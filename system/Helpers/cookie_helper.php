@@ -34,7 +34,7 @@ if (! function_exists('set_cookie'))
 	 * @param string       $prefix   The cookie prefix
 	 * @param boolean      $secure   True makes the cookie secure
 	 * @param boolean      $httpOnly True makes the cookie accessible via
-	 *                                 http(s) only (no javascript)
+	 *                                 http(s) only (no js)
 	 * @param string|null  $sameSite The cookie SameSite value
 	 *
 	 * @see (\Config\Services::response())->setCookie()

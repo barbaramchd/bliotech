@@ -519,7 +519,7 @@ class Validation implements ValidationInterface
 	}
 
 	/**
-	 * Returns the rendered HTML of the errors as defined in $template.
+	 * Returns the rendered html of the errors as defined in $template.
 	 *
 	 * @param string $template
 	 *
@@ -539,7 +539,7 @@ class Validation implements ValidationInterface
 	//--------------------------------------------------------------------
 
 	/**
-	 * Displays a single error in formatted HTML as defined in the $template view.
+	 * Displays a single error in formatted html as defined in the $template view.
 	 *
 	 * @param string $field
 	 * @param string $template

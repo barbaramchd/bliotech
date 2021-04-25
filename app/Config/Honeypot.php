@@ -28,7 +28,7 @@ class Honeypot extends BaseConfig
 	public $name = 'honeypot';
 
 	/**
-	 * Honeypot HTML Template
+	 * Honeypot html Template
 	 *
 	 * @var string
 	 */

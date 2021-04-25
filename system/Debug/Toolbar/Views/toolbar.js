@@ -246,7 +246,7 @@ var ciDebugBar = {
 
 		// define invalid & outer ( also invalid ) elements
 		const INVALID_ELEMENTS = [ 'NOSCRIPT', 'SCRIPT', 'STYLE' ];
-		const OUTER_ELEMENTS   = [ 'HTML', 'BODY', 'HEAD' ];
+		const OUTER_ELEMENTS   = [ 'html', 'BODY', 'HEAD' ];
 
 		var getValidElementInner = function ( node, reverse ) {
 			// handle invalid tags

@@ -146,7 +146,7 @@ class Email
 	public $charset = 'utf-8';
 
 	/**
-	 * Alternative message (for HTML messages only)
+	 * Alternative message (for html messages only)
 	 *
 	 * @var string
 	 */
@@ -1059,9 +1059,9 @@ class Email
 	 * Build alternative plain text message
 	 *
 	 * Provides the raw message for use in plain-text headers of
-	 * HTML-formatted emails.
+	 * html-formatted emails.
 	 * If the user hasn't specified his own alternative message
-	 * it creates one by stripping the HTML
+	 * it creates one by stripping the html
 	 *
 	 * @return string
 	 */

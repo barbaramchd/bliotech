@@ -71,7 +71,7 @@ trait ResponseTrait
 	protected $cookieSecure = false;
 
 	/**
-	 * Cookie will only be accessible via HTTP(S) (no javascript)
+	 * Cookie will only be accessible via HTTP(S) (no js)
 	 *
 	 * @var boolean
 	 */
@@ -586,7 +586,7 @@ trait ResponseTrait
 	 * @param string       $path     Cookie path (default: '/')
 	 * @param string       $prefix   Cookie name prefix
 	 * @param boolean      $secure   Whether to only transfer cookies via SSL
-	 * @param boolean      $httponly Whether only make the cookie accessible via HTTP (no javascript)
+	 * @param boolean      $httponly Whether only make the cookie accessible via HTTP (no js)
 	 * @param string|null  $samesite
 	 *
 	 * @return $this

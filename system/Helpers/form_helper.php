@@ -719,7 +719,7 @@ if (! function_exists('set_value'))
 	 *
 	 * @param string          $field      Field name
 	 * @param string|string[] $default    Default value
-	 * @param boolean         $htmlEscape Whether to escape HTML special characters or not
+	 * @param boolean         $htmlEscape Whether to escape html special characters or not
 	 *
 	 * @return string|string[]
 	 */

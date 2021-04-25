@@ -14,11 +14,11 @@ namespace Laminas\Escaper;
 class Escaper
 {
     /**
-     * Entity Map mapping Unicode codepoints to any available named HTML entities.
+     * Entity Map mapping Unicode codepoints to any available named html entities.
      *
-     * While HTML supports far more named entities, the lowest common denominator
+     * While html supports far more named entities, the lowest common denominator
      * has become HTML5's XML Serialisation which is restricted to the those named
-     * entities that XML supports. Using HTML entities would result in this error:
+     * entities that XML supports. Using html entities would result in this error:
      *     XML Parsing Error: undefined entity
      *
      * @var array
@@ -47,7 +47,7 @@ class Escaper
     protected $htmlSpecialCharsFlags;
 
     /**
-     * Static Matcher which escapes characters for HTML Attribute contexts
+     * Static Matcher which escapes characters for html Attribute contexts
      *
      * @var callable
      */
@@ -61,7 +61,7 @@ class Escaper
     protected $jsMatcher;
 
     /**
-     * Static Matcher which escapes characters for CSS Attribute contexts
+     * Static Matcher which escapes characters for css Attribute contexts
      *
      * @var callable
      */
@@ -136,7 +136,7 @@ class Escaper
     }
 
     /**
-     * Escape a string for the HTML Body context where there are very few characters
+     * Escape a string for the html Body context where there are very few characters
      * of special meaning. Internally this will use htmlspecialchars().
      *
      * @param string $string
@@ -148,7 +148,7 @@ class Escaper
     }
 
     /**
-     * Escape a string for the HTML Attribute context. We use an extended set of characters
+     * Escape a string for the html Attribute context. We use an extended set of characters
      * to escape that are not covered by htmlspecialchars() to cover cases where an attribute
      * might be unquoted or quoted illegally (e.g. backticks are valid quotes for IE).
      *
@@ -169,11 +169,11 @@ class Escaper
     /**
      * Escape a string for the Javascript context. This does not use json_encode(). An extended
      * set of characters are escaped beyond ECMAScript's rules for Javascript literal string
-     * escaping in order to prevent misinterpretation of Javascript as HTML leading to the
+     * escaping in order to prevent misinterpretation of Javascript as html leading to the
      * injection of special characters and entities. The escaping used should be tolerant
-     * of cases where HTML escaping was not applied on top of Javascript escaping correctly.
+     * of cases where html escaping was not applied on top of Javascript escaping correctly.
      * Backslash escaping is not used as it still leaves the escaped character as-is and so
-     * is not useful in a HTML context.
+     * is not useful in a html context.
      *
      * @param string $string
      * @return string
@@ -203,8 +203,8 @@ class Escaper
     }
 
     /**
-     * Escape a string for the CSS context. CSS escaping can be applied to any string being
-     * inserted into CSS and escapes everything except alphanumerics.
+     * Escape a string for the css context. css escaping can be applied to any string being
+     * inserted into css and escapes everything except alphanumerics.
      *
      * @param string $string
      * @return string
@@ -221,7 +221,7 @@ class Escaper
     }
 
     /**
-     * Callback function for preg_replace_callback that applies HTML Attribute
+     * Callback function for preg_replace_callback that applies html Attribute
      * escaping to all matches.
      *
      * @param array $matches
@@ -233,7 +233,7 @@ class Escaper
         $ord = ord($chr);
 
         /**
-         * The following replaces characters undefined in HTML with the
+         * The following replaces characters undefined in html with the
          * hex entity for the Unicode replacement character.
          */
         if (($ord <= 0x1f && $chr != "\t" && $chr != "\n" && $chr != "\r")
@@ -290,7 +290,7 @@ class Escaper
     }
 
     /**
-     * Callback function for preg_replace_callback that applies CSS
+     * Callback function for preg_replace_callback that applies css
      * escaping to all matches.
      *
      * @param array $matches

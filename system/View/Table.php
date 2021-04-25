@@ -14,7 +14,7 @@ namespace CodeIgniter\View;
 use CodeIgniter\Database\BaseResult;
 
 /**
- * HTML Table Generating Class
+ * html Table Generating Class
  *
  * Lets you create tables manually or from database result objects, or arrays.
  */

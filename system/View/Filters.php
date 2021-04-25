@@ -143,7 +143,7 @@ class Filters
 	//--------------------------------------------------------------------
 
 	/**
-	 * Highlights code samples with HTML/CSS.
+	 * Highlights code samples with html/css.
 	 *
 	 * @param string $value
 	 *
@@ -247,7 +247,7 @@ class Filters
 
 	/**
 	 * Returns a string with all instances of newline character (\n)
-	 * converted to an HTML <br/> tag.
+	 * converted to an html <br/> tag.
 	 *
 	 * @param string $value
 	 *

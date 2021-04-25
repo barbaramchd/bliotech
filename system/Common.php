@@ -231,7 +231,7 @@ if (! function_exists('csrf_token'))
 	/**
 	 * Returns the CSRF token name.
 	 * Can be used in Views when building hidden inputs manually,
-	 * or used in javascript vars when using APIs.
+	 * or used in js vars when using APIs.
 	 *
 	 * @return string
 	 */
@@ -246,7 +246,7 @@ if (! function_exists('csrf_header'))
 	/**
 	 * Returns the CSRF header name.
 	 * Can be used in Views by adding it to the meta tag
-	 * or used in javascript to define a header name when using APIs.
+	 * or used in js to define a header name when using APIs.
 	 *
 	 * @return string
 	 */
@@ -261,7 +261,7 @@ if (! function_exists('csrf_hash'))
 	/**
 	 * Returns the current hash value for the CSRF protection.
 	 * Can be used in Views when building hidden inputs manually,
-	 * or used in javascript vars for API usage.
+	 * or used in js vars for API usage.
 	 *
 	 * @return string
 	 */
@@ -289,7 +289,7 @@ if (! function_exists('csrf_field'))
 if (! function_exists('csrf_meta'))
 {
 	/**
-	 * Generates a meta tag for use within javascript calls.
+	 * Generates a meta tag for use within js calls.
 	 *
 	 * @param string|null $id
 	 *
@@ -1105,7 +1105,7 @@ if (! function_exists('slash_item'))
 if (! function_exists('stringify_attributes'))
 {
 	/**
-	 * Stringify attributes for use in HTML tags.
+	 * Stringify attributes for use in html tags.
 	 *
 	 * Helper function used to convert a string, array, or object
 	 * of attributes to a string.
@@ -1221,7 +1221,7 @@ if (! function_exists('view'))
 if (! function_exists('view_cell'))
 {
 	/**
-	 * View cells are used within views to insert HTML chunks that are managed
+	 * View cells are used within views to insert html chunks that are managed
 	 * by other classes.
 	 *
 	 * @param string      $library

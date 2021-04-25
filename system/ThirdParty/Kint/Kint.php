@@ -117,7 +117,7 @@ class Kint
     /**
      * @var bool enable detection when Kint is command line.
      *
-     * Formats output with whitespace only; does not HTML-escape it
+     * Formats output with whitespace only; does not html-escape it
      */
     public static $cli_detection = true;
 

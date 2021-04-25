@@ -94,7 +94,7 @@ class Typography
 			$str = preg_replace("/\n\n+/", "\n\n", $str);
 		}
 
-		// HTML comment tags don't conform to patterns of normal tags, so pull them out separately, only if needed
+		// html comment tags don't conform to patterns of normal tags, so pull them out separately, only if needed
 		$htmlComments = [];
 		if (strpos($str, '<!--') !== false && preg_match_all('#(<!\-\-.*?\-\->)#s', $str, $matches))
 		{
@@ -187,11 +187,11 @@ class Typography
 		// Convert quotes, elipsis, em-dashes, non-breaking spaces, and ampersands
 		$str = $this->formatCharacters($str);
 
-		// restore HTML comments
+		// restore html comments
 		for ($i = 0, $total = count($htmlComments); $i < $total; $i ++)
 		{
 			// remove surrounding paragraph tags, but only if there's an opening paragraph tag
-			// otherwise HTML comments at the ends of paragraphs will have the closing tag removed
+			// otherwise html comments at the ends of paragraphs will have the closing tag removed
 			// if '<p>{@HC1}' then replace <p>{@HC1}</p> with the comment, else replace only {@HC1} with the comment
 			$str = preg_replace('#(?(?=<p>\{@HC' . $i . '\})<p>\{@HC' . $i . '\}(\s*</p>)|\{@HC' . $i . '\})#s', $htmlComments[$i], $str);
 		}
@@ -356,7 +356,7 @@ class Typography
 	// --------------------------------------------------------------------
 
 	/**
-	 * Convert newlines to HTML line breaks except within PRE tags
+	 * Convert newlines to html line breaks except within PRE tags
 	 *
 	 * @param  string $str
 	 * @return string

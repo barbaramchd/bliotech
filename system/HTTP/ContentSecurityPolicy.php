@@ -483,7 +483,7 @@ class ContentSecurityPolicy
 	}
 
 	/**
-	 * specifies an HTML sandbox policy that the user agent applies to
+	 * specifies an html sandbox policy that the user agent applies to
 	 * the protected resource.
 	 *
 	 * @see http://www.w3.org/TR/CSP/#directive-sandbox
@@ -500,7 +500,7 @@ class ContentSecurityPolicy
 	}
 
 	/**
-	 * Adds a new valid endpoint for javascript file sources. Can be either
+	 * Adds a new valid endpoint for js file sources. Can be either
 	 * a URI class or a simple string.
 	 *
 	 * @see http://www.w3.org/TR/CSP/#directive-connect-src
@@ -518,7 +518,7 @@ class ContentSecurityPolicy
 	}
 
 	/**
-	 * Adds a new valid endpoint for CSS file sources. Can be either
+	 * Adds a new valid endpoint for css file sources. Can be either
 	 * a URI class or a simple string.
 	 *
 	 * @see http://www.w3.org/TR/CSP/#directive-connect-src

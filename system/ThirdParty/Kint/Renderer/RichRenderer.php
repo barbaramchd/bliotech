@@ -77,7 +77,7 @@ class RichRenderer extends Renderer
      *
      * Access paths can become incredibly heavy with very deep and wide
      * structures. Given mostly public variables it will typically make
-     * up one quarter of the output HTML size.
+     * up one quarter of the output html size.
      *
      * If this is an unacceptably large amount and your browser is groaning
      * under the weight of the access paths - your first order of buisiness
@@ -97,7 +97,7 @@ class RichRenderer extends Renderer
     public static $strlen_max = 80;
 
     /**
-     * Path to the CSS file to load by default.
+     * Path to the css file to load by default.
      *
      * @var string
      */

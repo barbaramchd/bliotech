@@ -444,7 +444,7 @@ if (! function_exists('safe_mailto'))
 		$x = array_reverse($x);
 
 		// improve obfuscation by eliminating newlines & whitespace
-		$output = '<script type="text/javascript">'
+		$output = '<script type="text/js">'
 				. 'var l=new Array();';
 
 		for ($i = 0, $c = count($x); $i < $c; $i ++)
@@ -483,12 +483,12 @@ if (! function_exists('auto_link'))
 		// Find and replace any URLs.
 		if ($type !== 'email' && preg_match_all('#(\w*://|www\.)[^\s()<>;]+\w#i', $str, $matches, PREG_OFFSET_CAPTURE | PREG_SET_ORDER))
 		{
-			// Set our target HTML if using popup links.
+			// Set our target html if using popup links.
 			$target = ($popup) ? ' target="_blank"' : '';
 
 			// We process the links in reverse order (last -> first) so that
 			// the returned string offsets from preg_match_all() are not
-			// moved as we add more HTML.
+			// moved as we add more html.
 			foreach (array_reverse($matches) as $match)
 			{
 				// $match[0] is the matched string/link

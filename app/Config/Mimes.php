@@ -128,7 +128,7 @@ class Mimes
 		'phtml' => 'application/x-httpd-php',
 		'phps'  => 'application/x-httpd-php-source',
 		'js'    => [
-			'application/x-javascript',
+			'application/x-js',
 			'text/plain',
 		],
 		'swf'   => 'application/x-shockwave-flash',

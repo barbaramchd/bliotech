@@ -324,7 +324,7 @@ interface ResponseInterface
 	 * @param string       $path     Cookie path (default: '/')
 	 * @param string       $prefix   Cookie name prefix
 	 * @param boolean      $secure   Whether to only transfer cookies via SSL
-	 * @param boolean      $httponly Whether only make the cookie accessible via HTTP (no javascript)
+	 * @param boolean      $httponly Whether only make the cookie accessible via HTTP (no js)
 	 * @param string|null  $samesite
 	 *
 	 * @return $this

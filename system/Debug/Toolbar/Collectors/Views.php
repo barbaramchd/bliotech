@@ -53,7 +53,7 @@ class Views extends BaseCollector
 
 	/**
 	 * The 'title' of this Collector.
-	 * Used to name things in the toolbar HTML.
+	 * Used to name things in the toolbar html.
 	 *
 	 * @var string
 	 */

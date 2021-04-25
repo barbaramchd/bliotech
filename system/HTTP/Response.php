@@ -165,7 +165,7 @@ class Response extends Message implements MessageInterface, ResponseInterface
 			throw HTTPException::forInvalidSameSiteSetting($this->cookieSameSite);
 		}
 
-		// Default to an HTML Content-Type. Devs can override if needed.
+		// Default to an html Content-Type. Devs can override if needed.
 		$this->setContentType('text/html');
 	}
 

@@ -43,7 +43,7 @@ class PlainRenderer extends TextRenderer
     );
 
     /**
-     * Path to the CSS file to load by default.
+     * Path to the css file to load by default.
      *
      * @var string
      */

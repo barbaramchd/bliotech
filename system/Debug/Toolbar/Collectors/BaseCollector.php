@@ -52,7 +52,7 @@ class BaseCollector
 
 	/**
 	 * The 'title' of this Collector.
-	 * Used to name things in the toolbar HTML.
+	 * Used to name things in the toolbar html.
 	 *
 	 * @var string
 	 */
@@ -249,7 +249,7 @@ class BaseCollector
 	}
 
 	/**
-	 * Returns the HTML to display the icon. Should either
+	 * Returns the html to display the icon. Should either
 	 * be SVG, or a base-64 encoded.
 	 *
 	 * Recommended dimensions are 24px x 24px

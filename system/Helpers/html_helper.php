@@ -16,18 +16,18 @@ use Config\Mimes;
 // --------------------------------------------------------------------
 
 /**
- * CodeIgniter HTML Helpers
+ * CodeIgniter html Helpers
  */
 if (! function_exists('ul'))
 {
 	/**
 	 * Unordered List
 	 *
-	 * Generates an HTML unordered list from an single or
+	 * Generates an html unordered list from an single or
 	 * multi-dimensional array.
 	 *
 	 * @param array $list
-	 * @param mixed $attributes HTML attributes string, array, object
+	 * @param mixed $attributes html attributes string, array, object
 	 *
 	 * @return string
 	 */
@@ -44,10 +44,10 @@ if (! function_exists('ol'))
 	/**
 	 * Ordered List
 	 *
-	 * Generates an HTML ordered list from an single or multi-dimensional array.
+	 * Generates an html ordered list from an single or multi-dimensional array.
 	 *
 	 * @param array $list
-	 * @param mixed $attributes HTML attributes string, array, object
+	 * @param mixed $attributes html attributes string, array, object
 	 *
 	 * @return string
 	 */
@@ -64,7 +64,7 @@ if (! function_exists('_list'))
 	/**
 	 * Generates the list
 	 *
-	 * Generates an HTML ordered list from an single or multi-dimensional array.
+	 * Generates an html ordered list from an single or multi-dimensional array.
 	 *
 	 * @param string  $type
 	 * @param mixed   $list
@@ -121,7 +121,7 @@ if (! function_exists('img'))
 	 *
 	 * @param string|array        $src        Image source URI, or array of attributes and values
 	 * @param boolean             $indexPage  Whether to treat $src as a routed URI string
-	 * @param string|array|object $attributes Additional HTML attributes
+	 * @param string|array|object $attributes Additional html attributes
 	 *
 	 * @return string
 	 */
@@ -273,7 +273,7 @@ if (! function_exists('script_tag'))
 			}
 		}
 
-		return $script . 'type="text/javascript"' . '></script>';
+		return $script . 'type="text/js"' . '></script>';
 	}
 }
 
@@ -284,14 +284,14 @@ if (! function_exists('link_tag'))
 	/**
 	 * Link
 	 *
-	 * Generates link to a CSS file
+	 * Generates link to a css file
 	 *
 	 * @param mixed   $href      Stylesheet href or an array
 	 * @param string  $rel
 	 * @param string  $type
 	 * @param string  $title
 	 * @param string  $media
-	 * @param boolean $indexPage should indexPage be added to the CSS path.
+	 * @param boolean $indexPage should indexPage be added to the css path.
 	 * @param string  $hreflang
 	 *
 	 * @return string
@@ -366,7 +366,7 @@ if (! function_exists('video'))
 	 *
 	 * @param mixed   $src                Either a source string or an array of sources
 	 * @param string  $unsupportedMessage The message to display if the media tag is not supported by the browser
-	 * @param string  $attributes         HTML attributes
+	 * @param string  $attributes         html attributes
 	 * @param array   $tracks
 	 * @param boolean $indexPage
 	 *
@@ -431,7 +431,7 @@ if (! function_exists('audio'))
 	 *
 	 * @param mixed   $src                Either a source string or an array of sources
 	 * @param string  $unsupportedMessage The message to display if the media tag is not supported by the browser.
-	 * @param string  $attributes         HTML attributes
+	 * @param string  $attributes         html attributes
 	 * @param array   $tracks
 	 * @param boolean $indexPage
 	 *
@@ -547,7 +547,7 @@ if (! function_exists('source'))
 	 *
 	 * @param string  $src        The path of the media resource
 	 * @param string  $type       The MIME-type of the resource with optional codecs parameters
-	 * @param string  $attributes HTML attributes
+	 * @param string  $attributes html attributes
 	 * @param boolean $indexPage
 	 *
 	 * @return string
@@ -618,7 +618,7 @@ if (! function_exists('object'))
 	 *
 	 * @param string  $data       A resource URL
 	 * @param string  $type       Content-type of the resource
-	 * @param string  $attributes HTML attributes
+	 * @param string  $attributes html attributes
 	 * @param array   $params
 	 * @param boolean $indexPage
 	 *
@@ -668,7 +668,7 @@ if (! function_exists('param'))
 	 * @param string $name       The name of the parameter
 	 * @param string $value      The value of the parameter
 	 * @param string $type       The MIME-type
-	 * @param string $attributes HTML attributes
+	 * @param string $attributes html attributes
 	 *
 	 * @return string
 	 */
@@ -692,7 +692,7 @@ if (! function_exists('embed'))
 	 *
 	 * @param string  $src        The path of the resource to embed
 	 * @param string  $type       MIME-type
-	 * @param string  $attributes HTML attributes
+	 * @param string  $attributes html attributes
 	 * @param boolean $indexPage
 	 *
 	 * @return string

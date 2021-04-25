@@ -67,7 +67,7 @@ class DOMParser
 	public function withString(string $content)
 	{
 		// converts all special characters to utf-8
-		$content = mb_convert_encoding($content, 'HTML-ENTITIES', 'UTF-8');
+		$content = mb_convert_encoding($content, 'html-ENTITIES', 'UTF-8');
 
 		//turning off some errors
 		libxml_use_internal_errors(true);
@@ -77,7 +77,7 @@ class DOMParser
 			// unclear how we would get here, given that we are trapping libxml errors
 			// @codeCoverageIgnoreStart
 			libxml_clear_errors();
-			throw new BadMethodCallException('Invalid HTML');
+			throw new BadMethodCallException('Invalid html');
 			// @codeCoverageIgnoreEnd
 		}
 
@@ -143,7 +143,7 @@ class DOMParser
 	}
 
 	/**
-	 * Checks to see if an element with the matching CSS specifier
+	 * Checks to see if an element with the matching css specifier
 	 * is found within the current DOM.
 	 *
 	 * @param string $element

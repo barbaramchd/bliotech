@@ -331,7 +331,7 @@ class Toolbar
 
 			$format = $response->getHeaderLine('content-type');
 
-			// Non-HTML formats should not include the debugbar
+			// Non-html formats should not include the debugbar
 			// then we send headers saying where to find the debug data
 			// for this response
 			if ($request->isAJAX() || strpos($format, 'html') === false)
@@ -344,10 +344,10 @@ class Toolbar
 			}
 
 			$script = PHP_EOL
-					. '<script type="text/javascript" {csp-script-nonce} id="debugbar_loader" '
+					. '<script type="text/js" {csp-script-nonce} id="debugbar_loader" '
 					. 'data-time="' . $time . '" '
 					. 'src="' . site_url() . '?debugbar"></script>'
-					. '<script type="text/javascript" {csp-script-nonce} id="debugbar_dynamic_script"></script>'
+					. '<script type="text/js" {csp-script-nonce} id="debugbar_dynamic_script"></script>'
 					. '<style type="text/css" {csp-style-nonce} id="debugbar_dynamic_style"></style>'
 					. PHP_EOL;
 
@@ -380,8 +380,8 @@ class Toolbar
 		// simply returning the loading script
 		if ($request->getGet('debugbar') !== null)
 		{
-			// Let the browser know that we are sending javascript
-			header('Content-Type: application/javascript');
+			// Let the browser know that we are sending js
+			header('Content-Type: application/js');
 
 			ob_start();
 			include($this->config->viewsPath . 'toolbarloader.js.php');

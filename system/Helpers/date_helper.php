@@ -47,7 +47,7 @@ if (! function_exists('timezone_select'))
 	/**
 	 * Generates a select field of all available timezones
 	 *
-	 * Returns a string with the formatted HTML
+	 * Returns a string with the formatted html
 	 *
 	 * @param string  $class   Optional class to apply to the select field
 	 * @param string  $default Default value for initial selection

@@ -292,7 +292,7 @@ class FeatureResponse extends TestCase
 	}
 
 	/**
-	 * Assert that we see an element selected via a CSS selector.
+	 * Assert that we see an element selected via a css selector.
 	 *
 	 * @param string $search
 	 *
@@ -304,7 +304,7 @@ class FeatureResponse extends TestCase
 	}
 
 	/**
-	 * Assert that we do not see an element selected via a CSS selector.
+	 * Assert that we do not see an element selected via a css selector.
 	 *
 	 * @param string $search
 	 *

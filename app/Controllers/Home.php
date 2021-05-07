@@ -6,7 +6,7 @@ class Home extends BaseController
 {
 	public function index()
 	{
-        return redirect()->to('/auth/login');
+        return redirect()->to('/Dashboard/');
 		//return view('welcome_message');
 	}
 }

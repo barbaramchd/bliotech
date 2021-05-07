@@ -26,7 +26,7 @@ namespace App\Config;
  *
  * @package CodeIgniter-Ion-Auth
  */
-class IonAuth extends \IonAuth\Config\Ionauth
+class IonAuth extends \IonAuth\Config\IonAuth
 {
 
 	/**

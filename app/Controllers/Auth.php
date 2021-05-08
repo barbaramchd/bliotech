@@ -7,5 +7,5 @@ class Auth extends \IonAuth\Controllers\Auth
      *  - copy the ion-auth/Views/auth folder to your Views folder,
      *  - remove comment
      */
-    // protected $viewsFolder = 'auth';
+    protected $viewsFolder = 'auth';
 }

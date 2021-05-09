@@ -3,13 +3,13 @@
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href="./index.html"><b>Blio</b>Tech</a>
+        <a href="<?=base_url(""); ?>/index.html"><b>Blio</b>Tech</a>
     </div>
     <!-- /.login-logo -->
     <div class="card">
         <div class="card-body login-card-body">
             <p class="login-box-msg">Sign in to start your session</p>
-            <form action="<?=base_url("auth/footer"); ?>" method="post">
+            <form action="<?=base_url("auth/login"); ?>" method="post">
 
 
                 <!-- TODO: Error message box. This div is just a dummy div, we need some nice box for "incoorect password/ succesfull registration-->
@@ -18,7 +18,7 @@
 
 
                 <div class="input-group mb-3">
-                    <input type="email" class="form-control" placeholder="Email">
+                    <input name="identity" type="email" class="form-control" placeholder="Email">
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fas fa-envelope"></span>
@@ -26,7 +26,7 @@
                     </div>
                 </div>
                 <div class="input-group mb-3">
-                    <input type="password" class="form-control" placeholder="Password">
+                    <input name="password" type="password" class="form-control" placeholder="Password">
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fas fa-lock"></span>
@@ -36,7 +36,7 @@
                 <div class="row">
                     <div class="col-8">
                         <div class="icheck-primary">
-                            <input type="checkbox" id="remember">
+                            <input name="remember" value="1" type="checkbox" id="remember">
                             <label for="remember">
                                 Remember Me
                             </label>
@@ -72,30 +72,4 @@
     </div>
 </div>
 <!-- /.login-box -->
-
-<!-- TODO: update the form above
-<?php echo view("auth/footer"); ?>
-
-<div id="infoMessage"><?php echo $message;?></div>
-
-<?php echo form_open('auth/login');?>
-
-  <p>
-    <?php echo form_label(lang('Auth.login_identity_label'), 'identity');?>
-    <?php echo form_input($identity);?>
-  </p>
-
-  <p>
-    <?php echo form_label(lang('Auth.login_password_label'), 'password');?>
-    <?php echo form_input($password);?>
-  </p>
-
-  <p>
-    <?php echo form_label(lang('Auth.login_remember_label'), 'remember');?>
-    <?php echo form_checkbox('remember', '1', false, 'id="remember"');?>
-  </p>
-<p><a href="forgot_password"><?php echo lang('Auth.login_forgot_password');?></a></p>
-
--->
-
 <?php echo view("auth/footer"); ?>

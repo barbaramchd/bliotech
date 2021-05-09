@@ -9,10 +9,17 @@ class CheckLogin implements FilterInterface
     public function before(RequestInterface $request, $arguments = null)
     {
 
+        // Redirect to a login page if user is not logged in
         $ionAuth = new \IonAuth\Libraries\IonAuth();
         if (!$ionAuth->loggedIn()) {
             return redirect()->to('/auth/login');
         }
+
+        // If user is logged in, prepare data for dashboard
+        global $DATA;
+        $DATA["user"] = $ionAuth->user();
+        $DATA["isAdmin"] = $ionAuth->isAdmin();
+        $DATA["isManager"] = $ionAuth->inGroup("manager");
     }
 
     //--------------------------------------------------------------------

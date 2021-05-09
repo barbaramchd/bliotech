@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="<?= base_url();?>/assets/plugins/daterangepicker/daterangepicker.css">
     <!-- summernote -->
     <link rel="stylesheet" href="..<?= base_url();?>/assets/plugins/summernote/summernote-bs4.min.css">
+
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -108,7 +109,7 @@
                     <!-- Add New Restaurant Link -->
                     <li class="nav-item">
                         <a href="./restaurants.html" class="nav-link">
-                            <i class="far fa-store-alt nav-icon"></i>
+                            <i class="far fa-building nav-icon"></i>
                             <p>Restaurants</p>
                         </a>
                     </li>
@@ -116,6 +117,7 @@
                     <!-- Add New Account Link -->
                     <li class="nav-item">
                         <a href="./accounts.html" class="nav-link">
+                            <i class="far fa-address-card nav-icon"></i>
                             <p>Accounts</p>
                         </a>
                     </li>
@@ -125,6 +127,7 @@
                     <!-- Settings Link -->
                     <li class="nav-item">
                         <a href="./settings.html" class="nav-link">
+                            <i class="far fa-cogs nav-icon"></i>
                             <p>Settings</p>
                         </a>
                     </li>
@@ -132,6 +135,7 @@
                     <!-- Logout Link -->
                     <li class="nav-item">
                         <a href="<?= base_url("auth/logout");?>" class="nav-link">
+                            <i class="far fa-sign-out nav-icon"></i>
                             <p>Logout</p>
                         </a>
                     </li>

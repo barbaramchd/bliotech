@@ -8,8 +8,8 @@ class Dashboard extends BaseController
 	{
 	    global $DATA;  # Contains information about logged user to be used in view
 
-	    die("You are magic!");
-        //return redirect()->to('/Dashboard/');
+	    //die("You are magic!"); # Testing if we managed to log in
+        return redirect()->to('/Dashboard/home');
 		//return view('welcome_message');
 	}
 
@@ -30,7 +30,7 @@ class Dashboard extends BaseController
     public function home() # For demo purposes
     {
         echo view("dashboard/header");
-        # Content
+        echo view("dashboard/home");
         echo view("dashboard/footer");
     }
 

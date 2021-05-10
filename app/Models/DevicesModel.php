@@ -7,17 +7,17 @@ use CodeIgniter\Model;
 class DevicesModel extends Model
 {
     protected $table = 'devices';
-    protected $allowedFields = ['model', 'serial_number', "name", "active", "activated",
-                                "note", "notification_phone", "notification_email"];
+    protected $allowedFields = ['d_model', 'd_serial_number', "d_name", "d_active", "d_activated",
+                                "d_note", "d_notification_phone", "d_notification_email"];
     protected $useTimestamps = true;
-    protected $createdField  = 'created_at';
-    protected $updatedField  = 'updated_at';
+    protected $createdField  = 'd_created_at';
+    protected $updatedField  = 'd_updated_at';
 
     public function getDevice($device_id)
     {
         return $this->asArray()
-            ->where(['id' => $device_id])
-            ->orWhere(["serial_number" => $device_id])
+            ->where(['d_id' => $device_id])
+            ->orWhere(["d_serial_number" => $device_id])
             ->first();
     }
 

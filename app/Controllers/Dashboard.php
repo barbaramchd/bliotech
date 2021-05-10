@@ -2,6 +2,12 @@
 
 namespace App\Controllers;
 
+use App\Models\UnitsModel;
+use App\Models\UnitUsersModel;
+use App\Models\UnitDistModel;
+use App\Models\DistrictModel;
+
+
 class Dashboard extends BaseController
 {
 	public function index()
@@ -42,14 +48,27 @@ class Dashboard extends BaseController
 
         # IF current user is manager
         if (($DATA["isManager"] == true) OR ($DATA["isAdmin"] == true)){
+            # Find a District of a Manager
+            $districts = new DistrictModel();
+            $district = $districts->getDistrictByUser($DATA["user"]->id);
+
+            # Get all Units from given District
+            $unit_districts = new UnitDistModel();
+
+            # Add data to $DATA
+            # $DATA["units"] =
+
+
             echo view("dashboard/home", $DATA);
         }else{
             # IF current user is worker
             # TODO redirect to single unit
-            # Find which unit is associated with the worker
-
-
-            return redirect()->to('/Dashboard/unit/'+$unit_id);
+            # Find which unit is associated with the worker from user_units table
+            $unit_user = new UnitUsersModel();
+            //var_dump($DATA["user"]);
+            $unit_id = $unit_user->getUnit($DATA["user"]->id)["unit_id"];
+            //var_dump($unit_id);
+            return redirect()->to('/Dashboard/unit/'.$unit_id);
         }
 
         echo view("dashboard/footer", $DATA);

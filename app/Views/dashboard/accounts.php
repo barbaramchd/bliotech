@@ -8,17 +8,34 @@
             <!-- Main row -->
             <div class="row">
                 <!-- Left col -->
-                <section class="col-lg-7 connectedSortable">
 
                     <!-- Add Account Form -->
                     <!-- TODO: make the form for the add account pop up when clicked only -->
-                    <div class="card">
-                        <div class="card-body register-card-body">
-                            <p class="login-box-msg">Add new account</p>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        Add new account
+                    </button>
 
-                            <form action="./index.html" method="post">
+                    <!-- Add Account Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">New Account Info</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Employee Full Name">
+                                    <input type="text" class="form-control" placeholder="Employee's First Name">
+                                    <div class="input-group-append">
+                                        <div class="input-group-text">
+                                            <span class="fas fa-user"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder="Employee's Last Name">
                                     <div class="input-group-append">
                                         <div class="input-group-text">
                                             <span class="fas fa-user"></span>
@@ -34,10 +51,18 @@
                                     </div>
                                 </div>
                                 <div class="input-group mb-3">
+                                    <input type="number" class="form-control" placeholder="Phone">
+                                    <div class="input-group-append">
+                                        <div class="input-group-text">
+                                            <span class="fas fa-phone"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-group mb-3">
                                     <input type="password" class="form-control" placeholder="Select Restaurant">
                                     <div class="input-group-append">
                                         <div class="input-group-text">
-                                            <span class="fas fa-lock"></span>
+                                            <span class="fas fa-store"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -45,32 +70,23 @@
                                     <input type="password" class="form-control" placeholder="Employee's Role">
                                     <div class="input-group-append">
                                         <div class="input-group-text">
-                                            <span class="fas fa-lock"></span>
+                                            <span class="fas fa-wallet"></span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <!-- /.col -->
-                                    <div class="card-footer clearfix">
-                                        <button type="button" class="btn btn-primary float-right"><i
-                                                class="fas fa-plus"></i>
-                                            Add
-                                        </button>
-                                    </div>
-                                    <!-- /.col -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary">Save</button>
                                 </div>
-                            </form>
+                            </div>
                         </div>
-                        <!-- /.form-box -->
-                    </div><!-- /.card -->
-                </section>
+                    </div>
                 <!-- /.Left col -->
             </div>
             <!-- /.row (main row) -->
         </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
-
+    <div class="content-header"></div>
     <section class="col-lg-12 col-12 connectedSortable">
 
         <!-- Restaurant List -->

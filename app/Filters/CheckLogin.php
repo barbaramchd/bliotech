@@ -17,7 +17,7 @@ class CheckLogin implements FilterInterface
 
         // If user is logged in, prepare data for dashboard
         global $DATA;
-        $DATA["user"] = $ionAuth->user();
+        $DATA["user"] = $ionAuth->user()->row();
         $DATA["isAdmin"] = $ionAuth->isAdmin();
         $DATA["isManager"] = $ionAuth->inGroup("manager");
     }

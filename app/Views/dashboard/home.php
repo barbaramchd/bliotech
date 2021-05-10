@@ -1,6 +1,7 @@
 
-<!-- Content Wrapper. Contains page content -->
+<!-- Content Wrapper. Contains home content -->
 <div class="content-wrapper">
+    <div class="content-header"></div>
 
     <!-- Boxes content -->
     <section class="content">

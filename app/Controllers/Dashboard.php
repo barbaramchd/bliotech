@@ -34,7 +34,7 @@ class Dashboard extends BaseController
         echo view("dashboard/footer");
     }
 
-    public function unit() # For demo purposes
+    public function units() # For demo purposes
     {
         echo view("dashboard/header");
         echo view("dashboard/units");

@@ -1,5 +1,6 @@
 <!-- Content Wrapper. Contains accounts page content -->
 <div class="content-wrapper">
+    <div class="content-header"></div>
 
     <!-- Main content -->
     <section class="content">
@@ -10,6 +11,7 @@
                 <section class="col-lg-7 connectedSortable">
 
                     <!-- Add Account Form -->
+                    <!-- TODO: make the form for the add account pop up when clicked only -->
                     <div class="card">
                         <div class="card-body register-card-body">
                             <p class="login-box-msg">Add new account</p>

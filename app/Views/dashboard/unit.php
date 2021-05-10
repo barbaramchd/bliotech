@@ -13,55 +13,14 @@
                     <!-- Add Unit Form -->
                     <!-- TODO: make unit form pop up when clicked linked -->
                     <div class="card">
-                        <div class="card-body register-card-body">
-                            <p class="login-box-msg">Add new restaurant</p>
-
-                            <form action="./index.html" method="post">
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Unit Name">
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">
-                                            <span class="fas fa-user"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input type="email" class="form-control" placeholder="Address">
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">
-                                            <span class="fas fa-envelope"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input type="password" class="form-control" placeholder="City">
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">
-                                            <span class="fas fa-lock"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input type="password" class="form-control" placeholder="State">
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">
-                                            <span class="fas fa-lock"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <!-- /.col -->
-                                    <div class="card-footer clearfix">
-                                        <button type="button" class="btn btn-primary float-right"><i
-                                                class="fas fa-plus"></i>
-                                            Add
-                                        </button>
-                                    </div>
-                                    <!-- /.col -->
-                                </div>
-                            </form>
-                        </div>
-                        <!-- /.form-box -->
+                        <h1>Unit Info</h1>
+                        <h2>Unit Name</h2>
+                        <h2>Address 1</h2>
+                        <h2>Address 2</h2>
+                        <h2>City</h2>
+                        <h3>State</h3>
+                        <h2>Devices Info</h2>
+                        <h2>Employees Info</h2>
                     </div><!-- /.card -->
                 </section>
                 <!-- /.Left col -->

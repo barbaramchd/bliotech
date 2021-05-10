@@ -135,6 +135,14 @@
                             <p>Logout</p>
                         </a>
                     </li>
+
+                    <!-- Test Link -->
+                    <li class="nav-item">
+                        <a href="<?= base_url("dashboard/unit");?>" class="nav-link">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <p>Test</p>
+                        </a>
+                    </li>
                 </ul>
             </nav>
             <!-- /.sidebar-menu -->

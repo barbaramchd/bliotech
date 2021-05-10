@@ -80,7 +80,7 @@ class Dashboard extends BaseController
 
         # Displaying Header
         echo view("dashboard/header", $DATA);
-        echo view("dashboard/home", $DATA);
+        echo view("dashboard/unit", $DATA);
         echo view("dashboard/footer", $DATA);
     }
 

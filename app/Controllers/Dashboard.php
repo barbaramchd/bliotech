@@ -47,19 +47,24 @@ class Dashboard extends BaseController
         echo view("dashboard/header", $DATA);
 
         # IF current user is manager
-        if (($DATA["isManager"] == true) OR ($DATA["isAdmin"] == true)){
+        if (($DATA["isManager"] == true) OR ($DATA["isAdmin"] == true)) {
             # Find a District of a Manager
             $districts = new DistrictModel();
             $district = $districts->getDistrictByUser($DATA["user"]->id);
 
-            # Get all Units from given District
-            $unit_districts = new UnitDistModel();
+            if (isset($district)) {
+                # Get all Units from given District
+                $unit_districts = new UnitDistModel();
 
-            # Add data to $DATA
-            # $DATA["units"] =
+                # Add data to $DATA
+                $DATA["units"] = $unit_districts->getUnitsFromDistrict($district["id"]);
+                var_dump($DATA["units"]);
 
-
-            echo view("dashboard/home", $DATA);
+                echo view("dashboard/home", $DATA);
+            }else{
+                $DATA["message"] = "You do not have access to any district. Please contact our tech support.";
+                echo view("dashboard/error_message", $DATA);
+            }
         }else{
             # IF current user is worker
             # TODO redirect to single unit

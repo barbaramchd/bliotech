@@ -12,6 +12,11 @@ class DistrictModel extends Model
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
 
-
+    public function getDistrictByUser($user_id)
+    {
+        return $this->asArray()
+            ->where(['manager_id' => $user_id])
+            ->first();
+    }
 
 }

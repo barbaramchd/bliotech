@@ -34,10 +34,10 @@ class Dashboard extends BaseController
         echo view("dashboard/footer");
     }
 
-    public function restaurant() # For demo purposes
+    public function unit() # For demo purposes
     {
         echo view("dashboard/header");
-        # Content
+        //echo view("dashboard/unit");
         echo view("dashboard/footer");
     }
 

@@ -141,9 +141,9 @@
                                     <td><?= $event["u_name"];?></td>
                                     <td>TODO</td>
                                     <td>
-                                        <?= $event["created_at"];?>
+                                        <?= $event["e_created_at"];?>
                                         <small class="text-success mr-1">
-                                            <?= $event["type"];?>
+                                            <?= $event["e_type"];?>
                                         </small>
                                     </td>
                                     <td>

@@ -7,10 +7,10 @@ use CodeIgniter\Model;
 class EventsModel extends Model
 {
     protected $table = 'events';
-    protected $allowedFields = ['type', 'device_id', "note"];
+    protected $allowedFields = ['e_type', 'e_device_id', "e_note"];
     protected $useTimestamps = true;
-    protected $createdField  = 'created_at';
-    protected $updatedField  = 'updated_at';
+    protected $createdField  = 'e_created_at';
+    protected $updatedField  = 'e_updated_at';
 
 
 }

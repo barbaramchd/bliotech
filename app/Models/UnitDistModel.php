@@ -25,7 +25,7 @@ class UnitDistModel extends Model
             ->join("units", "units.u_id = unit_districts.unit_id")
             ->join("unit_devices", "unit_devices.unit_id = units.u_id")
             ->join("devices", "devices.d_id = unit_devices.device_id")
-            ->join("events", "events.device_id = devices.d_id")
+            ->join("events", "events.e_device_id = devices.d_id")
             ->findAll();
     }
 

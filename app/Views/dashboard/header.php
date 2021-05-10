@@ -96,7 +96,7 @@
                     <li class="nav-header">MAIN</li>
                     <!-- Dashboard link -->
                     <li class="nav-item">
-                        <a href="./index.html" class="nav-link active">
+                        <a href="<?= base_url();?>" class="nav-link active">
                             <i class="fas fa-tachometer-alt"></i>
                             <p>Dashboard</p>
                         </a>
@@ -104,7 +104,7 @@
 
                     <!-- Add New Unit Link -->
                     <li class="nav-item">
-                        <a href="./units.html" class="nav-link">
+                        <a href="<?= base_url("dashboard/units");?>" class="nav-link">
                             <i class="fas fa-store-alt"></i>
                             <p>Units</p>
                         </a>
@@ -122,7 +122,7 @@
                     <li class="nav-header">ACCOUNT INFO</li>
                     <!-- Settings Link -->
                     <li class="nav-item">
-                        <a href="./settings.html" class="nav-link">
+                        <a href="<?= base_url("dashboard/settings");?>" class="nav-link">
                             <i class="fas fa-cog"></i>
                             <p>Settings</p>
                         </a>
@@ -130,7 +130,7 @@
 
                     <!-- Logout Link -->
                     <li class="nav-item">
-                        <a href="./logout.html" class="nav-link">
+                        <a href="<?= base_url("dashboard/logout");?>" class="nav-link">
                             <i class="fas fa-sign-out-alt"></i>
                             <p>Logout</p>
                         </a>

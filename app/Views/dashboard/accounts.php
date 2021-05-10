@@ -9,7 +9,7 @@
                 <!-- Left col -->
                 <section class="col-lg-7 connectedSortable">
 
-                    <!-- TO DO List -->
+                    <!-- Add Account Form -->
                     <div class="card">
                         <div class="card-body register-card-body">
                             <p class="login-box-msg">Add new account</p>

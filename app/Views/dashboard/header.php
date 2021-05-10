@@ -73,6 +73,7 @@
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
         <a href="<?= base_url();?>" class="brand-link">
+            <!-- TODO: Blio needs a bit more space on the right -->
             <span class="brand-text font-weight-light">Blio Tech</span>
         </a>
 
@@ -81,6 +82,7 @@
             <!-- Sidebar user panel (optional) -->
             <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                 <div class="info">
+                    <!-- TODO: Add some nice styles ;) -->
                     <a class="d-block">Welcome,</a>
                     <a class="d-block"><?= $user->first_name; ?> <?= $user->last_name; ?></a>
                     <a class="d-block"><?= $user->company; ?></a>

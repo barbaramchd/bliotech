@@ -91,51 +91,23 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Mc Donalds</td>
-                        <td>Battery Street</td>
-                        <td>San Francisco</td>
-                        <td>CA</td>
-                        <td>Names</td>
-                        <td>4444444444</td>
-                        <td>email@gmail.com</td>
-                        <td>
-                            <a href="#" class="text-muted">
-                                <i class="fas fa-edit"></i>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Mc Donalds</td>
-                        <td>Battery Street</td>
-                        <td>San Francisco</td>
-                        <td>CA</td>
-                        <td>Names</td>
-                        <td>4444444444</td>
-                        <td>email@gmail.com</td>
-                        <td>
-                            <a href="#" class="text-muted">
-                                <i class="fas fa-edit"></i>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Mc Donalds</td>
-                        <td>Battery Street</td>
-                        <td>San Francisco</td>
-                        <td>CA</td>
-                        <td>Names</td>
-                        <td>4444444444</td>
-                        <td>email@gmail.com</td>
-                        <td>
-                            <a href="#" class="text-muted">
-                                <i class="fas fa-edit"></i>
-                            </a>
-                        </td>
-                    </tr>
+                    <?php foreach($units as $unit){ ?>
+                        <tr>
+                            <td><?= $unit["id"];?></td>
+                            <td><?= $unit["name"];?></td>
+                            <td><?= $unit["address1"];?></td>
+                            <td><?= $unit["city"];?></td>
+                            <td>CA</td>
+                            <td>Names</td>
+                            <td>4444444444</td>
+                            <td>email@gmail.com</td>
+                            <td>
+                                <a href="#" class="text-muted">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    <?php } ?>
                     </tbody>
                 </table>
             </div>

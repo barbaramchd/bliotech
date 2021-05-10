@@ -57,8 +57,8 @@ class Dashboard extends BaseController
                 $unit_districts = new UnitDistModel();
 
                 # Add data to $DATA
-                $DATA["units"] = $unit_districts->getUnitsFromDistrict($district["id"]);
-                var_dump($DATA["units"]);
+                $DATA["events"] = $unit_districts->getEventsFromDistrict($district["id"]);
+                //var_dump($DATA["events"]);
 
                 echo view("dashboard/home", $DATA);
             }else{

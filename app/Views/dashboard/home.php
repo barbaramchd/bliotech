@@ -135,14 +135,15 @@
                                 </tr>
                                 </thead>
                                 <tbody>
+                                <?php foreach($events as $event){ ?>
                                 <tr>
-                                    <td>1</td>
-                                    <td>Mc Donalds</td>
-                                    <td>John Smith</td>
+                                    <td><?= $event["u_id"];?></td>
+                                    <td><?= $event["u_name"];?></td>
+                                    <td>TODO</td>
                                     <td>
-                                        Date
+                                        <?= $event["created_at"];?>
                                         <small class="text-success mr-1">
-                                            Clean
+                                            <?= $event["type"];?>
                                         </small>
                                     </td>
                                     <td>
@@ -151,38 +152,7 @@
                                         </a>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Mc Donalds</td>
-                                    <td>John Smith</td>
-                                    <td>
-                                        Date
-                                        <small class="text-success mr-1">
-                                            Clean
-                                        </small>
-                                    </td>
-                                    <td>
-                                        <a href="#" class="text-muted">
-                                            <i class="fas fa-search"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Burger King</td>
-                                    <td>John Smith</td>
-                                    <td>
-                                        Date
-                                        <small class="text-warning mr-1">
-                                            Attention
-                                        </small>
-                                    </td>
-                                    <td>
-                                        <a href="#" class="text-muted">
-                                            <i class="fas fa-search"></i>
-                                        </a>
-                                    </td>
-                                </tr>
+                                <?php } ?>
                                 </tbody>
                             </table>
                         </div>

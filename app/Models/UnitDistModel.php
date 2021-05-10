@@ -14,9 +14,19 @@ class UnitDistModel extends Model
     {
         return $this->asArray()
             ->where(['district_id' => $distict_id])
-            ->join("units", "units.id = unit_districts.unit_id")
+            ->join("units", "units.u_id = unit_districts.unit_id")
             ->findAll();
     }
-    
+
+    public function getEventsFromDistrict($distict_id)
+    {
+        return $this->asArray()
+            ->where(['district_id' => $distict_id])
+            ->join("units", "units.u_id = unit_districts.unit_id")
+            ->join("unit_devices", "unit_devices.unit_id = units.u_id")
+            ->join("devices", "devices.d_id = unit_devices.device_id")
+            ->join("events", "events.device_id = devices.d_id")
+            ->findAll();
+    }
 
 }

@@ -32,12 +32,12 @@ class API extends BaseController
                         "type" => 1,
                         "note" => "New click received"];
 
-                echo $events->insert($data) . "<br>";
+                echo "[DEBUG]Event ID: " . $events->insert($data) . "<br>";
 
                 //Trigger notifications
                 // TODO Setup SMS and Email notifications
-                echo "SMS notificiation to: " . $device["notification_phone"]."<br>";
-                echo "EMAIL notificiation to: " . $device["notification_email"];
+                echo "[DEBUG]SMS notificiation to: " . $device["notification_phone"]."<br>";
+                echo "[DEBUG]EMAIL notificiation to: " . $device["notification_email"]."<br>";
 
                 die("TRUE");
             }

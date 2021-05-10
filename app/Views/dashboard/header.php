@@ -99,12 +99,13 @@
                     <li class="nav-header">MAIN</li>
                     <!-- Dashboard link -->
                     <li class="nav-item">
-                        <a href="<?= base_url();?>" class="nav-link active">
+                        <a href="<?= base_url("dashboard/home");?>" class="nav-link active">
                             <i class="fas fa-tachometer-alt"></i>
                             <p>Dashboard</p>
                         </a>
                     </li>
 
+                    <?php if (($isAdmin == true) or ($isManager == true)){ ?>
                     <!-- Add New Unit Link -->
                     <li class="nav-item">
                         <a href="<?= base_url("dashboard/units");?>" class="nav-link">
@@ -120,7 +121,7 @@
                             <p>Accounts</p>
                         </a>
                     </li>
-
+                    <?php } ?>
 
                     <li class="nav-header">ACCOUNT INFO</li>
                     <!-- Settings Link -->

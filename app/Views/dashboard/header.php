@@ -81,8 +81,9 @@
             <!-- Sidebar user panel (optional) -->
             <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                 <div class="info">
-                    <!-- / TODO: make the name of the user match -->
-                    <a href="#" class="d-block">Welcome, Alexander Pierce!</a>
+                    <a class="d-block">Welcome,</a>
+                    <a class="d-block"><?= $user->first_name; ?> <?= $user->last_name; ?></a>
+                    <a class="d-block"><?= $user->company; ?></a>
                 </div>
             </div>
 

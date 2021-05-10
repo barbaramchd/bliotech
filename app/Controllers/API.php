@@ -28,7 +28,7 @@ class API extends BaseController
                 //Log the click in the database
                 $events = new EventsModel();
 
-                $data = ["device_id" => device["id"],
+                $data = ["device_id" => $device["id"],
                         "type" => 1,
                         "note" => "New click received"];
 

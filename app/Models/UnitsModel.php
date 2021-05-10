@@ -7,11 +7,11 @@ use CodeIgniter\Model;
 class UnitsModel extends Model
 {
     protected $table = 'units';
-    protected $allowedFields = ['unit_name', 'company', "address1", "address2", "city", "state", "zip",
-                                "country", "phone", "email", "website","type","size","active"];
+    protected $allowedFields = ['u_unit_name', 'u_company', "u_address1", "u_address2", "u_city", "u_state", "u_zip",
+                                "u_country", "u_phone", "u_email", "u_website","u_type","u_size","u_active"];
     protected $useTimestamps = true;
-    protected $createdField  = 'created_at';
-    protected $updatedField  = 'updated_at';
+    protected $createdField  = 'u_created_at';
+    protected $updatedField  = 'u_updated_at';
 
     
 

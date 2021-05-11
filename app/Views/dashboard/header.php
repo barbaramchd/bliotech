@@ -83,9 +83,9 @@
             <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                 <div class="info">
                     <!-- TODO: Add some nice styles ;) -->
-                    <a class="d-block">Welcome,</a>
+                    <small><a class="d-block">Welcome,</a></small>
                     <a class="d-block"><?= $user->first_name; ?> <?= $user->last_name; ?></a>
-                    <a class="d-block"><?= $user->company; ?></a>
+                    <small><a class="d-block"><?= $user->company; ?></a></small>
                 </div>
             </div>
 

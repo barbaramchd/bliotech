@@ -8,8 +8,6 @@
             <!-- Main row -->
             <div class="row">
                 <!-- Left col -->
-                <section class="col-lg-7 connectedSortable">
-
                     <!-- Add Unit Modal -->
 
                     <!-- Button trigger modal -->
@@ -77,14 +75,6 @@
                                     </div>
                                 </div>
                                 <div class="input-group mb-3">
-                                    <input type="password" class="form-control" placeholder="Phone">
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">
-                                            <span class="fas fa-phone"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="input-group mb-3">
                                     <input type="password" class="form-control" placeholder="Website">
                                 </div>
                                 <div class="input-group mb-3">
@@ -99,65 +89,13 @@
                             </div>
                         </div>
                     </div>
-                    <!-- TODO: make unit form pop up when clicked linked -->
-                    <div class="card">
-                        <div class="card-body register-card-body">
-                            <p class="login-box-msg">Add new restaurant</p>
-
-                            <form action="./index.html" method="post">
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Unit Name">
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">
-                                            <span class="fas fa-user"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input type="email" class="form-control" placeholder="Address">
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">
-                                            <span class="fas fa-envelope"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input type="password" class="form-control" placeholder="City">
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">
-                                            <span class="fas fa-lock"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input type="password" class="form-control" placeholder="State">
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">
-                                            <span class="fas fa-lock"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <!-- /.col -->
-                                    <div class="card-footer clearfix">
-                                        <button type="button" class="btn btn-primary float-right"><i
-                                                class="fas fa-plus"></i>
-                                            Add
-                                        </button>
-                                    </div>
-                                    <!-- /.col -->
-                                </div>
-                            </form>
-                        </div>
-                        <!-- /.form-box -->
-                    </div><!-- /.card -->
-                </section>
                 <!-- /.Left col -->
             </div>
             <!-- /.row (main row) -->
         </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
+    <div class="content-header"></div>
 
     <section class="col-lg-12 col-12 connectedSortable">
 

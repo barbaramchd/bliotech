@@ -91,12 +91,12 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <?php foreach($units as $unit){ ?>
+                    <?php //foreach($units as $unit){ ?>
                         <tr>
-                            <td><?= $unit["id"];?></td>
-                            <td><?= $unit["name"];?></td>
-                            <td><?= $unit["address1"];?></td>
-                            <td><?= $unit["city"];?></td>
+                            <td><?=""; //$unit["id"];  ?></td>
+                            <td><?=""; //$unit["name"];?></td>
+                            <td><?=""; //$unit["address1"];?></td>
+                            <td><?="";// $unit["city"];?></td>
                             <td>CA</td>
                             <td>Names</td>
                             <td>4444444444</td>
@@ -107,7 +107,7 @@
                                 </a>
                             </td>
                         </tr>
-                    <?php } ?>
+                    <?php // } ?>
                     </tbody>
                 </table>
             </div>

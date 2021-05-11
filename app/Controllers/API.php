@@ -36,8 +36,8 @@ class API extends BaseController
 
                 //Trigger notifications
                 // TODO Setup SMS and Email notifications
-                echo "[DEBUG]SMS notificiation to: " . $device["notification_phone"]."<br>";
-                echo "[DEBUG]EMAIL notificiation to: " . $device["notification_email"]."<br>";
+                echo "[DEBUG]SMS notificiation to: " . $device["d_notification_phone"]."<br>";
+                echo "[DEBUG]EMAIL notificiation to: " . $device["d_notification_email"]."<br>";
 
                 die("TRUE");
             }

@@ -142,9 +142,24 @@
                                     <td>TODO</td>
                                     <td>
                                         <?= $event["e_created_at"];?>
-                                        <small class="text-success mr-1">
-                                            <?= $event["e_type"];?>
-                                        </small>
+
+                                        <?php switch($event["e_type"]){
+                                            case 1: ?>
+                                                <small class="text-warning mr-1">
+                                                    Needs Attention
+                                                </small>
+                                            <?php break;
+                                            case 2: ?>
+                                                <small class="text-success mr-1">
+                                                    Solved
+                                                </small>
+                                                <?php break;
+                                            case 3: ?>
+                                                <small class="text-danger mr-1">
+                                                    Overdue
+                                                </small>
+                                                <?php break;
+                                        }?>
                                     </td>
                                     <td>
                                         <a href="#" class="text-muted">

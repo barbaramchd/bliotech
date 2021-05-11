@@ -9,14 +9,13 @@
             <div class="row">
                 <!-- Left col -->
 
-                    <!-- Add Account Form -->
-                    <!-- TODO: make the form for the add account pop up when clicked only -->
+                    <!-- Add Account Modal -->
+
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                         Add new account
                     </button>
 
-                    <!-- Add Account Modal -->
                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
@@ -59,18 +58,18 @@
                                     </div>
                                 </div>
                                 <div class="input-group mb-3">
-                                    <input type="password" class="form-control" placeholder="Select Restaurant">
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">
-                                            <span class="fas fa-store"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="input-group mb-3">
                                     <input type="password" class="form-control" placeholder="Employee's Role">
                                     <div class="input-group-append">
                                         <div class="input-group-text">
                                             <span class="fas fa-wallet"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <input type="password" class="form-control" placeholder="Select Restaurant">
+                                    <div class="input-group-append">
+                                        <div class="input-group-text">
+                                            <span class="fas fa-store"></span>
                                         </div>
                                     </div>
                                 </div>

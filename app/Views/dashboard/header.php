@@ -9,23 +9,24 @@
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="<?= base_url();?>/assets/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/assets/plugins/fontawesome-free/css/all.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Tempusdominus Bootstrap 4 -->
-    <link rel="stylesheet" href="<?= base_url();?>/assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <link rel="stylesheet"
+          href="<?= base_url(); ?>/assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
     <!-- iCheck -->
-    <link rel="stylesheet" href="<?= base_url();?>/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
     <!-- JQVMap -->
-    <link rel="stylesheet" href="<?= base_url();?>/assets/plugins/jqvmap/jqvmap.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/assets/plugins/jqvmap/jqvmap.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="<?= base_url();?>/assets/css/adminlte.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/adminlte.min.css">
     <!-- overlayScrollbars -->
-    <link rel="stylesheet" href="<?= base_url();?>/assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- Daterange picker -->
-    <link rel="stylesheet" href="<?= base_url();?>/assets/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/assets/plugins/daterangepicker/daterangepicker.css">
     <!-- summernote -->
-    <link rel="stylesheet" href="..<?= base_url();?>/assets/plugins/summernote/summernote-bs4.min.css">
+    <link rel="stylesheet" href="..<?= base_url(); ?>/assets/plugins/summernote/summernote-bs4.min.css">
 
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -72,7 +73,7 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
-        <a href="<?= base_url();?>" class="brand-link">
+        <a href="<?= base_url(); ?>" class="brand-link">
             <!-- TODO: Blio needs a bit more space on the right -->
             <span class="brand-text font-weight-light">Blio Tech</span>
         </a>
@@ -99,34 +100,34 @@
                     <li class="nav-header">MAIN</li>
                     <!-- Dashboard link -->
                     <li class="nav-item">
-                        <a href="<?= base_url("dashboard/home");?>" class="nav-link active">
+                        <a href="<?= base_url("dashboard/home"); ?>" class="nav-link active">
                             <i class="fas fa-tachometer-alt"></i>
                             <p>Dashboard</p>
                         </a>
                     </li>
 
-                    <?php if (($isAdmin == true) or ($isManager == true)){ ?>
-                    <!-- Add New Unit Link -->
-                    <li class="nav-item">
-                        <a href="<?= base_url("dashboard/units");?>" class="nav-link">
-                            <i class="fas fa-store-alt"></i>
-                            <p>Units</p>
-                        </a>
-                    </li>
+                    <?php if (($isAdmin == true) or ($isManager == true)) { ?>
+                        <!-- Add New Unit Link -->
+                        <li class="nav-item">
+                            <a href="<?= base_url("dashboard/units"); ?>" class="nav-link">
+                                <i class="fas fa-store-alt"></i>
+                                <p>Units</p>
+                            </a>
+                        </li>
 
-                    <!-- Add New Account Link -->
-                    <li class="nav-item">
-                        <a href="<?= base_url("dashboard/accounts");?>" class="nav-link">
-                            <i class="fas fa-users"></i>
-                            <p>Accounts</p>
-                        </a>
-                    </li>
+                        <!-- Add New Account Link -->
+                        <li class="nav-item">
+                            <a href="<?= base_url("dashboard/accounts"); ?>" class="nav-link">
+                                <i class="fas fa-users"></i>
+                                <p>Accounts</p>
+                            </a>
+                        </li>
                     <?php } ?>
 
                     <li class="nav-header">ACCOUNT INFO</li>
                     <!-- Settings Link -->
                     <li class="nav-item">
-                        <a href="<?= base_url("dashboard/settings");?>" class="nav-link">
+                        <a href="<?= base_url("dashboard/settings"); ?>" class="nav-link">
                             <i class="fas fa-cog"></i>
                             <p>Settings</p>
                         </a>
@@ -134,7 +135,7 @@
 
                     <!-- Logout Link -->
                     <li class="nav-item">
-                        <a href="<?= base_url("auth/logout");?>" class="nav-link">
+                        <a href="<?= base_url("auth/logout"); ?>" class="nav-link">
                             <i class="fas fa-sign-out-alt"></i>
                             <p>Logout</p>
                         </a>
@@ -142,7 +143,7 @@
 
                     <!-- Test Link -->
                     <li class="nav-item">
-                        <a href="<?= base_url("dashboard/unit");?>" class="nav-link">
+                        <a href="<?= base_url("dashboard/unit"); ?>" class="nav-link">
                             <i class="fas fa-sign-out-alt"></i>
                             <p>Test</p>
                         </a>

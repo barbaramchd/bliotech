@@ -12,7 +12,7 @@
             <form action="<?=base_url("auth/login"); ?>" method="post">
 
 
-                <!-- TODO: Error message box. This div is just a dummy div, we need some nice box for "incoorect password/ succesfull registration-->
+                <!-- TODO: Error message box. This div is just a dummy div, we need some nice box for "incorect password/ succesfull registration-->
                 <div id="infoMessage"><?php echo $message;?></div>
                 <!---END of error message box -->
 

@@ -1,4 +1,3 @@
-
 <!-- Content Wrapper. Contains home content -->
 <div class="content-wrapper">
     <div class="content-header"></div>
@@ -21,7 +20,7 @@
                                     <i class="ion ion-android-apps"></i>
                                 </div>
                                 <a href="#" class="small-box-footer">More info <i
-                                        class="fas fa-arrow-circle-right"></i></a>
+                                            class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                         <!-- ./col -->
@@ -30,13 +29,13 @@
                             <div class="small-box bg-success">
                                 <div class="inner">
                                     <h3>53<sup style="font-size: 20px">%</sup></h3>
-                                    <p>Clean</p>
+                                    <p>Solved</p>
                                 </div>
                                 <div class="icon">
                                     <i class="ion ion-android-done-all"></i>
                                 </div>
                                 <a href="#" class="small-box-footer">More info <i
-                                        class="fas fa-arrow-circle-right"></i></a>
+                                            class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                         <!-- ./col -->
@@ -51,7 +50,7 @@
                                     <i class="ion ion-android-locate"></i>
                                 </div>
                                 <a href="#" class="small-box-footer">More info <i
-                                        class="fas fa-arrow-circle-right"></i></a>
+                                            class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                         <!-- ./col -->
@@ -66,7 +65,7 @@
                                     <i class="ion ion-alert-circled"></i>
                                 </div>
                                 <a href="#" class="small-box-footer">More info <i
-                                        class="fas fa-arrow-circle-right"></i></a>
+                                            class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -135,38 +134,32 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <?php foreach($events as $event){ ?>
-                                <tr>
-                                    <td><?= $event["u_id"];?></td>
-                                    <td><?= $event["u_name"];?></td>
-                                    <td>TODO</td>
-                                    <td>
-                                        <?= $event["e_created_at"];?>
+                                <?php foreach ($events as $event) { ?>
+                                    <tr>
+                                        <td><?= $event["u_id"]; ?></td>
+                                        <td><?= $event["u_name"]; ?></td>
+                                        <td>TODO</td>
+                                        <td>
+                                            <?= $event["e_created_at"]; ?>
 
-                                        <?php switch($event["e_type"]){
-                                            case 1: ?>
-                                                <small class="text-warning mr-1">
-                                                    Needs Attention
-                                                </small>
-                                            <?php break;
-                                            case 2: ?>
-                                                <small class="text-success mr-1">
-                                                    Solved
-                                                </small>
-                                                <?php break;
-                                            case 3: ?>
-                                                <small class="text-danger mr-1">
-                                                    Overdue
-                                                </small>
-                                                <?php break;
-                                        }?>
-                                    </td>
-                                    <td>
-                                        <a href="#" class="text-muted">
-                                            <i class="fas fa-search"></i>
-                                        </a>
-                                    </td>
-                                </tr>
+                                            <?php switch ($event["e_type"]) {
+                                                case 1: ?>
+                                                    <span class="float-right badge badge-warning">Attention</span>
+                                                    <?php break;
+                                                case 2: ?>
+                                                    <span class="float-right badge bg-success">Solved</span>
+                                                    <?php break;
+                                                case 3: ?>
+                                                    <span class="float-right badge bg-danger">842</span>
+                                                    <?php break;
+                                            } ?>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="text-muted">
+                                                <i class="fas fa-search"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
                                 <?php } ?>
                                 </tbody>
                             </table>

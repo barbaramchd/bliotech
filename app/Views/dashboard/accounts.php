@@ -9,76 +9,62 @@
             <div class="row">
                 <!-- Left col -->
 
-                    <!-- Add Account Modal -->
+                <!-- Add Account Modal -->
 
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                        Add new account
-                    </button>
-
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">New Account Info</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Employee's First Name">
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">
-                                            <span class="fas fa-user"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Employee's Last Name">
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">
-                                            <span class="fas fa-user"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input type="email" class="form-control" placeholder="Email">
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">
-                                            <span class="fas fa-envelope"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input type="number" class="form-control" placeholder="Phone">
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">
-                                            <span class="fas fa-phone"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input type="password" class="form-control" placeholder="Employee's Role">
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">
-                                            <span class="fas fa-wallet"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input type="password" class="form-control" placeholder="Select Restaurant">
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">
-                                            <span class="fas fa-store"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary">Save</button>
-                                </div>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-default">
+                    Add new account
+                </button>
+                <div class="modal fade" id="modal-default" style="display: none;" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">New Account Info</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" name="first_name" placeholder="John" class="form-control"
+                                       required="required">
+                                <span class="input-group-append"></span>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" name="last_name" placeholder="Smith" class="form-control"
+                                       required="required">
+                                <span class="input-group-append"></span>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" name="email" placeholder="name@example.com" class="form-control"
+                                       required="required">
+                                <span class="input-group-append"></span>
+                            </div>
+                            <div class="input-group">
+                                <input type="number" name="phone" placeholder="Phone" class="form-control">
+                                <span class="input-group-append"></span>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" name="role" placeholder="Role" class="form-control">
+                                <span class="input-group-append"></span>
+                            </div>
+                            <div class="input-group">
+                                <!-- TODO: the options of the dropdown menu should match the restaurants that the manager has -->
+                                <label for="user_unit">This employee works at:</label>
+                                <select id="user_unit" name="user_unit">
+                                    <option style="display:none;"></option>
+                                    <option value="Option 1">Option 1</option>
+                                    <option value="Option 2">Option 2</option>
+                                </select>
+                            </div>
+                            <div class="modal-footer justify-content-between">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save</button>
                             </div>
                         </div>
+                        <!-- /.modal-content -->
                     </div>
+                    <!-- /.modal-dialog -->
+                </div>
                 <!-- /.Left col -->
             </div>
             <!-- /.row (main row) -->

@@ -11,11 +11,11 @@
                 <!-- Add Unit Modal -->
 
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-default">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-xl">
                     Add new unit
                 </button>
-                <div class="modal fade" id="modal-default" style="display: none;" aria-hidden="true">
-                    <div class="modal-dialog">
+                <div class="modal fade" id="modal-xl" style="display: none;" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h4 class="modal-title">New Unit Info</h4>
@@ -23,63 +23,61 @@
                                     <span aria-hidden="true">×</span>
                                 </button>
                             </div>
-                            <div class="input-group mb-3">
-                                <input type="text" name="u_name" placeholder="Unit's Name" class="form-control"
+                            <div class="form-group">
+                                <label >Unit's name</label>
+                                <input type="text" name="u_name" class="form-control" placeholder="Enter name"
                                        required="required">
-                                <span class="input-group-append"></span>
                             </div>
-                            <div class="input-group mb-3">
-                                <input type="text" name="u_company" placeholder="Company" class="form-control">
-                                <span class="input-group-append"></span>
+                            <div class="form-group">
+                                <label >Company</label>
+                                <input type="text" name="u_company" class="form-control" placeholder="Enter company">
                             </div>
-                            <div class="input-group mb-3">
-                                <input type="text" name="u_address1" placeholder="Address 1" class="form-control"
+                            <div class="form-group">
+                                <label >Address 1</label>
+                                <input type="text" name="u_address1" class="form-control" placeholder="Enter address"
                                        required="required">
-                                <span class="input-group-append"></span>
                             </div>
-                            <div class="input-group mb-3">
-                                <input type="text" name="u_address2" placeholder="Address 2" class="form-control">
-                                <span class="input-group-append"></span>
+                            <div class="form-group">
+                                <label >Address 2</label>
+                                <input type="text" name="u_address2" class="form-control" placeholder="Enter address">
                             </div>
-                            <div class="input-group mb-3">
-                                <input type="text" name="u_city" placeholder="City" class="form-control"
+                            <div class="form-group">
+                                <label >City</label>
+                                <input type="text" name="u_city" class="form-control" placeholder="Enter city"
                                        required="required">
-                                <span class="input-group-append"></span>
                             </div>
-                            <div class="input-group mb-3">
-                                <input type="text" name="u_state" placeholder="State" class="form-control">
-                                <span class="input-group-append"></span>
-                            </div>
-                            <div class="input-group mb-3">
-                                <input type="number" name="u_zip" placeholder="Postal Code (only numbers)" class="form-control"
+                            <div class="form-group">
+                                <label >State</label>
+                                <input type="text" name="u_state" class="form-control" placeholder="Enter state"
                                        required="required">
-                                <span class="input-group-append"></span>
                             </div>
-                            <div class="input-group mb-3">
-                                <input type="number" name="u_phone" placeholder="Phone (only numbers)" class="form-control">
-                                <span class="input-group-append"></span>
+                            <div class="form-group">
+                                <label >Postal Code</label>
+                                <input type="number" name="u_zip" class="form-control" placeholder="Enter postal code (only numbers)"
+                                       required="required">
                             </div>
-                            <div class="input-group mb-3">
-                                <input type="email" name="u_email" placeholder="Email" class="form-control">
-                                <span class="input-group-append"></span>
+                            <div class="form-group">
+                                <label >Phone</label>
+                                <input type="number" name="u_phone" class="form-control" placeholder="Enter phone (only numbers)">
                             </div>
-                            <div class="input-group mb-3">
-                                <input type="url" name="u_website" placeholder="Website" class="form-control">
-                                <span class="input-group-append"></span>
+                            <div class="form-group">
+                                <label >Email</label>
+                                <input type="email" name="u_email" class="form-control" placeholder="Enter email">
                             </div>
-                            <!-- TODO: get dropdown menu style from AdminLTE -->
-                            <div class="input-group mb-3">
-                                <!-- TODO: add the options of the dropdown menu should match the restaurants that the manager has -->
-                                <label for="u_type">Sector:</label>
+                            <div class="form-group">
+                                <label >Website</label>
+                                <input type="url" name="u_website" class="form-control" placeholder="Enter website">
+                            </div>
+                            <div class="form-group">
+                                <label >Sector</label>
                                 <select id="u_type" name="u_type">
                                     <option style="display:none;"></option>
                                     <option value="Option 1">Option 1</option>
                                     <option value="Option 2">Option 2</option>
                                 </select>
                             </div>
-                            <div class="input-group mb-3">
-                                <!-- TODO: the options of the dropdown menu should match the restaurants that the manager has -->
-                                <label for="u_size">Unit's Size:</label>
+                            <div class="form-group">
+                                <label >Unit size</label>
                                 <select id="u_size" name="u_size">
                                     <option style="display:none;"></option>
                                     <option value="Option 1">Option 1</option>
@@ -90,7 +88,6 @@
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                 <button type="button" class="btn btn-primary">Save</button>
                             </div>
-                            <!-- TODO: add employee on the next button -->
                         </div>
                         <!-- /.modal-content -->
                     </div>
@@ -126,10 +123,10 @@
                     <tbody>
                     <?php //foreach($units as $unit){ ?>
                     <tr>
-                        <td><?= ""; //$unit["id"];    ?></td>
-                        <td><?= ""; //$unit["name"];  ?></td>
-                        <td><?= ""; //$unit["address1"];  ?></td>
-                        <td><?= "";// $unit["city"];  ?></td>
+                        <td><?= ""; //$unit["id"];     ?></td>
+                        <td><?= ""; //$unit["name"];   ?></td>
+                        <td><?= ""; //$unit["address1"];   ?></td>
+                        <td><?= "";// $unit["city"];   ?></td>
                         <td>CA</td>
                         <td>Names</td>
                         <td>4444444444</td>

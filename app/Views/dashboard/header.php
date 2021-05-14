@@ -105,7 +105,7 @@
 
                     <!-- Dashboard link -->
                     <li class="nav-item">
-                        <a href="<?= base_url("dashboard/home"); ?>" class="nav-link active">
+                        <a href="<?= base_url("dashboard/home"); ?>" class="nav-link <?=$current_menu=="Dashboard"?"active":"";?>">
                             <i class="fas fa-tachometer-alt"></i>
                             <p>Dashboard</p>
                         </a>
@@ -114,7 +114,7 @@
                     <?php if (($isAdmin == true) or ($isManager == true)) { ?>
                         <!-- Add New Unit Link -->
                         <li class="nav-item">
-                            <a href="<?= base_url("dashboard/units"); ?>" class="nav-link">
+                            <a href="<?= base_url("dashboard/units"); ?>" class="nav-link <?=$current_menu=="Units"?"active":"";?>">
                                 <i class="fas fa-store-alt"></i>
                                 <p>Units</p>
                             </a>
@@ -122,7 +122,7 @@
 
                         <!-- Add New Account Link -->
                         <li class="nav-item">
-                            <a href="<?= base_url("dashboard/accounts"); ?>" class="nav-link">
+                            <a href="<?= base_url("dashboard/accounts"); ?>" class="nav-link <?=$current_menu=="Accounts"?"active":"";?>">
                                 <i class="fas fa-users"></i>
                                 <p>Accounts</p>
                             </a>
@@ -132,7 +132,7 @@
                     <li class="nav-header">ACCOUNT INFO</li>
                     <!-- Settings Link -->
                     <li class="nav-item">
-                        <a href="<?= base_url("dashboard/settings"); ?>" class="nav-link">
+                        <a href="<?= base_url("dashboard/settings"); ?>" class="nav-link <?=$current_menu=="Settings"?"active":"";?>">
                             <i class="fas fa-cog"></i>
                             <p>Settings</p>
                         </a>
@@ -148,7 +148,7 @@
 
                     <!-- Test Link -->
                     <li class="nav-item">
-                        <a href="<?= base_url("dashboard/unit"); ?>" class="nav-link">
+                        <a href="<?= base_url("dashboard/unit"); ?>" class="nav-link <?=$current_menu=="Units"?"active":"";?>">
                             <i class="fas fa-sign-out-alt"></i>
                             <p>Test</p>
                         </a>

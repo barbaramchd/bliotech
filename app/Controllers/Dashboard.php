@@ -12,16 +12,20 @@ class Dashboard extends BaseController
 {
 	public function index()
 	{
-	    global $DATA;  # Contains information about logged user to be used in view
-
-	    //die("You are magic!"); # Testing if we managed to log in
         return redirect()->to('/Dashboard/home');
-		//return view('welcome_message');
 	}
 
 	public function accounts()  # For demo purposes
     {
+        # Initializing data for the views
         global $DATA;
+        # Side menu ID that should be highlighted
+        $DATA["current_menu"] = "Accounts";
+        # Displayed in on the begining of the page
+        $DATA["page_header"] = $DATA["current_menu"]; # Comment if you want to define your own page title
+        # Name of the tab in browser
+        $DATA["page_title"] = $DATA["current_menu"]; # Comment if you want to define your own page title
+
 
         # Displaying Header
         echo view("dashboard/header", $DATA);
@@ -29,19 +33,17 @@ class Dashboard extends BaseController
         echo view("dashboard/footer", $DATA);
     }
 
-    public function admin()  # For demo purposes
-    {
-        global $DATA;
-
-        # Displaying Header
-        echo view("dashboard/header", $DATA);
-        # Content
-        echo view("dashboard/footer", $DATA);
-    }
 
     public function home() # For demo purposes
     {
+        # Initializing data for the views
         global $DATA;
+        # Side menu ID that should be highlighted
+        $DATA["current_menu"] = "Dashboard";
+        # Displayed in on the begining of the page
+        $DATA["page_header"] = $DATA["current_menu"]; # Comment if you want to define your own page title
+        # Name of the tab in browser
+        $DATA["page_title"] = $DATA["current_menu"]; # Comment if you want to define your own page title
 
         # Displaying Header
         echo view("dashboard/header", $DATA);
@@ -81,7 +83,14 @@ class Dashboard extends BaseController
 
     public function unit($unit_id) # For demo purposes
     {
+        # Initializing data for the views
         global $DATA;
+        # Side menu ID that should be highlighted
+        $DATA["current_menu"] = "Units";
+        # Displayed in on the begining of the page
+        $DATA["page_header"] = "Unit ".$unit_id;
+        # Name of the tab in browser
+        $DATA["page_title"] = $DATA["page_header"]; # Comment if you want to define your own page title
 
         # Displaying Header
         echo view("dashboard/header", $DATA);
@@ -91,7 +100,14 @@ class Dashboard extends BaseController
 
     public function units() # For demo purposes
     {
+        # Initializing data for the views
         global $DATA;
+        # Side menu ID that should be highlighted
+        $DATA["current_menu"] = "Units";
+        # Displayed in on the begining of the page
+        $DATA["page_header"] = "All Units";
+        # Name of the tab in browser
+        $DATA["page_title"] = $DATA["page_header"]; # Comment if you want to define your own page title
 
         # Displaying Header
         echo view("dashboard/header", $DATA);
@@ -99,9 +115,16 @@ class Dashboard extends BaseController
         echo view("dashboard/footer", $DATA);
     }
 
-    public function settings() # For demo purposes
+    public function settings()
     {
+        # Initializing data for the views
         global $DATA;
+        # Side menu ID that should be highlighted
+        $DATA["current_menu"] = "Settings";
+        # Displayed in on the begining of the page
+        $DATA["page_header"] = "Account Settings";
+        # Name of the tab in browser
+        $DATA["page_title"] = $DATA["page_header"]; # Comment if you want to define your own page title
 
         # Displaying Header
         echo view("dashboard/header", $DATA);

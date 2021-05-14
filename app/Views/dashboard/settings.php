@@ -60,5 +60,3 @@
         </div>
         <!-- /.card -->
     </section>
-</div>
-<!-- /.content-wrapper -->

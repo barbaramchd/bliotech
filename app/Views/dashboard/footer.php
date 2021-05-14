@@ -1,3 +1,5 @@
+</div>
+<!-- /.content-wrapper -->
 <footer class="main-footer">
     <strong>Copyright &copy; <a href="http://blio.tech/">Blio Tech</a>.</strong>
     All rights reserved.

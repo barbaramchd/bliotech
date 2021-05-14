@@ -99,7 +99,7 @@
 
                     <?php if (($isManager == false) and ($isAdmin == false) and ($user->company != "")) {?>
                         <li class="nav-header"><?= strtoupper($user->company);?></li>
-                    <?php }else{ ?>
+                    <?php } else { ?>
                         <li class="nav-header">COMPANY</li>
                     <?php } ?>
 

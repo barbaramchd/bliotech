@@ -23,70 +23,72 @@
                                     <span aria-hidden="true">×</span>
                                 </button>
                             </div>
-                            <div class="form-group">
-                                <label >Unit's name</label>
-                                <input type="text" name="u_name" class="form-control" placeholder="Enter name"
-                                       required="required">
-                            </div>
-                            <div class="form-group">
-                                <label >Company</label>
-                                <input type="text" name="u_company" class="form-control" placeholder="Enter company">
-                            </div>
-                            <div class="form-group">
-                                <label >Address 1</label>
-                                <input type="text" name="u_address1" class="form-control" placeholder="Enter address"
-                                       required="required">
-                            </div>
-                            <div class="form-group">
-                                <label >Address 2</label>
-                                <input type="text" name="u_address2" class="form-control" placeholder="Enter address">
-                            </div>
-                            <div class="form-group">
-                                <label >City</label>
-                                <input type="text" name="u_city" class="form-control" placeholder="Enter city"
-                                       required="required">
-                            </div>
-                            <div class="form-group">
-                                <label >State</label>
-                                <input type="text" name="u_state" class="form-control" placeholder="Enter state"
-                                       required="required">
-                            </div>
-                            <div class="form-group">
-                                <label >Postal Code</label>
-                                <input type="number" name="u_zip" class="form-control" placeholder="Enter postal code (only numbers)"
-                                       required="required">
-                            </div>
-                            <div class="form-group">
-                                <label >Phone</label>
-                                <input type="number" name="u_phone" class="form-control" placeholder="Enter phone (only numbers)">
-                            </div>
-                            <div class="form-group">
-                                <label >Email</label>
-                                <input type="email" name="u_email" class="form-control" placeholder="Enter email">
-                            </div>
-                            <div class="form-group">
-                                <label >Website</label>
-                                <input type="url" name="u_website" class="form-control" placeholder="Enter website">
-                            </div>
-                            <div class="form-group">
-                                <label >Sector</label>
-                                <select id="u_type" name="u_type">
-                                    <option style="display:none;"></option>
-                                    <option value="Option 1">Option 1</option>
-                                    <option value="Option 2">Option 2</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label >Unit size</label>
-                                <select id="u_size" name="u_size">
-                                    <option style="display:none;"></option>
-                                    <option value="Option 1">Option 1</option>
-                                    <option value="Option 2">Option 2</option>
-                                </select>
-                            </div>
-                            <div class="modal-footer justify-content-between">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save</button>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label >Unit's name</label>
+                                    <input type="text" name="u_name" class="form-control" placeholder="Enter name"
+                                           required="required">
+                                </div>
+                                <div class="form-group">
+                                    <label >Company</label>
+                                    <input type="text" name="u_company" class="form-control" placeholder="Enter company">
+                                </div>
+                                <div class="form-group">
+                                    <label >Address 1</label>
+                                    <input type="text" name="u_address1" class="form-control" placeholder="Enter address"
+                                           required="required">
+                                </div>
+                                <div class="form-group">
+                                    <label >Address 2</label>
+                                    <input type="text" name="u_address2" class="form-control" placeholder="Enter address">
+                                </div>
+                                <div class="form-group">
+                                    <label >City</label>
+                                    <input type="text" name="u_city" class="form-control" placeholder="Enter city"
+                                           required="required">
+                                </div>
+                                <div class="form-group">
+                                    <label >State</label>
+                                    <input type="text" name="u_state" class="form-control" placeholder="Enter state"
+                                           required="required">
+                                </div>
+                                <div class="form-group">
+                                    <label >Postal Code</label>
+                                    <input type="number" name="u_zip" class="form-control" placeholder="Enter postal code (only numbers)"
+                                           required="required">
+                                </div>
+                                <div class="form-group">
+                                    <label >Phone</label>
+                                    <input type="number" name="u_phone" class="form-control" placeholder="Enter phone (only numbers)">
+                                </div>
+                                <div class="form-group">
+                                    <label >Email</label>
+                                    <input type="email" name="u_email" class="form-control" placeholder="Enter email">
+                                </div>
+                                <div class="form-group">
+                                    <label >Website</label>
+                                    <input type="url" name="u_website" class="form-control" placeholder="Enter website">
+                                </div>
+                                <div class="form-group">
+                                    <label >Sector</label>
+                                    <select id="u_type" name="u_type">
+                                        <option style="display:none;"></option>
+                                        <option value="Option 1">Option 1</option>
+                                        <option value="Option 2">Option 2</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label >Unit size</label>
+                                    <select id="u_size" name="u_size">
+                                        <option style="display:none;"></option>
+                                        <option value="Option 1">Option 1</option>
+                                        <option value="Option 2">Option 2</option>
+                                    </select>
+                                </div>
+                                <div class="modal-footer justify-content-between">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save</button>
+                                </div>
                             </div>
                         </div>
                         <!-- /.modal-content -->

@@ -97,7 +97,12 @@
                     <!-- Add icons to the links using the .nav-icon class
                          with font-awesome or any other icon font library -->
 
-                    <li class="nav-header">MAIN</li>
+                    <?php if (($isManager == false) and ($isAdmin == false)) {?>
+                        <li class="nav-header"><?= strtoupper($user->company);?></li>
+                    <?php }else{ ?>
+                        <li class="nav-header">COMPANY OVERVIEW</li>
+                    <?php } ?>
+
                     <!-- Dashboard link -->
                     <li class="nav-item">
                         <a href="<?= base_url("dashboard/home"); ?>" class="nav-link active">

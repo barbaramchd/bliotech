@@ -97,10 +97,10 @@
                     <!-- Add icons to the links using the .nav-icon class
                          with font-awesome or any other icon font library -->
 
-                    <?php if (($isManager == false) and ($isAdmin == false)) {?>
+                    <?php if (($isManager == false) and ($isAdmin == false) and ($user->company != "")) {?>
                         <li class="nav-header"><?= strtoupper($user->company);?></li>
                     <?php }else{ ?>
-                        <li class="nav-header">COMPANY OVERVIEW</li>
+                        <li class="nav-header">COMPANY</li>
                     <?php } ?>
 
                     <!-- Dashboard link -->

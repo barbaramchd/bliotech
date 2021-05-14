@@ -7,6 +7,8 @@ use App\Models\UnitUsersModel;
 use App\Models\UnitDistModel;
 use App\Models\DistrictModel;
 
+const BLIO_TITLE = " | Blio Tech | Button - Manager Dashboard";
+
 
 class Dashboard extends BaseController
 {
@@ -24,7 +26,7 @@ class Dashboard extends BaseController
         # Displayed in on the begining of the page
         $DATA["page_header"] = $DATA["current_menu"]; # Comment if you want to define your own page title
         # Name of the tab in browser
-        $DATA["page_title"] = $DATA["current_menu"]; # Comment if you want to define your own page title
+        $DATA["page_title"] = $DATA["current_menu"].BLIO_TITLE;
 
 
         # Displaying Header
@@ -43,7 +45,7 @@ class Dashboard extends BaseController
         # Displayed in on the begining of the page
         $DATA["page_header"] = $DATA["current_menu"]; # Comment if you want to define your own page title
         # Name of the tab in browser
-        $DATA["page_title"] = $DATA["current_menu"]; # Comment if you want to define your own page title
+        $DATA["page_title"] = $DATA["current_menu"].BLIO_TITLE;
 
         # Displaying Header
         echo view("dashboard/header", $DATA);
@@ -90,7 +92,7 @@ class Dashboard extends BaseController
         # Displayed in on the begining of the page
         $DATA["page_header"] = "Unit ".$unit_id;
         # Name of the tab in browser
-        $DATA["page_title"] = $DATA["page_header"]; # Comment if you want to define your own page title
+        $DATA["page_title"] = $DATA["page_header"].BLIO_TITLE;
 
         # Displaying Header
         echo view("dashboard/header", $DATA);
@@ -107,7 +109,7 @@ class Dashboard extends BaseController
         # Displayed in on the begining of the page
         $DATA["page_header"] = "All Units";
         # Name of the tab in browser
-        $DATA["page_title"] = $DATA["page_header"]; # Comment if you want to define your own page title
+        $DATA["page_title"] = $DATA["page_header"] .BLIO_TITLE;
 
         # Displaying Header
         echo view("dashboard/header", $DATA);
@@ -124,7 +126,7 @@ class Dashboard extends BaseController
         # Displayed in on the begining of the page
         $DATA["page_header"] = "Account Settings";
         # Name of the tab in browser
-        $DATA["page_title"] = $DATA["page_header"]; # Comment if you want to define your own page title
+        $DATA["page_title"] = $DATA["page_header"].BLIO_TITLE;
 
         # Displaying Header
         echo view("dashboard/header", $DATA);

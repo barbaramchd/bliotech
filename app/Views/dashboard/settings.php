@@ -1,7 +1,3 @@
-<!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
-    <div class="content-header"></div>
-
     <section class="col-lg-12 col-12 connectedSortable">
 
         <!-- Unit List -->

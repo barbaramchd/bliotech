@@ -1,8 +1,3 @@
-<!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
-    <div class="content-header"></div>
-
-    <!-- Main content -->
     <section class="content">
         <div class="container-fluid">
             <!-- Main row -->

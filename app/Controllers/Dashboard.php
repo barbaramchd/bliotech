@@ -71,7 +71,7 @@ class Dashboard extends BaseController
             }
         }else{
             # IF current user is worker
-            # TODO redirect to single unit
+            # redirect to single unit
             # Find which unit is associated with the worker from user_units table
             $unit_user = new UnitUsersModel();
             //var_dump($DATA["user"]);

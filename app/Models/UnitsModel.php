@@ -12,7 +12,10 @@ class UnitsModel extends Model
     protected $useTimestamps = true;
     protected $createdField  = 'u_created_at';
     protected $updatedField  = 'u_updated_at';
+    protected $primaryKey = 'u_id';
+    protected $deletedField  = 'u_deleted_at';
 
-    
+
+
 
 }

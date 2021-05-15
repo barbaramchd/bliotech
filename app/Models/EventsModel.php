@@ -11,6 +11,8 @@ class EventsModel extends Model
     protected $useTimestamps = true;
     protected $createdField  = 'e_created_at';
     protected $updatedField  = 'e_updated_at';
+    protected $deletedField  = 'e_deleted_at';
+    protected $primaryKey = 'e_id';
 
 
 }

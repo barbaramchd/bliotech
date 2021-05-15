@@ -12,6 +12,7 @@ class DevicesModel extends Model
     protected $useTimestamps = true;
     protected $createdField  = 'd_created_at';
     protected $updatedField  = 'd_updated_at';
+    protected $primaryKey = 'd_id';
 
     public function getDevice($device_id)
     {

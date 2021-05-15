@@ -29,4 +29,10 @@ class UnitDistModel extends Model
             ->findAll();
     }
 
+    public function getActiveCount($district_id){
+        return $this->where(['district_id' => $district_id])
+            ->join("units", "units.u_id = unit_districts.unit_id")
+            ->where(['u_active' => 1])
+            ->countAllResults();
+    }
 }

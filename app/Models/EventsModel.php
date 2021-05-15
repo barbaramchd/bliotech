@@ -14,5 +14,13 @@ class EventsModel extends Model
     protected $deletedField  = 'e_deleted_at';
     protected $primaryKey = 'e_id';
 
+    public function getLatestByDevice($device){
+
+        return $this->asArray()
+            ->where(['e_device_id' => $device])
+            ->orderBy("e_created_at","DESC")
+            ->first();
+    }
+
 
 }

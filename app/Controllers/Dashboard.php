@@ -60,9 +60,10 @@ class Dashboard extends BaseController
                 # Get all Units from given District
                 $unit_districts = new UnitDistModel();
 
-                # Add data to $DATA
+                # Add data for dashbaord to $DATA
+                #var_dump($district);
                 $DATA["events"] = $unit_districts->getEventsFromDistrict($district["id"]);
-                //var_dump($DATA["events"]);
+                $DATA["restaurants_no"] = $unit_districts->getActiveCount($district["id"]);
 
                 echo view("dashboard/home", $DATA);
             }else{

@@ -27,17 +27,17 @@
                                                required="required">
                                     </div>
                                     <div class="form-group">
-                                        <label>Address 1</label>
-                                        <input type="text" name="u_address1" class="form-control"
-                                               placeholder="Enter address"
-                                               required="required">
+                                        <label>Company</label>
+                                        <input type="text" name="u_company" class="form-control"
+                                               placeholder="Enter company">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Company</label>
-                                        <input type="text" name="u_company" class="form-control"
-                                               placeholder="Enter company">
+                                        <label>Address 1</label>
+                                        <input type="text" name="u_address1" class="form-control"
+                                               placeholder="Enter address"
+                                               required="required">
                                     </div>
                                     <div class="form-group">
                                         <label>Address 2</label>
@@ -45,11 +45,10 @@
                                                placeholder="Enter address">
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-4">
                                     <div class="form-group">
-                                        <label>Postal Code</label>
-                                        <input type="text" pattern="[0-9]*" name="u_zip" class="form-control"
-                                               placeholder="Enter postal code (only numbers)"
+                                        <label>City</label>
+                                        <input type="text" name="u_city" class="form-control" placeholder="Enter city"
                                                required="required">
                                     </div>
                                 </div>
@@ -67,6 +66,14 @@
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
+                                        <label>Postal Code</label>
+                                        <input type="text" pattern="[0-9]*" name="u_zip" class="form-control"
+                                               placeholder="Enter postal code (only numbers)"
+                                               required="required">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
                                         <label>Phone</label>
                                         <input type="text" pattern="[0-9]*" name="u_phone" class="form-control"
                                                placeholder="Enter phone (only numbers)">
@@ -77,13 +84,6 @@
                                         <label>Email</label>
                                         <input type="email" name="u_email" class="form-control"
                                                placeholder="Enter email">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label>City</label>
-                                        <input type="text" name="u_city" class="form-control" placeholder="Enter city"
-                                               required="required">
                                     </div>
                                 </div>
                                 <div class="col-md-4">

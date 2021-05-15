@@ -1,48 +1,62 @@
 $(function() {
 
+    $.validator.setDefaults({
+        submitHandler: function () {
+            alert( "Form successful submitted!" );
+        }
+    });
+
     $("#units-form").validate({
         rules: {
             u_name: {
                 required: true,
-                maxlength: 2
+                maxlength: 255
             },
             u_address1: {
-                required: true
+                required: true,
+                maxlength: 255
             },
             u_city: {
-                required: true
+                required: true,
+                maxlength: 255
             },
             u_state: {
-                required: true
+                required: true,
+                maxlength: 50
             },
             u_zip: {
                 required: true,
-                digits: true
+                digits: true,
+                maxlength: 10
             },
             u_phone: {
                 required: false,
-                digits: true
+                digits: true,
+                maxlength: 20
             },
             u_email: {
                 required: false,
-                email: true
+                email: true,
+                maxlength: 255
             },
             u_website: {
                 required: false,
-                url: true
+                url: true,
+                maxlength: 255
             },
             u_type: {
-                required: false
+                required: false,
+                maxlength: 11
             },
             u_size: {
-                required: false
+                required: false,
+                maxlength: 11
             }
         },
 
         messages: {
             u_name: {
-                required: 'Please enter a name.',
-                maxlength: 'Please less than 2.'
+                required: 'Please enter a name.'
             },
             u_address1: {
                 required: 'Please enter an address.'
@@ -72,6 +86,18 @@ $(function() {
             u_size: {
                 required: 'Please select size range.'
             }
+        },
+
+        errorElement: 'span',
+        errorPlacement: function (error, element) {
+            error.addClass('invalid-feedback');
+            element.closest('.form-group').append(error);
+        },
+        highlight: function (element, errorClass, validClass) {
+            $(element).addClass('is-invalid');
+        },
+        unhighlight: function (element, errorClass, validClass) {
+            $(element).removeClass('is-invalid');
         }
 
     });

@@ -61,9 +61,9 @@
                                             <select class="form-control select2 select2-hidden-accessible"
                                                     style="width: 100%;"
                                                     data-select2-id="1" tabindex="-1" aria-hidden="true"
-                                                    id="u_state" name="u_state">
-                                                <option selected="selected"> --Select--</option>
-                                                <option data-select2-id="115">Option 1</option>
+                                                    id="u_state" name="u_state" required>
+                                                <option selected="selected" value=""> --Select--</option>
+                                                <option data-select2-id="115" value="option1">Option 1</option>
                                             </select>
                                         </div>
                                     </div>
@@ -105,8 +105,8 @@
                                                     style="width: 100%;"
                                                     data-select2-id="1" tabindex="-1" aria-hidden="true"
                                                     id="u_type" name="u_type">
-                                                <option selected="selected"> --Select--</option>
-                                                <option data-select2-id="105">Alaska</option>
+                                                <option selected="selected" value=""> --Select--</option>
+                                                <option data-select2-id="105"value="Alaska">Alaska</option>
                                                 <option data-select2-id="106">California</option>
                                                 <option data-select2-id="107">Delaware</option>
                                                 <option data-select2-id="108">Tennessee</option>
@@ -122,7 +122,7 @@
                                                     style="width: 100%;"
                                                     data-select2-id="1" tabindex="-1" aria-hidden="true"
                                                     id="u_size" name="u_size">
-                                                <option selected="selected"> --Select--</option>
+                                                <option selected="selected" value=""> --Select--</option>
                                                 <option data-select2-id="115">Option 1</option>
                                             </select>
                                         </div>

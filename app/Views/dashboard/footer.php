@@ -56,6 +56,6 @@
 <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.2/additional-methods.js"></script>
 <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.2/additional-methods.min.js"></script>
 <!-- Validation.js file path -->
-<script src="/assets/js/validation.js"></script>
+<script src="<?= base_url(); ?>/assets/js/validation.js"></script>
 </body>
 </html>

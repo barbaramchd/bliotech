@@ -44,10 +44,6 @@ $(function() {
                 url: true,
                 maxlength: 255
             },
-            u_type: {
-                required: false,
-                maxlength: 11
-            },
             u_size: {
                 required: false,
                 maxlength: 11
@@ -79,9 +75,6 @@ $(function() {
             },
             u_website: {
                 url: 'Please enter a <em>valid</em> URL.'
-            },
-            u_type: {
-                required: 'Please select sector.'
             },
             u_size: {
                 required: 'Please select size range.'

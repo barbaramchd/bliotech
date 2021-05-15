@@ -1,7 +1,5 @@
 $(function() {
 
-    $.validator.addMethod('')
-
     $("#units-form").validate({
         rules: {
             u_name: {

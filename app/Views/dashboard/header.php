@@ -168,8 +168,9 @@
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Manager</a></li>
-                            <li class="breadcrumb-item active">Dashboard</li>
+                            <li class="breadcrumb-item"><?= $isAdmin?"Admin":($isManager?"Manager":"Employee");?></li>
+                            <li class="breadcrumb-item"><?=$current_menu;?></li>
+                            <li class="breadcrumb-item active"><?=$page_header;?></li>
                         </ol>
                     </div>
                 </div>

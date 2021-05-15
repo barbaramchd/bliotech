@@ -2,7 +2,7 @@ $(function() {
 
     $.validator.setDefaults({
         submitHandler: function () {
-            alert( "Form successful submitted!" );
+            alert( "Form successfully submitted!" );
         }
     });
 
@@ -78,6 +78,57 @@ $(function() {
             },
             u_size: {
                 required: 'Please select size range.'
+            }
+        },
+
+        errorElement: 'span',
+        errorPlacement: function (error, element) {
+            error.addClass('invalid-feedback');
+            element.closest('.form-group').append(error);
+        },
+        highlight: function (element, errorClass, validClass) {
+            $(element).addClass('is-invalid');
+        },
+        unhighlight: function (element, errorClass, validClass) {
+            $(element).removeClass('is-invalid');
+        }
+
+    });
+
+    $("#accounts-form").validate({
+        rules: {
+            first_name: {
+                required: true,
+                maxlength: 50
+            },
+            last_name: {
+                required: true,
+                maxlength: 50
+            },
+            email: {
+                required: true,
+                maxlength: 254
+            },
+            phone: {
+                required: false,
+                digits: true,
+                maxlength: 20
+            }
+        },
+
+        messages: {
+            first_name: {
+                required: 'Please enter first name.'
+            },
+            last_name: {
+                required: 'Please enter last name.'
+            },
+            email: {
+                required: 'Please enter email.',
+                email: 'Please enter a <em>valid</em> email address.'
+            },
+            u_phone: {
+                digits: 'Please enter digits only.'
             }
         },
 

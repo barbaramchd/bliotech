@@ -50,9 +50,12 @@
 <script src="<?= base_url(); ?>/assets/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="<?= base_url(); ?>/assets/js/pages/dashboard.js"></script>
+<!-- jQuery Validation CND -->
 <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.2/jquery.validate.js"></script>
 <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.2/jquery.validate.min.js"></script>
 <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.2/additional-methods.js"></script>
 <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.2/additional-methods.min.js"></script>
+<!-- Validation.js file path -->
+<script src="/assets/js/validation.js"></script>
 </body>
 </html>

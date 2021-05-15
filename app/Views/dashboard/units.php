@@ -174,7 +174,12 @@
                                 </div>
                                 <div class="modal-footer justify-content-between">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    <input type="submit" class="btn btn-primary" id="save-unit-button" value="Save"></input>
+                                    <input type="submit" class="btn btn-primary float-right"
+                                           id="save-unit-button" value="Save"></input>
+                                </div>
+                                <div class="float-right">
+                                    <a href="<?= base_url(); ?>/dashboard/accounts">Click here to add employer to this
+                                        unit</a>
                                 </div>
                             </div>
                         </div>

@@ -47,13 +47,17 @@
                                                    placeholder="Enter phone (only digits)">
                                         </div>
                                         <div class="form-group">
-                                            <!-- TODO: Add options to the works at -->
+
                                             <label>Works at:</label>
                                             <select class="form-control select2 select2-hidden-accessible"
                                                     style="width: 100%;"
                                                     data-select2-id="1" tabindex="-1" aria-hidden="true"
                                                     id="user_unit" name="user_unit" required>
                                                 <option selected="selected" value="">Choose</option>
+                                                <?php foreach ($units_all as $unit){?>
+                                                    <option selected="selected" value="<?= $unit["u_id"];?>"><?= $unit["u_name"];?></option>
+
+                                                <?php }?>
                                             </select>
                                         </div>
                                     </div>

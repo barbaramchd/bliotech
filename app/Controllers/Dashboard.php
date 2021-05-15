@@ -108,6 +108,7 @@ class Dashboard extends BaseController
         # Name of the tab in browser
         $DATA["page_title"] = $DATA["page_header"].BLIO_TITLE;
 
+
         # Displaying Header
         echo view("dashboard/header", $DATA);
         echo view("dashboard/unit", $DATA);
@@ -124,6 +125,16 @@ class Dashboard extends BaseController
         $DATA["page_header"] = "All Units";
         # Name of the tab in browser
         $DATA["page_title"] = $DATA["page_header"] .BLIO_TITLE;
+
+        # Find a District of a Manager
+        $districts = new DistrictModel();
+        $ud   = new UnitDistModel();
+        $district = $districts->getDistrictByUser($DATA["user"]->id);
+
+        # Get all units associated with the district
+        $units = $ud->getUnitsFromDistrict($district["id"]);
+        $DATA["units_all"] = $units;
+
 
 
         # Displaying Header

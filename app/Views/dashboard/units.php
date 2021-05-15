@@ -116,7 +116,6 @@
                                                 <option value="VA">VA</option>
                                                 <option value="VI">VI</option>
                                                 <option value="WA">WA</option>
-                                                <option value="WASHINGTON_DC">Washington, D.C.</option>
                                                 <option value="WV">WV</option>
                                                 <option value="WI">WI</option>
                                                 <option value="WY">WY</option>
@@ -212,23 +211,23 @@
                 </tr>
                 </thead>
                 <tbody>
-                <?php //foreach($units as $unit){ ?>
+                <?php foreach($units_all as $unit){ ?>
                 <tr>
-                    <td><?= ""; //$unit["id"];            ?></td>
-                    <td><?= ""; //$unit["name"];          ?></td>
-                    <td><?= ""; //$unit["address1"];          ?></td>
-                    <td><?= "";// $unit["city"];          ?></td>
-                    <td>CA</td>
-                    <td>Names</td>
-                    <td>4444444444</td>
-                    <td>email@gmail.com</td>
+                    <td><?= $unit["u_id"]; ?></td>
+                    <td><?= $unit["u_name"]; ?></td>
+                    <td><?= $unit["u_address1"];?></td>
+                    <td><?= $unit["u_city"]; ?></td>
+                    <td><?= $unit["u_state"]; ?></td>
+                    <td>TODO</td>
+                    <td><?= $unit["u_phone"]; ?></td>
+                    <td><?= $unit["u_email"]; ?></td>
                     <td>
                         <a href="#" class="text-muted">
                             <i class="fas fa-edit"></i>
                         </a>
                     </td>
                 </tr>
-                <?php // } ?>
+                <?php } ?>
                 </tbody>
             </table>
         </div>

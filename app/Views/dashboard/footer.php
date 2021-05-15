@@ -45,11 +45,11 @@
 <!-- overlayScrollbars -->
 <script src="<?= base_url(); ?>/assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
-<script src="<?= base_url(); ?>/assets/js/adminlte.js"></script>
+<script src="<?= base_url(); ?>/assets/js/main.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?= base_url(); ?>/assets/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="<?= base_url(); ?>/assets/js/pages/dashboard.js"></script>
+<script src="<?= base_url(); ?>/assets/js/dashboard.js"></script>
 <!-- jQuery Validation CND -->
 <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.2/jquery.validate.js"></script>
 <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.2/jquery.validate.min.js"></script>

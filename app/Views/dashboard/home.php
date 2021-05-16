@@ -12,7 +12,7 @@
                             <!-- Total Restaurant -->
                             <div class="small-box bg-info">
                                 <div class="inner">
-                                    <h3>150</h3>
+                                    <h3><?= $restaurants_no;?></h3>
                                     <p>Restaurants</p>
                                 </div>
                                 <div class="icon">

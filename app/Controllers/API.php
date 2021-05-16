@@ -51,14 +51,16 @@ class API extends BaseController
                     }
                 }
                 $clicks = new ClicksModel();
-
+                $counter = $clicks->getClickCount(isset($event_id)?$event_id:$latest["e_id"])+1;
                 $click_data = [
                     "c_device" => $device["d_id"],
                     "c_event"  => isset($event_id)?$event_id:$latest["e_id"]
                 ];
                 $clicks->insert($click_data);
 
-                $message = "Button ".$device["d_name"]." has just been pressed. Reply FIXED to (415) 306-8588 after resolving the issue.";
+
+                $message = "Button ".$device["d_name"]." has just been pressed".($counter!=1?"(".$counter."x)":"").". Reply FIXED to (415) 306-8588 after resolving the issue.";
+
 
                 $this->send_sms("+".$device["d_notification_phone"], $message);
 

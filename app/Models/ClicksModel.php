@@ -13,5 +13,9 @@ class ClicksModel extends Model
     protected $updatedField  = 'c_updated_at';
     protected $primaryKey = 'c_id';
 
+    public function getClickCount($event_id){
+        return $this->where(['c_event' => $event_id])
+            ->countAllResults();
+    }
 
 }

@@ -17,7 +17,18 @@ class EventsModel extends Model
     public function getLatestByDevice($device_id){
         return $this->asArray()
             ->where(['e_device_id' => $device_id])
+            ->where(["e_type"=> 1])
             ->orderBy("e_created_at","DESC")
+            ->first();
+    }
+
+    public function getLatestByPhone($phone){
+        return $this->asArray()
+            ->join("devices","devices.d_id = events.e_device_id")
+            ->join("clicks","devices.d_id = clicks.c_device")
+            ->where(['d_notification_phone' => $phone])
+            ->where(["e_type"=> 1])
+            ->orderBy("c_created_at","DESC")
             ->first();
     }
 

@@ -9,7 +9,8 @@ class ClicksModel extends Model
     protected $table = 'clicks';
     protected $allowedFields = ['c_device', 'c_event'];
     protected $useTimestamps = true;
-    protected $createdField  = 'e_created_at';
+    protected $createdField  = 'c_created_at';
+    protected $updatedField  = 'c_updated_at';
     protected $primaryKey = 'c_id';
 
 

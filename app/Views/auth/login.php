@@ -63,7 +63,7 @@
             <!-- /.social-auth-links -->
 
             <p class="mb-1">
-                <a href="<?=base_url(); ?>/auth/forget_password">I forgot my password</a>
+                <a href="<?=base_url(); ?>/auth/forgot_password">I forgot my password</a>
             </p>
             <p class="mb-0"> <!-- TODO: registration page -->
                 <a href="<?=base_url("Home/register"); ?>" class="text-center">Registers a business</a>

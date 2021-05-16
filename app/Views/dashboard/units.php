@@ -37,7 +37,7 @@
             <!-- Add Unit Modal -->
 
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-xl">
+            <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#modal-xl">
                 Add new unit
             </button>
             <div class="modal fade" id="modal-xl" style="display: none;" aria-hidden="true">

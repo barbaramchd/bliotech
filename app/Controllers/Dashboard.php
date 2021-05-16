@@ -36,6 +36,10 @@ class Dashboard extends BaseController
         $ud   = new UnitDistModel();
         $district = $districts->getDistrictByUser($DATA["user"]->id);
 
+        # Get all accounts associated with the district
+        $users = $ud->getUsersFromDistrict($district["id"]);
+        $DATA["accounts_all"] = $users;
+
         # Get all units associated with the district
         $units = $ud->getUnitsFromDistrict($district["id"]);
         $DATA["units_all"] = $units;

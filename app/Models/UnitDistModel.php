@@ -10,18 +10,29 @@ class UnitDistModel extends Model
     protected $allowedFields = ['unit_id', 'district_id'];
     protected $useTimestamps = false;
 
-    public function getUnitsFromDistrict($distict_id)
+    public function getUnitsFromDistrict($district_id)
     {
         return $this->asArray()
-            ->where(['district_id' => $distict_id])
+            ->where(['district_id' => $district_id])
             ->join("units", "units.u_id = unit_districts.unit_id")
             ->findAll();
     }
 
-    public function getEventsFromDistrict($distict_id)
+    public function getUsersFromDistrict($district_id){
+
+        return $this->asArray()
+            ->where(['district_id' => $district_id])
+            ->join("units", "units.u_id = unit_districts.unit_id")
+            ->join("unit_users", "units.u_id = unit_users.unit_id")
+            ->join("users","users.id = unit_users.user_id")
+            ->findAll();
+
+    }
+
+    public function getEventsFromDistrict($district_id)
     {
         return $this->asArray()
-            ->where(['district_id' => $distict_id])
+            ->where(['district_id' => $district_id])
             ->join("units", "units.u_id = unit_districts.unit_id")
             ->join("unit_devices", "unit_devices.unit_id = units.u_id")
             ->join("devices", "devices.d_id = unit_devices.device_id")
@@ -29,10 +40,10 @@ class UnitDistModel extends Model
             ->findAll();
     }
 
-    public function getUniqueEventsFromDistrict($distict_id)
+    public function getUniqueEventsFromDistrict($district_id)
     {
         return $this->asArray()
-            ->where(['district_id' => $distict_id])
+            ->where(['district_id' => $district_id])
             ->join("units", "units.u_id = unit_districts.unit_id")
             ->join("unit_devices", "unit_devices.unit_id = units.u_id")
             ->join("devices", "devices.d_id = unit_devices.device_id")

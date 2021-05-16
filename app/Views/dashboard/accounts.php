@@ -91,7 +91,7 @@
                     <th>#</th>
                     <th>Employee</th>
                     <th>Email</th>
-                    <th>Restaurant</th>
+                    <th>Unit</th>
                     <th>Role</th>
                     <th>Actions</th>
                 </tr>
@@ -99,43 +99,35 @@
                 <tbody>
                 <tr>
                     <td>1</td>
-                    <td>Marc Jones</td>
-                    <td>marc@mcdonalds.com</td>
-                    <td>McDonalds Link</td>
+                    <td><?= $user->first_name;?> <?= $user->last_name;?> <small>(you)</small></td>
+                    <td><?= $user->email;?></td>
+                    <td>-</td>
                     <td>Manager</td>
                     <td>
                         <a href="#" class="text-muted">
                             <i class="fas fa-edit"></i>
-                            <i class="fas fa-trash"></i>
                         </a>
                     </td>
                 </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Marc Jones</td>
-                    <td>marc@mcdonalds.com</td>
-                    <td>McDonalds Link</td>
-                    <td>Manager</td>
-                    <td>
-                        <a href="#" class="text-muted">
-                            <i class="fas fa-edit"></i>
-                            <i class="fas fa-trash"></i>
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Marc Jones</td>
-                    <td>marc@mcdonalds.com</td>
-                    <td>McDonalds Link</td>
-                    <td>Manager</td>
-                    <td>
-                        <a href="#" class="text-muted">
-                            <i class="fas fa-edit"></i>
-                            <i class="fas fa-trash"></i>
-                        </a>
-                    </td>
-                </tr>
+                <?php $counter = 1;
+                foreach ($accounts_all as $account) {
+                    $counter ++; ?>
+                    <tr>
+                        <td><?=$counter;?></td>
+                        <td><?=$account["first_name"];?> <?=$account["last_name"];?></td>
+                        <td><?=$account["email"];?></td>
+                        <td><?=$account["u_name"];?></td>
+                        <td>Employee</td>
+                        <td>
+                            <a href="#" class="text-muted">
+                                <i class="fas fa-edit"></i>
+                                <i class="fas fa-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+                <?php }?>
+
+
                 </tbody>
             </table>
         </div>

@@ -247,9 +247,12 @@
                 </tr>
                 </thead>
                 <tbody>
-                <?php foreach($units_all as $unit){ ?>
+                <?php
+                $counter = 0;
+                foreach($units_all as $unit){
+                    $counter++;?>
                 <tr>
-                    <td><?= $unit["u_id"]; ?></td>
+                    <td><?=$counter;?><!--<?= $unit["u_id"]; ?>--></td>
                     <td><?= $unit["u_name"]; ?></td>
                     <td><?= $unit["u_address1"];?></td>
                     <td><?= $unit["u_city"]; ?></td>

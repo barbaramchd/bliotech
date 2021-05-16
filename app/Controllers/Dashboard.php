@@ -6,6 +6,7 @@ use App\Models\UnitsModel;
 use App\Models\UnitUsersModel;
 use App\Models\UnitDistModel;
 use App\Models\DistrictModel;
+use App\Models\ClicksModel;
 
 const BLIO_TITLE = " | Blio Tech | Button - Manager Dashboard";
 
@@ -86,6 +87,9 @@ class Dashboard extends BaseController
                 $DATA["overdue_no"] = $unit_districts->getOverdueCount($district["id"]);
                 $DATA["solved_no"] = $unit_districts->getSolvedCount($district["id"]);
                 //$DATA["solved_count"] = $DATA["restaurants_no"] - $DATA["needs_attention_no"] - $DATA["overdue_no"];
+
+                # Click counter Not the best solution, but works for now. TODO: make better solution
+                $DATA["clicks_model"] = new ClicksModel();
 
                 echo view("dashboard/home", $DATA);
             }else{

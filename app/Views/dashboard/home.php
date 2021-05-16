@@ -131,7 +131,8 @@
                                     <th>#</th>
                                     <th>Restaurant</th>
                                     <th>Device</th>
-                                    <th>Current Status</th>
+                                    <th>Status</th>
+                                    <th>Clicks</th>
                                     <th>Time</th>
                                     <th>Details</th>
                                 </tr>
@@ -162,6 +163,7 @@
                                                     <?php break;
                                             } ?>
                                         </td>
+                                        <td><?= $clicks_model->getClickCount($event["e_id"]); ?></td>
                                         <td><?= $event["e_created_at"]; ?></td>
                                         <td >
                                             <a href="#" class="text-muted">

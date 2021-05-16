@@ -137,9 +137,12 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <?php foreach ($events as $event) { ?>
+                                <?php
+                                $counter = 0;
+                                foreach ($events as $event) {
+                                    $counter++;?>
                                     <tr>
-                                        <td><?= $event["u_id"]; ?></td>
+                                        <td><?= $counter ?></td>
                                         <td><?= $event["u_name"]; ?></td>
                                         <td><?= $event["d_name"]; ?></td>
                                         <td>

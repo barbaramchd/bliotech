@@ -66,7 +66,7 @@
                 <a href="<?=base_url(); ?>/auth/forget_password">I forgot my password</a>
             </p>
             <p class="mb-0"> <!-- TODO: registration page -->
-                <a href="<?=base_url(); ?>" class="text-center">Register a new membership</a>
+                <a href="<?=base_url("Home/register"); ?>" class="text-center">Registers a business</a>
             </p>
         </div>
         <!-- /.login-card-body -->

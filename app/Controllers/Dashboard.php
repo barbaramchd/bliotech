@@ -29,7 +29,7 @@ class Dashboard extends BaseController
         $DATA["page_title"] = $DATA["current_menu"].BLIO_TITLE;
 
         if ($DATA["isManager"] == false){
-            redirect("Dashboard/home");
+            return redirect()->to('/Dashboard/home');
         }
         # Find a District of a Manager
         $districts = new DistrictModel();
@@ -134,13 +134,13 @@ class Dashboard extends BaseController
         # Find a District of a Manager
         $districts = new DistrictModel();
         $ud   = new UnitDistModel();
+        $session = \Config\Services::session();
         $district = $districts->getDistrictByUser($DATA["user"]->id);
 
         # Get all units associated with the district
         $units = $ud->getUnitsFromDistrict($district["id"]);
         $DATA["units_all"] = $units;
-
-
+        $DATA["flashdata"] = $session->getFlashdata();
 
         # Displaying Header
         echo view("dashboard/header", $DATA);

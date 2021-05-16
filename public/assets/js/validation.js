@@ -1,9 +1,10 @@
 $(function() {
 
     $.validator.setDefaults({
-        submitHandler: function () {
-            alert( "Form successfully submitted!" );
-        }
+        // TODO Uncomment for AJAX
+        // submitHandler: function () {
+        //    alert( "Form successfully submitted!" );
+        //}
     });
 
     $("#units-form").validate({

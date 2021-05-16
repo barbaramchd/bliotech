@@ -1,5 +1,36 @@
 <section class="content">
     <div class="container-fluid">
+
+        <?php if (isset($flashdata)){?>
+            <!-- Showing alerts if needed -->
+            <div class="row">
+                <?php if (isset($flashdata["operation_action"])){
+                    if($flashdata["operation_action"] == "show_alert_success"){?>
+                        <div class="callout callout-success">
+                            <h5>Unit was successfully created!</h5>
+
+                            <p>To open unit unit, add users and button, click on the "Manage" button.<br>
+                                <a href="<?=base_url("dashboard/unit/".$flashdata["operation_id"]);?>" class="btn btn-success text-white">Manage new Unit</a>
+                            </p>
+                        </div>
+
+                        <!--
+                        <div class="alert alert-success alert-dismissible">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                            <h5><i class="icon fas fa-check"></i> Success!</h5>
+                            Unit was successfully created! To open unit unit, add users and button, click on the "Manage" button.
+                            <a href="<?=base_url("dashboard/unit/".$flashdata["operation_id"]);?>" class="btn btn-warning">Manage</a>
+                        </div>-->
+                <?php }else{?>
+                        <div class="alert alert-<?= $flashdata["operation_result"];?> alert-dismissible">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                            <h5><i class="icon fas fa-check"></i> Warning!</h5>
+                            <?= $flashdata["operation_content"];?>
+                        </div>
+                <?php }}?>
+            </div>
+        <?php } ?>
+
         <!-- Main row -->
         <div class="row">
             <!-- Left col -->
@@ -10,7 +41,7 @@
                 Add new unit
             </button>
             <div class="modal fade" id="modal-xl" style="display: none;" aria-hidden="true">
-                <form id="units-form">
+                <form id="units-form" method="post" action="<?=base_url("actions/add_unit");?>">
                     <div class="modal-dialog modal-xl">
                         <div class="modal-content">
                             <div class="modal-header">

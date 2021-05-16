@@ -121,6 +121,15 @@ class Dashboard extends BaseController
         # Name of the tab in browser
         $DATA["page_title"] = $DATA["page_header"].BLIO_TITLE;
 
+        # TODO: Get Data about the unit
+
+
+        # TODO: Get Data about the employees
+
+
+        # TODO: Get Data about the clicks
+
+
 
         # Displaying Header
         echo view("dashboard/header", $DATA);

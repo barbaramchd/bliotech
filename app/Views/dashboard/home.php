@@ -27,7 +27,7 @@
                             <!-- Clean Restaurants -->
                             <div class="small-box bg-success">
                                 <div class="inner">
-                                    <h3>53<sup style="font-size: 20px">%</sup></h3>
+                                    <h3><?= round(100*$solved_no/$devices_no);?><sup style="font-size: 20px">%</sup></h3>
                                     <p>Solved</p>
                                 </div>
                                 <div class="icon">
@@ -42,7 +42,7 @@
                             <!-- Attention -->
                             <div class="small-box bg-warning">
                                 <div class="inner">
-                                    <h3>44</h3>
+                                    <h3><?= $needs_attention_no?></h3>
                                     <p>Needs Attention</p>
                                 </div>
                                 <div class="icon">
@@ -57,7 +57,7 @@
                             <!-- Overdue -->
                             <div class="small-box bg-danger">
                                 <div class="inner">
-                                    <h3>65</h3>
+                                    <h3><?= $overdue_no?></h3>
                                     <p>Overdue</p>
                                 </div>
                                 <div class="icon">
@@ -116,6 +116,9 @@
             <!-- /.row -->
             <!-- Main row -->
             <div class="row">
+                <div class="col-12">
+                    <h3>Recent Events</h3>
+                </div>
                 <!-- Left col -->
                 <section class="col-lg-12 col-12 connectedSortable">
 
@@ -127,8 +130,9 @@
                                 <tr>
                                     <th>#</th>
                                     <th>Restaurant</th>
-                                    <th>Representative</th>
-                                    <th>Status</th>
+                                    <th>Device</th>
+                                    <th>Current Status</th>
+                                    <th>Time</th>
                                     <th>Details</th>
                                 </tr>
                                 </thead>
@@ -137,25 +141,28 @@
                                     <tr>
                                         <td><?= $event["u_id"]; ?></td>
                                         <td><?= $event["u_name"]; ?></td>
-                                        <td>TODO</td>
+                                        <td><?= $event["d_name"]; ?></td>
                                         <td>
-                                            <?= $event["e_created_at"]; ?>
-
                                             <?php switch ($event["e_type"]) {
-                                                case 1: ?>
-                                                    <span class="float-right badge badge-warning">Attention</span>
-                                                    <?php break;
+                                                case 1:
+                                                    if(time() - strtotime($event["e_created_at"]) < 3*3601){?>
+                                                    <span class="float-left badge badge-warning">Attention</span>
+                                                        <?php }else{?>
+                                                        <span class="float-left badge bg-danger">Overdue</span>
+                                                    <?php }
+                                                        break;
                                                 case 2: ?>
-                                                    <span class="float-right badge bg-success">Solved</span>
+                                                    <span class="float-left badge bg-success">Solved</span>
                                                     <?php break;
                                                 case 3: ?>
-                                                    <span class="float-right badge bg-danger">842</span>
+                                                    <span class="float-left badge bg-info">Unknown</span>
                                                     <?php break;
                                             } ?>
                                         </td>
-                                        <td>
+                                        <td><?= $event["e_created_at"]; ?></td>
+                                        <td >
                                             <a href="#" class="text-muted">
-                                                <i class="fas fa-search"></i>
+                                                <center><i class="fas  fa-search"></i></center>
                                             </a>
                                         </td>
                                     </tr>

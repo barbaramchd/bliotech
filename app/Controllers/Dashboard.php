@@ -75,8 +75,13 @@ class Dashboard extends BaseController
 
                 # Add data for dashbaord to $DATA
                 #var_dump($district);
-                $DATA["events"] = $unit_districts->getEventsFromDistrict($district["id"]);
+                $DATA["events"] = $unit_districts->getUniqueEventsFromDistrict($district["id"]);
                 $DATA["restaurants_no"] = $unit_districts->getActiveCount($district["id"]);
+                $DATA["devices_no"] = $unit_districts->getAllEventsCount($district["id"]);
+                $DATA["needs_attention_no"] = $unit_districts->getAttentionCount($district["id"]);
+                $DATA["overdue_no"] = $unit_districts->getOverdueCount($district["id"]);
+                $DATA["solved_no"] = $unit_districts->getSolvedCount($district["id"]);
+                //$DATA["solved_count"] = $DATA["restaurants_no"] - $DATA["needs_attention_no"] - $DATA["overdue_no"];
 
                 echo view("dashboard/home", $DATA);
             }else{

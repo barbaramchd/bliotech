@@ -146,13 +146,13 @@
                         </a>
                     </li>
 
-                    <!-- Test Link -->
+                    <!-- Test Link
                     <li class="nav-item">
                         <a href="<?= base_url("dashboard/unit"); ?>" class="nav-link <?=$current_menu=="Units"?"active":"";?>">
                             <i class="fas fa-sign-out-alt"></i>
                             <p>Test</p>
                         </a>
-                    </li>
+                    </li>-->
                 </ul>
             </nav>
             <!-- /.sidebar-menu -->

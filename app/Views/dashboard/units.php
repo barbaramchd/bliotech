@@ -252,7 +252,7 @@
                 foreach($units_all as $unit){
                     $counter++;?>
                 <tr>
-                    <td><?=$counter;?><!--<?= $unit["u_id"]; ?>--></td>
+                    <td><?=$counter;?></td>
                     <td><?= $unit["u_name"]; ?></td>
                     <td><?= $unit["u_address1"];?></td>
                     <td><?= $unit["u_city"]; ?></td>
@@ -260,9 +260,15 @@
                     <td><?= $unit["u_phone"]; ?></td>
                     <td><?= $unit["u_email"]; ?></td>
                     <td>
-                        <a href="#" class="text-muted">
-                            <i class="fas fa-edit"></i>
-                        </a>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Edit">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <a href="<?=base_url("Dashboard/unit/".$unit["u_id"]);?>">
+                            <button type="button"  class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Details">
+                                 <i class="fas fa-inbox"></i>
+                            </button></a>
+                        </div>
                     </td>
                 </tr>
                 <?php } ?>

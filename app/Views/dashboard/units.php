@@ -240,7 +240,7 @@
                     <th>Address</th>
                     <th>City</th>
                     <th>State</th>
-                    <th>Employees</th>
+                    <!--<th>Employees</th>-->
                     <th>Phone</th>
                     <th>Email</th>
                     <th>Actions</th>
@@ -254,7 +254,6 @@
                     <td><?= $unit["u_address1"];?></td>
                     <td><?= $unit["u_city"]; ?></td>
                     <td><?= $unit["u_state"]; ?></td>
-                    <td>TODO</td>
                     <td><?= $unit["u_phone"]; ?></td>
                     <td><?= $unit["u_email"]; ?></td>
                     <td>

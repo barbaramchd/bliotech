@@ -141,7 +141,9 @@
                             <tbody>
                             <?php
                             $counter = 0;
-                            foreach ($events as $event) {
+                            foreach ($events
+
+                                     as $event) {
                                 $counter++; ?>
                                 <tr>
                                     <td><?= $counter ?></td>
@@ -185,9 +187,55 @@
                                                     </div>
                                                     <div class="modal-body">
                                                         <div class="row">
-                                                            <div class="col-md-4">
-                                                                <label>Device: </label>
+                                                            <div class="col-md-3">
+                                                                <label>Info: </label>
                                                                 <?= $event["d_name"]; ?>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                (<?= $clicks_model->getClickCount($event["e_id"]); ?>x)
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <?= $event["e_created_at"]; ?>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <?php switch ($event["e_type"]) {
+                                                                    case 1:
+                                                                        if (time() - strtotime($event["e_created_at"]) < 3 * 3601) {
+                                                                            ?>
+                                                                            <span class="float-left badge badge-warning">Attention</span>
+                                                                        <?php } else {
+                                                                            ?>
+                                                                            <span class="float-left badge bg-danger">Overdue</span>
+                                                                        <?php }
+                                                                        break;
+                                                                    case 2: ?>
+                                                                        <span class="float-left badge bg-success">Solved</span>
+                                                                        <label>By: </label>
+                                                                        <?php break;
+                                                                    case 3: ?>
+                                                                        <span class="float-left badge bg-info">Unknown</span>
+                                                                        <?php break;
+                                                                } ?>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <label>Note:</label>
+                                                                    <textarea class="form-control" rows="3"
+                                                                              placeholder="Enter ..."
+                                                                              spellcheck="true"></textarea>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <a class="btn btn-warning btn-sm" href="#">
+                                                                        <i class="fas fa-pencil-alt">
+                                                                        </i>
+                                                                    </a>
+                                                                    <a class="btn btn-danger btn-sm" href="#">
+                                                                        <i class="fas fa-trash">
+                                                                        </i>
+                                                                    </a>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -195,8 +243,9 @@
                                                         <button type="button" class="btn btn-default"
                                                                 data-dismiss="modal">Close
                                                         </button>
-                                                        <button type="button" class="btn btn-primary">Save changes
-                                                        </button>
+                                                        <input type="submit" class="btn btn-primary"
+                                                               value="Save" id="save-note">
+                                                        </input>
                                                     </div>
                                                 </div>
                                                 <!-- /.modal-content -->

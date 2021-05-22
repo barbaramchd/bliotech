@@ -18,8 +18,33 @@
                             <div class="icon">
                                 <i class="ion ion-android-apps"></i>
                             </div>
-                            <a href="#" class="small-box-footer">More info <i
-                                        class="fas fa-arrow-circle-right"></i></a>
+                            <a href="#" class="small-box-footer" data-toggle="modal" data-target="#modal-default">More
+                                info <i class="fas fa-arrow-circle-right"></i>
+                            </a>
+                            <div class="modal fade" id="modal-default" style="display: none;"
+                                 aria-hidden="true">
+                                <div class="modal-dialog modal-default">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Units</h4>
+                                            <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Hi</p>
+                                        </div>
+                                        <div class="modal-footer justify-content-between">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- /.modal-content -->
+                                </div>
+                                <!-- /.modal-dialog -->
+                            </div>
                         </div>
                     </div>
                     <!-- ./col -->
@@ -210,6 +235,7 @@
                                                                         break;
                                                                     case 2: ?>
                                                                         <span class="float-left badge bg-success">Solved</span>
+                                                                        <!-- TODO: personalize name of the person who changed it to solved-->
                                                                         <label>By: </label>
                                                                         <?php break;
                                                                     case 3: ?>
@@ -252,6 +278,9 @@
                                             </div>
                                             <!-- /.modal-dialog -->
                                         </div>
+                                        <a href="#" class="text-muted">
+                                            <i class="far fa-comment-alt"></i>
+                                        </a>
                                     </td>
                                 </tr>
                             <?php } ?>

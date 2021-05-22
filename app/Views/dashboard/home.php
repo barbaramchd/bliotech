@@ -254,8 +254,8 @@
                                     </td>
                                     <td><?= $clicks_model->getClickCount($event["e_id"]); ?>
 
-                                        <?php if ($event["e_note"] != "" ){ ?>
-                                        <i class="far fa-comment-alt "></i>
+                                        <?php if ($event["e_note"] != "") { ?>
+                                            <i class="far fa-comment-alt "></i>
                                         <?php } ?></td>
                                     <td><?= $event["e_created_at"]; ?></td>
                                     <td>
@@ -311,30 +311,18 @@
                                                             <div class="row">
                                                                 <div class="col-md-12">
                                                                     <label>Note:</label>
-                                                                    <textarea class="form-control" rows="3"
+                                                                    <textarea class="form-control"
+                                                                              id="autosave-note"
+                                                                              rows="3"
                                                                               placeholder="Enter ..."
                                                                               spellcheck="true"></textarea>
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                    <a class="btn btn-warning btn-sm" href="#">
-                                                                        <i class="fas fa-pencil-alt">
-                                                                        </i>
-                                                                    </a>
-                                                                    <a class="btn btn-danger btn-sm" href="#">
-                                                                        <i class="fas fa-trash">
-                                                                        </i>
-                                                                    </a>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="modal-footer justify-content-between">
-                                                        <button type="button" class="btn btn-default"
-                                                                data-dismiss="modal">Close
-                                                        </button>
-                                                        <input type="submit" class="btn btn-primary"
-                                                               value="Save" id="save-note">
-                                                        </input>
+                                                    <div class="modal-footer float-right">
+                                                        <input type='button' id='autosave-button'
+                                                               class="btn btn-success" value='Save'>
                                                     </div>
                                                 </div>
                                                 <!-- /.modal-content -->

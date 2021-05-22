@@ -58,5 +58,6 @@
 <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.2/additional-methods.min.js"></script>
 <!-- Validation.js file path -->
 <script src="<?= base_url(); ?>/assets/js/validation.js"></script>
+<script src="<?= base_url(); ?>/assets/js/autosave.js"></script>
 </body>
 </html>

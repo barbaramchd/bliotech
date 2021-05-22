@@ -37,7 +37,7 @@ class API extends BaseController
                 # data for new event, if needed
                 $data = ["e_device_id" => $device["d_id"],
                     "e_type" => 1,
-                    "e_note" => "New click received"];
+                    "e_note" => ""];
 
 
                 // Check if latest event has been resolved

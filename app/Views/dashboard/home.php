@@ -9,7 +9,7 @@
             <div class="col-6">
                 <div class="row">
                     <div class="col-lg-6 col-12">
-                        <!-- Total Restaurant -->
+                        <!-- Total Units -->
                         <div class="small-box bg-info">
                             <div class="inner">
                                 <h3><?= $restaurants_no; ?></h3>
@@ -21,46 +21,61 @@
                             <a href="#" class="small-box-footer" data-toggle="modal" data-target="#modal-default">More
                                 info <i class="fas fa-arrow-circle-right"></i>
                             </a>
-                            <div class="modal fade" id="modal-default" style="display: none;"
-                                 aria-hidden="true">
-                                <div class="modal-dialog modal-default">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h4 class="modal-title">Units</h4>
-                                            <button type="button" class="close" data-dismiss="modal"
-                                                    aria-label="Close">
-                                                <span aria-hidden="true">×</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p>Hi</p>
-                                        </div>
-                                        <div class="modal-footer justify-content-between">
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">×</span>
-                                            </button>
-                                        </div>
+                        </div>
+                        <div class="modal fade" id="modal-default" style="display: none;"
+                             aria-hidden="true">
+                            <div class="modal-dialog modal-default">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Units</h4>
+                                        <button type="button" class="close" data-dismiss="modal"
+                                                aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
                                     </div>
-                                    <!-- /.modal-content -->
+                                    <div class="modal-body">
+                                        <p>You have a total of <?= $restaurants_no; ?> units under your supervision.</p>
+                                    </div>
                                 </div>
-                                <!-- /.modal-dialog -->
+                                <!-- /.modal-content -->
                             </div>
+                            <!-- /.modal-dialog -->
                         </div>
                     </div>
                     <!-- ./col -->
                     <div class="col-lg-6 col-12">
-                        <!-- Clean Restaurants -->
+                        <!-- Solved -->
                         <div class="small-box bg-success">
                             <div class="inner">
-                                <h3><?= round(100 * $solved_no / $devices_no); ?><sup style="font-size: 20px">%</sup>
-                                </h3>
+                                <h3><?= $solved_no; ?></h3>
                                 <p>Solved</p>
                             </div>
                             <div class="icon">
                                 <i class="ion ion-android-done-all"></i>
                             </div>
-                            <a href="#" class="small-box-footer">More info <i
+                            <a href="#" class="small-box-footer" data-toggle="modal"
+                               data-target="#modal-default-solved">More info <i
                                         class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                        <div class="modal fade" id="modal-default-solved" style="display: none;"
+                             aria-hidden="true">
+                            <div class="modal-dialog modal-default-solved">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Solved</h4>
+                                        <button type="button" class="close" data-dismiss="modal"
+                                                aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p><?= $solved_no; ?> buttons have not received new clicks in the last 24
+                                            hours.</p>
+                                    </div>
+                                </div>
+                                <!-- /.modal-content -->
+                            </div>
+                            <!-- /.modal-dialog -->
                         </div>
                     </div>
                     <!-- ./col -->
@@ -74,8 +89,29 @@
                             <div class="icon">
                                 <i class="ion ion-android-locate"></i>
                             </div>
-                            <a href="#" class="small-box-footer">More info <i
+                            <a href="#" class="small-box-footer" data-toggle="modal"
+                               data-target="#modal-default-attention">More info <i
                                         class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                        <div class="modal fade" id="modal-default-attention" style="display: none;"
+                             aria-hidden="true">
+                            <div class="modal-dialog modal-default-attention">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Needs Attention</h4>
+                                        <button type="button" class="close" data-dismiss="modal"
+                                                aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p><?= $needs_attention_no ?> buttons were pressed recently and have not yet
+                                            been marked as resolved.</p>
+                                    </div>
+                                </div>
+                                <!-- /.modal-content -->
+                            </div>
+                            <!-- /.modal-dialog -->
                         </div>
                     </div>
                     <!-- ./col -->
@@ -89,8 +125,30 @@
                             <div class="icon">
                                 <i class="ion ion-alert-circled"></i>
                             </div>
-                            <a href="#" class="small-box-footer">More info <i
+                            <a href="#" class="small-box-footer" data-toggle="modal"
+                               data-target="#modal-default-overdue">More info <i
                                         class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                        <div class="modal fade" id="modal-default-overdue" style="display: none;"
+                             aria-hidden="true">
+                            <div class="modal-dialog modal-default-overdue">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Overdue</h4>
+                                        <button type="button" class="close" data-dismiss="modal"
+                                                aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p><?= $overdue_no ?> buttons were pressed 3 hours or more ago and have not yet
+                                            been marked as resolved.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- /.modal-content -->
+                            </div>
+                            <!-- /.modal-dialog -->
                         </div>
                     </div>
                 </div>

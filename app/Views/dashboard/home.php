@@ -128,7 +128,7 @@
                                 <canvas id="revenue-chart-canvas" height="300"
                                         style="height: 300px;"></canvas>
                             </div>
-                            <div class="chart tab-pane" id="sales-chart"
+                            <div class="chart tab-pane tex" id="sales-chart"
                                  style="position: relative; height: 208px;">
                                 <canvas id="sales-chart-canvas" height="300"
                                         style="height: 300px;"></canvas>
@@ -192,8 +192,13 @@
                                                 <span class="float-left badge bg-info">Unknown</span>
                                                 <?php break;
                                         } ?>
+
                                     </td>
-                                    <td><?= $clicks_model->getClickCount($event["e_id"]); ?></td>
+                                    <td><?= $clicks_model->getClickCount($event["e_id"]); ?>
+
+                                        <?php if ($event["e_note"] != "" ){ ?>
+                                        <i class="far fa-comment-alt "></i>
+                                        <?php } ?></td>
                                     <td><?= $event["e_created_at"]; ?></td>
                                     <td>
                                         <a href="#" class="text-muted" data-toggle="modal" data-target="#modal-lg">
@@ -278,9 +283,6 @@
                                             </div>
                                             <!-- /.modal-dialog -->
                                         </div>
-                                        <a href="#" class="text-muted">
-                                            <i class="far fa-comment-alt"></i>
-                                        </a>
                                     </td>
                                 </tr>
                             <?php } ?>

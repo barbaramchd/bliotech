@@ -263,10 +263,10 @@
                                         <?php } ?></td>
                                     <td><?= $event["e_created_at"]; ?></td>
                                     <td>
-                                        <a href="#" class="text-muted" data-toggle="modal" data-target="#modal-lg">
+                                        <a href="#" class="text-muted" data-toggle="modal" data-target="#modal-lg<?= $event["e_id"];?>">
                                             <i class="fas  fa-search"></i>
                                         </a>
-                                        <div class="modal fade" id="modal-lg" style="display: none;"
+                                        <div class="modal fade" id="modal-lg<?=$event["e_id"];?>" style="display: none;"
                                              aria-hidden="true">
                                             <div class="modal-dialog modal-lg">
                                                 <div class="modal-content">
@@ -319,12 +319,14 @@
                                                                               id="autosave-note"
                                                                               rows="3"
                                                                               placeholder="Enter ..."
+                                                                              data-id = "<?=$event["e_id"];?>"
                                                                               spellcheck="true"></textarea>
                                                                     <div class="margin">
                                                                         <div class="btn-group">
                                                                             <input type="button"
                                                                                    class="btn btn-block btn-default btn-xs"
                                                                                    id='autosave-button'
+                                                                                   data-id = "<?=$event["e_id"];?>"
                                                                                    value="Save updates">
                                                                         </div>
                                                                     </div>
@@ -333,10 +335,19 @@
                                                         </div>
                                                     </div>
                                                     <div class="modal-footer float-right">
-                                                        <button type='button' id='marked-solved-button'
-                                                                class="btn btn-success btn-sm"><i
-                                                                    class="fas fa-check"></i>  Mark as solved
-                                                        </button>
+                                                        <?php if ($event["e_type"] == 1){ ?>
+                                                            <a href="<?=base_url("/Actions/mark_solved/".$event["e_id"]);?>">
+                                                            <button type='button' id='marked-solved-button'
+                                                                    class="btn btn-success btn-sm"><i
+                                                                        class="fas fa-check"></i>  Mark as solved
+                                                            </button></a>
+                                                        <?php }else{ ?>
+                                                            <a href="<?=base_url("/Actions/mark_unsolved/".$event["e_id"]);?>">
+                                                                <button type='button' id='marked-solved-button'
+                                                                        class="btn btn-success btn-sm"><i
+                                                                            class="fas fa-check"></i>  Mark as solved
+                                                                </button></a>
+                                                        <?php } ?>
                                                     </div>
                                                 </div>
                                                 <!-- /.modal-content -->

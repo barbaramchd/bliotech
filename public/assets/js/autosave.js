@@ -19,13 +19,14 @@ $(document).ready(function(){
 function saveData(){
 
     var content = $('#autosave-note').val().trim();
+    var id      = $('#autosave-note').attr("data-id")
 
     if(content != ''){
         // AJAX request
         $.ajax({
-            url: 'autosave.php',
+            url: 'https://blio.tech/Actions/autosave_event',
             type: 'post',
-            data: {content:content},
+            data: {content:content, id:id},
             success: function(response){
                 $('#autosave-note').val(response);
             }

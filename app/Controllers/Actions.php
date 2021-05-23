@@ -99,6 +99,10 @@ class Actions extends BaseController
 
     }
 
+    public function autosave_event(){
+	    var_dump($_POST);
+    }
+
 
 
 }

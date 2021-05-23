@@ -215,28 +215,34 @@
                             </tr>
                             </thead>
                             <tbody>
+                            <?php
+                            $counter = 0;
+                            foreach ($devices as $device){
+                            $counter++;
+                            ?>
+
                             <tr>
-                                <td>1.</td>
-                                <td>Update software</td>
+                                <td><?= $counter;?></td>
+                                <td><?= $device["d_name"];?></td>
                                 <td>
                                     <input type="checkbox" name="my-checkbox" data-bootstrap-switch
-                                           data-off-color="danger" data-on-color="success">
+                                           data-off-color="danger" <?= set_checkbox('d_active', '1', $device["d_active"] ); ?> data-on-color="success">
                                 </td>
                                 <td>
-                                    ATTENTION
+                                    TODO
                                 </td>
                                 <td>
                                     <a href="#" class="text-muted" data-toggle="modal"
-                                       data-target="#modal-default-device" title="Edit">
+                                       data-target="#modal-default-<?= $counter;?>" title="Edit">
                                         <i class="fas  fa-edit"></i>
                                     </a>
                                     <!-- Device Edit modal -->
-                                    <div class="modal fade" id="modal-default-device" style="display: none;"
+                                    <div class="modal fade" id="modal-default-device<?= $counter;?>" style="display: none;"
                                          aria-hidden="true">
                                         <div class="modal-dialog modal-default-device">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h4 class="modal-title">DEVICE NAME</h4>
+                                                    <h4 class="modal-title"><?= $device["d_name"];?></h4>
                                                     <button type="button" class="close" data-dismiss="modal"
                                                             aria-label="Close">
                                                         <span aria-hidden="true">×</span>
@@ -273,6 +279,7 @@
                                     </div>
                                 </td>
                             </tr>
+                            <?php } ?>
                             </tbody>
                         </table>
                     </div>
@@ -297,15 +304,13 @@
                             </tr>
                             </thead>
                             <tbody>
+
+
                             <?php
                             $counter = 0;
                             foreach ($accounts as $account){
                                 $counter++;
                                 ?>
-
-
-
-
                             <tr>
                                 <td><?= $counter;?></td>
                                 <td><?= $account["first_name"];?></td>

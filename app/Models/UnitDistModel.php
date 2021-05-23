@@ -60,22 +60,24 @@ class UnitDistModel extends Model
     }
 
     public function getOverdueCount($district_id){
+
         return $this->where(['district_id' => $district_id])
             ->join("units", "units.u_id = unit_districts.unit_id")
             ->join("unit_devices", "unit_devices.unit_id = units.u_id")
             ->join("events_by_devices", "events_by_devices.e_device_id = unit_devices.device_id")
             ->where(['e_type' => 1])
-            ->where("e_created_at <= DATE_SUB(NOW(),INTERVAL 3 HOUR)")
+            ->where("e_created_at <= DATE_SUB(NOW(),INTERVAL 11 HOUR)")
             ->countAllResults();
     }
 
     public function getAttentionCount($district_id){
+
         return $this->where(['district_id' => $district_id])
             ->join("units", "units.u_id = unit_districts.unit_id")
             ->join("unit_devices", "unit_devices.unit_id = units.u_id")
             ->join("events_by_devices", "events_by_devices.e_device_id = unit_devices.device_id")
             ->where(['e_type' => 1])
-            ->where("e_created_at >= DATE_SUB(NOW(),INTERVAL 3 HOUR)")
+            ->where("e_created_at >= DATE_SUB(NOW(),INTERVAL 11 HOUR)")
             ->countAllResults();
     }
 

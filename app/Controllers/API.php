@@ -112,7 +112,7 @@ class API extends BaseController
         $email = \Config\Services::email();
 
         $email->setTo($address);
-        //$email->setCC("juraj.vasek@minerva.kgi.edu");
+        //$email->setFrom('you@example.com', 'Your Name');
 
         $email->setSubject($subject);
         $email->setMessage($message);

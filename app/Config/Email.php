@@ -14,7 +14,7 @@ class Email extends BaseConfig
 	/**
 	 * @var string
 	 */
-	public $fromName = "Blio Notifications";
+	public $fromName = "Blio Tech Notification";
 
 	/**
 	 * @var string

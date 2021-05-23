@@ -1,34 +1,37 @@
 <?php
 
 namespace App\Controllers;
+
 use App\Models\ClicksModel;
 use App\Models\DevicesModel;
 use App\Models\EventsModel;
+
 #use App\ThirdParty\Twilio\Rest\Client;
 require "../app/ThirdParty/Twilio/autoload.php";
+
 use Twilio\Rest\Client;
 
 const SECRET = "CHWjuwEL44nqdR6YPKSAqKpTbtWkWvmuLaKeqxqfUg4gNwsgzh4FSYnyezkhjQyXr5F9vxnHNrEUp3khTdt";
 
 class API extends BaseController
 {
-	public function index()
-	{
-	    # Redirect generall calls to homepage
-        return redirect()->to('/');
-	}
-
-	public function button_click($button_id, $secret)
+    public function index()
     {
-        $devices  = new DevicesModel();
+        # Redirect generall calls to homepage
+        return redirect()->to('/');
+    }
+
+    public function button_click($button_id, $secret)
+    {
+        $devices = new DevicesModel();
 
 
         //Verify secret if matches
-        if ($secret == SECRET){
+        if ($secret == SECRET) {
 
             //Check if button exists
             $device = $devices->getDevice($button_id);
-            if (isset($device)){
+            if (isset($device)) {
 
                 // Get latest event available
                 $events = new EventsModel();
@@ -41,29 +44,29 @@ class API extends BaseController
 
 
                 // Check if latest event has been resolved
-                if (!isset($latest)){
+                if (!isset($latest)) {
                     // There is no event, create a new one
                     $event_id = $events->insert($data);
-                }else{
-                    if ($latest["e_type"] != 1){
+                } else {
+                    if ($latest["e_type"] != 1) {
                         // Event already exist, but it is solved, create a new one
                         $event_id = $events->insert($data);
                     }
                 }
                 $clicks = new ClicksModel();
-                $counter = $clicks->getClickCount(isset($event_id)?$event_id:$latest["e_id"])+1;
+                $counter = $clicks->getClickCount(isset($event_id) ? $event_id : $latest["e_id"]) + 1;
                 $click_data = [
                     "c_device" => $device["d_id"],
-                    "c_event"  => isset($event_id)?$event_id:$latest["e_id"]
+                    "c_event" => isset($event_id) ? $event_id : $latest["e_id"]
                 ];
                 $clicks->insert($click_data);
 
 
-                $message = "Button ".$device["d_name"]." has just been pressed ".($counter!=1?"(".$counter."x)":"").". Reply FIXED to (415) 306-8588 after resolving the issue.";
+                $message = "Button " . $device["d_name"] . " has just been pressed " . ($counter != 1 ? "(" . $counter . "x)" : "") . ". Reply FIXED to (415) 306-8588 after resolving the issue.";
 
 
-                $this->send_sms("+".$device["d_notification_phone"], $message);
-                $this->send_email($device["d_notification_email"],$device["d_name"]."Needs attention","<h3>Hi!</h3><br><p>We have received a notification, that your device in ".$device["d_name"]." requires attention.</p><p>You can change the status on <a href='https://blio.tech'>you Blio Dashboard</a>.</p><p>Thank you for using our service!</p><p>Blio.Tech</p>");
+                $this->send_sms("+" . $device["d_notification_phone"], $message);
+                $this->send_email($device["d_notification_email"], $device["d_name"] .  "needs attention.", "<h3>Hi!</h3><br><p>We have received a notification that your device in " . $device["d_name"] . " requires attention.</p><p>You can change the status on <a href='https://blio.tech'>your Blio Dashboard</a>.</p><p>Thank you for using our services!</p><p>Blio Team</p>");
 
 
                 //Trigger notifications
@@ -76,34 +79,36 @@ class API extends BaseController
         die("FALSE");
     }
 
-    public function recieve_sms(){
-	    $from = $_POST["From"];
+    public function recieve_sms()
+    {
+        $from = $_POST["From"];
         $body = $_POST['Body'];
-        if (strtolower($body)=="fixed"){
+        if (strtolower($body) == "fixed") {
             # Find Button button with latest record
             $events = new EventsModel();
             $latest = $events->getLatestByPhone($from);
-            if (isset($latest)){
-            $data=[
-                "e_type"=>2,
-                "e_resolved_at"=>date('Y-m-d H:i:s'),
-                "e_resolved_by"=>"SMS ".$from
-            ];
-            $events->update($latest["e_id"],$data);
+            if (isset($latest)) {
+                $data = [
+                    "e_type" => 2,
+                    "e_resolved_at" => date('Y-m-d H:i:s'),
+                    "e_resolved_by" => "SMS " . $from
+                ];
+                $events->update($latest["e_id"], $data);
 
-            $this->send_sms($from, "Great! Event in ".$latest["d_name"]." marked as solved.");
-            }else{
+                $this->send_sms($from, "Great! Event in " . $latest["d_name"] . " marked as solved.");
+            } else {
                 #$this->send_sms($from, "Sorry, We did not recognized your phone number. Please use https://blio.tech");
                 $this->send_sms($from, "We did not find any unsolved event. Please check https://blio.tech");
 
             }
-        }else{
+        } else {
             $this->send_sms($from, "Sorry, we did not recognized your request.");
 
         }
     }
 
-    public function send_email($address, $subject, $message){
+    public function send_email($address, $subject, $message)
+    {
         $email = \Config\Services::email();
 
         $email->setTo($address);

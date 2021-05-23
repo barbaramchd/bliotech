@@ -259,7 +259,7 @@
                                     <td><?= $clicks_model->getClickCount($event["e_id"]); ?>
 
                                         <?php if ($event["e_note"] != "") { ?>
-                                            <i class="far fa-comment-alt "></i>
+                                            <i class="far fa-comment-alt"></i>
                                         <?php } ?></td>
                                     <td><?= $event["e_created_at"]; ?></td>
                                     <td>

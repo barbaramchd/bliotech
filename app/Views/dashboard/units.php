@@ -261,12 +261,9 @@
                     <td><?= $unit["u_email"]; ?></td>
                     <td>
                         <div class="btn-group">
-                            <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Edit">
-                                <i class="fas fa-edit"></i>
-                            </button>
                             <a href="<?=base_url("Dashboard/unit/".$unit["u_id"]);?>">
-                            <button type="button"  class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Details">
-                                 <i class="fas fa-inbox"></i>
+                            <button type="button"  class="btn btn-default" data-toggle="tooltip" data-placement="top" title="More info">
+                                 <i class="fas fa-info-circle"></i>
                             </button></a>
                         </div>
                     </td>

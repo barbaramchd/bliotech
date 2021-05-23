@@ -59,5 +59,7 @@
 <!-- Validation.js file path -->
 <script src="<?= base_url(); ?>/assets/js/validation.js"></script>
 <script src="<?= base_url(); ?>/assets/js/autosave.js"></script>
+<script src="<?= base_url(); ?>/assets/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+<script src="<?= base_url(); ?>/assets/js/switch.js"></script>
 </body>
 </html>

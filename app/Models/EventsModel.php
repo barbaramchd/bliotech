@@ -32,5 +32,27 @@ class EventsModel extends Model
             ->first();
     }
 
+    public function getOwnership($user_id,$e_id, $manager = false){
+        if (!$manager){
+            return $this->asArray()
+                ->join("devices","devices.d_id = events.e_device_id")
+                ->join("unit_devices","devices.d_id = unit_devices.device_id")
+                ->join("units","units.u_id = unit_devices.unit_id")
+                ->join("unit_users","unit_users.unit_id=units.u_id")
+                ->where(['user_id' => $user_id])
+                ->where(["e_id"=> $e_id])
+                ->first();
+        }else{
+            return $this->asArray()
+                ->join("devices","devices.d_id = events.e_device_id")
+                ->join("unit_devices","devices.d_id = unit_devices.device_id")
+                ->join("units","units.u_id = unit_devices.unit_id")
+                ->join("unit_districts","unit_districts.unit_id=units.u_id")
+                ->join("districts","districts.id = unit_districts.district_id")
+                ->where(['manager_id' => $user_id])
+                ->where(["e_id"=> $e_id])
+                ->first();
+        }
+    }
 
 }

@@ -224,13 +224,13 @@
                             <tbody>
                             <?php
                             $counter = 0;
-                            foreach ($events
-
-                                     as $event) {
+                            $ids = "0";
+                            foreach ($events as $event) {
                                 $counter++;
                                 if (($event["e_type"] ==2) and (time() - strtotime($event["e_created_at"]) > 24 * 3600)){
 
                                 }else{
+                                    $ids = $ids.",".$event["e_id"];
                                 ?>
                                 <tr>
                                     <td><?= $counter ?></td>
@@ -316,18 +316,18 @@
                                                                 <div class="col-md-12">
                                                                     <label>Note:</label>
                                                                     <textarea class="form-control"
-                                                                              id="autosave-note"
+                                                                              id="autosave-note<?=$event["e_id"];?>"
                                                                               rows="3"
                                                                               placeholder="Enter ..."
                                                                               data-id = "<?=$event["e_id"];?>"
-                                                                              spellcheck="true"></textarea>
+                                                                              spellcheck="true"><?=$event["e_note"];?></textarea>
                                                                     <div class="margin">
                                                                         <div class="btn-group">
                                                                             <input type="button"
                                                                                    class="btn btn-block btn-default btn-xs"
-                                                                                   id='autosave-button'
+                                                                                   id='autosave-button<?=$event["e_id"];?>'
                                                                                    data-id = "<?=$event["e_id"];?>"
-                                                                                   value="Save updates">
+                                                                                   value="Saved!">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -359,6 +359,7 @@
                             <?php }} ?>
                             </tbody>
                         </table>
+                        <div id="event_table_ids" data-ids ="<?=$ids;?>"></div>
                     </div>
                 </div>
                 <!-- /.card -->

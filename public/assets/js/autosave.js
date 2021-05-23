@@ -1,35 +1,48 @@
 $(document).ready(function(){
+
+    var ids = $('#event_table_ids').attr("data-ids").split(",");
+    ids.forEach(iterativeFunction);
+});
+
+
+function iterativeFunction(item){
     var timer;
-    var timeout = 5000; // Timout duration
-    $('#autosave-note').keyup(function(){
+    var timeout = 1500; // Timout duration
+    $('#autosave-note'+item).bind('input propertychange',function(){
+
+
 
         if(timer) {
             clearTimeout(timer);
         }
-        timer = setTimeout(saveData, timeout);
+        $('#autosave-button'+item).val("Save changes")
+        timer = setTimeout(function() {
+            saveData(item);
+            }, timeout);
 
     });
 
-    $('#autosave-button').click(function(){
-        saveData();
+    $('#autosave-button'+item).click(function(){
+        saveData(item);
     });
-});
+}
+
 
 // Save data
-function saveData(){
+function saveData(item){
 
-    var content = $('#autosave-note').val().trim();
-    var id      = $('#autosave-note').attr("data-id")
+    var content = $('#autosave-note'+item).val().trim();
+    var id      = $('#autosave-note'+item).attr("data-id");
 
-    if(content != ''){
         // AJAX request
         $.ajax({
             url: 'https://blio.tech/Actions/autosave_event',
             type: 'post',
-            data: {content:content, id:id},
+            data: {content:content, id:item},
             success: function(response){
-                $('#autosave-note').val(response);
+                $('#autosave-button'+item).val("Saved!")
+                //$('#autosave-note'+item).val(response);
             }
         });
-    }
+
 }

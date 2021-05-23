@@ -6,6 +6,7 @@ use App\Models\UnitsModel;
 use App\Models\UnitUsersModel;
 use App\Models\UnitDistModel;
 use App\Models\DistrictModel;
+use App\Models\EventsModel;
 
 const BLIO_TITLE = " | Blio Tech | Button - Manager Dashboard";
 
@@ -100,7 +101,23 @@ class Actions extends BaseController
     }
 
     public function autosave_event(){
-	    var_dump($_POST);
+        global $DATA;
+        $request = \Config\Services::request();
+        $events = new EventsModel();
+
+        $e_note = $request->getVar("content", FILTER_SANITIZE_STRING);
+        $e_id = $request->getVar("id", FILTER_SANITIZE_NUMBER_INT);
+
+        $latest = $events->getOwnership($DATA["user"]->id,$e_id, $DATA["isManager"]);
+        if (isset($latest)) {
+            $data = [
+                "e_note" => $e_note,
+            ];
+            $events->update($e_id, $data);
+            return $e_note;
+
+        }
+	    return $e_note."Saving Failed. Please login again.";
     }
 
 

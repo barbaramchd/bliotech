@@ -7,6 +7,7 @@ use App\Models\UnitUsersModel;
 use App\Models\UnitDistModel;
 use App\Models\DistrictModel;
 use App\Models\EventsModel;
+use CodeIgniter\Model;
 
 const BLIO_TITLE = " | Blio Tech | Button - Manager Dashboard";
 
@@ -90,14 +91,37 @@ class Actions extends BaseController
         return redirect()->to('/Dashboard/units');
     }
 
-    public function mark_solved($id){
+    public function mark_solved($e_id){
+        global $DATA;
+        $request = \Config\Services::request();
+        $events = new EventsModel();
 
+        $latest = $events->getOwnership($DATA["user"]->id,$e_id, $DATA["isManager"]);
+        if (isset($latest)) {
+            $data = [
+                "e_type" => 2,
+                "e_resolved_at" => date('Y-m-d H:i:s'),
+                "e_resolved_by" => $DATA["user"]->first_name . " ". $DATA["user"]->last_name,
+            ];
+            $events->update($e_id, $data);
+        }
+        return redirect()->to('/Dashboard');
 
     }
 
-    public function mark_unsolved($id){
+    public function mark_unsolved($e_id){
+        global $DATA;
+        $request = \Config\Services::request();
+        $events = new EventsModel();
 
-
+        $latest = $events->getOwnership($DATA["user"]->id,$e_id, $DATA["isManager"]);
+        if (isset($latest)) {
+            $data = [
+                "e_type" => 1,
+            ];
+            $events->update($e_id, $data);
+        }
+        return redirect()->to('/Dashboard');
     }
 
     public function autosave_event(){

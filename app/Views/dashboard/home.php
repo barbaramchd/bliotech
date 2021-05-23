@@ -227,7 +227,7 @@
                             $ids = "0";
                             foreach ($events as $event) {
                                 $counter++;
-                                if (($event["e_type"] ==2) and (time() - strtotime($event["e_created_at"]) > 24 * 3600)){
+                                if (($event["e_type"] ==2) and (time() - strtotime($event["e_resolved_at"]) > 24 * 3600)){
 
                                 }else{
                                     $ids = $ids.",".$event["e_id"];
@@ -271,25 +271,37 @@
                                             <div class="modal-dialog modal-lg">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h4 class="modal-title"><?= $event["u_name"]; ?></h4>
+                                                        <h4 class="modal-title"><?= $event["d_name"]; ?> | <?= $event["u_name"]; ?></h4>
                                                         <button type="button" class="close" data-dismiss="modal"
                                                                 aria-label="Close">
                                                             <span aria-hidden="true">×</span>
                                                         </button>
                                                     </div>
                                                     <div class="modal-body">
+                                                        <?php if ($event["e_type"]==2){?>
+
+                                                            <div class="alert alert-success">
+                                                                <h5><i class="icon fas fa-check"></i> Resolved!</h5>
+                                                                <p>This event was resolved by <b><?= $event["e_resolved_by"];?></b> at <b><?= $event["e_resolved_at"];?> </b>
+                                                                </p>
+                                                            </div>
+                                                         <?php } ?>
                                                         <div class="row">
-                                                            <div class="col-md-3">
-                                                                <label>Info: </label>
+                                                            <div class="col-md-6">
+                                                                <label>Device: </label>
                                                                 <?= $event["d_name"]; ?>
                                                             </div>
-                                                            <div class="col-md-1">
+                                                            <div class="col-md-6">
+                                                                <label>Clicks: </label>
                                                                 (<?= $clicks_model->getClickCount($event["e_id"]); ?>x)
                                                             </div>
-                                                            <div class="col-md-3">
+                                                        </div>
+                                                    <div class="row">
+                                                            <div class="col-md-6">
+                                                                <label>First click at: </label>
                                                                 <?= $event["e_created_at"]; ?>
                                                             </div>
-                                                            <div class="col-md-2">
+                                                            <div class="col-md-6">
                                                                 <?php switch ($event["e_type"]) {
                                                                     case 1:
                                                                         if (time() - strtotime($event["e_created_at"]) < 3 * 3601) {
@@ -301,9 +313,7 @@
                                                                         <?php }
                                                                         break;
                                                                     case 2: ?>
-                                                                        <span class="float-left badge bg-success">Solved</span>
-                                                                        <!-- TODO: personalize name of the person who changed it to solved-->
-                                                                        <label>By: </label>
+                                                                        <!--<span class="float-left badge bg-success">Solved</span>-->
                                                                         <?php break;
                                                                     case 3: ?>
                                                                         <span class="float-left badge bg-info">Unknown</span>
@@ -344,8 +354,8 @@
                                                         <?php }else{ ?>
                                                             <a href="<?=base_url("/Actions/mark_unsolved/".$event["e_id"]);?>">
                                                                 <button type='button' id='marked-solved-button'
-                                                                        class="btn btn-success btn-sm"><i
-                                                                            class="fas fa-check"></i>  Mark as solved
+                                                                        class="btn btn-warning btn-sm text-black"><i
+                                                                            class="fas fa-check"></i>  Mark as Needs Attention
                                                                 </button></a>
                                                         <?php } ?>
                                                     </div>

@@ -69,7 +69,7 @@
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        <p><?= $solved_no; ?> buttons have not received new clicks in the last 24
+                                        <p><?= $solved_no; ?> buttons have not received new clicks.
                                             hours.</p>
                                     </div>
                                 </div>
@@ -316,13 +316,23 @@
                                                                               rows="3"
                                                                               placeholder="Enter ..."
                                                                               spellcheck="true"></textarea>
+                                                                    <div class="margin">
+                                                                        <div class="btn-group">
+                                                                            <input type="button"
+                                                                                   class="btn btn-block btn-default btn-xs"
+                                                                                   id='autosave-button'
+                                                                                   value="Save updates">
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="modal-footer float-right">
-                                                        <input type='button' id='autosave-button'
-                                                               class="btn btn-success" value='Save'>
+                                                        <button type='button' id='marked-solved-button'
+                                                                class="btn btn-success btn-sm"><i
+                                                                    class="fas fa-check"></i>  Mark as solved
+                                                        </button>
                                                     </div>
                                                 </div>
                                                 <!-- /.modal-content -->

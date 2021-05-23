@@ -227,7 +227,11 @@
                             foreach ($events
 
                                      as $event) {
-                                $counter++; ?>
+                                $counter++;
+                                if (($event["e_type"] ==2) and (time() - strtotime($event["e_created_at"]) > 24 * 3600)){
+
+                                }else{
+                                ?>
                                 <tr>
                                     <td><?= $counter ?></td>
                                     <td><?= $event["u_name"]; ?></td>
@@ -341,7 +345,7 @@
                                         </div>
                                     </td>
                                 </tr>
-                            <?php } ?>
+                            <?php }} ?>
                             </tbody>
                         </table>
                     </div>

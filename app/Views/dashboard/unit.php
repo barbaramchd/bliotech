@@ -22,13 +22,13 @@
                         <div class="form-group">
                             <label for="u_name">Name</label>
                             <input type="text" name="u_name" id="u_name" class="form-control"
-                                   value="NAMENAME"
+                                   value="<?= $unit["u_name"];?>"
                                    required>
                         </div>
                         <div class="form-group">
                             <label for="u_company">Company</label>
                             <input type="text" name="u_company" id="u_company" class="form-control"
-                                   value="AdminLTE">
+                                   value="<?= $unit["u_company"];?>">
                         </div>
                         <div class="form-group">
                             <label for="u_address1">Address 1</label>
@@ -53,63 +53,63 @@
                                     style="width: 100%;"
                                     data-select2-id="1" tabindex="-1" aria-hidden="true"
                                     id="u_state" name="u_state" required>
-                                <option selected="selected" value="">Choose</option>
-                                <option value="AL">AL</option>
-                                <option value="AK">AK</option>
-                                <option value="AS">AS</option>
-                                <option value="AZ">AZ</option>
-                                <option value="AR">AR</option>
-                                <option value="CA">CA</option>
-                                <option value="CO">CO</option>
-                                <option value="CT">CT</option>
-                                <option value="DE">DE</option>
-                                <option value="DC">DC</option>
-                                <option value="FL">FL</option>
-                                <option value="GA">GA</option>
-                                <option value="GU">GU</option>
-                                <option value="HI">HI</option>
-                                <option value="ID">ID</option>
-                                <option value="IL">IL</option>
-                                <option value="IN">IN</option>
-                                <option value="IA">IA</option>
-                                <option value="KS">KS</option>
-                                <option value="KY">KY</option>
-                                <option value="LA">LA</option>
-                                <option value="ME">ME</option>
-                                <option value="MD">MD</option>
-                                <option value="MA">MA</option>
-                                <option value="MI">MI</option>
-                                <option value="MN">MN</option>
-                                <option value="MS">MS</option>
-                                <option value="MO">MO</option>
-                                <option value="MT">MT</option>
-                                <option value="NE">NE</option>
-                                <option value="NV">NV</option>
-                                <option value="NH">NH</option>
-                                <option value="NJ">NJ</option>
-                                <option value="NM">NM</option>
-                                <option value="NY">NY</option>
-                                <option value="NC">NC</option>
-                                <option value="ND">ND</option>
-                                <option value="MP">MP</option>
-                                <option value="OH">OH</option>
-                                <option value="OK">OK</option>
-                                <option value="OR">OR</option>
-                                <option value="PA">PA</option>
-                                <option value="PR">PR</option>
-                                <option value="RI">RI</option>
-                                <option value="SC">SC</option>
-                                <option value="SD">SD</option>
-                                <option value="TN">TN</option>
-                                <option value="TX">TX</option>
-                                <option value="UT">UT</option>
-                                <option value="VT">VT</option>
-                                <option value="VA">VA</option>
-                                <option value="VI">VI</option>
-                                <option value="WA">WA</option>
-                                <option value="WV">WV</option>
-                                <option value="WI">WI</option>
-                                <option value="WY">WY</option>
+                                <option <?= set_select('u_state', '', $unit["u_state"]=="");?> value="">Choose</option>
+                                <option <?= set_select('u_state', 'AL', $unit["u_state"]=="AL");?>value="AL">AL</option>
+                                <option <?= set_select('u_state', 'AK', $unit["u_state"]=="AK");?>value="AK">AK</option>
+                                <option <?= set_select('u_state', 'AS', $unit["u_state"]=="AS");?>value="AS">AS</option>
+                                <option <?= set_select('u_state', 'AZ', $unit["u_state"]=="AZ");?>value="AZ">AZ</option>
+                                <option <?= set_select('u_state', 'AR', $unit["u_state"]=="AR");?>value="AR">AR</option>
+                                <option <?= set_select('u_state', 'CA', $unit["u_state"]=="CA");?>value="CA">CA</option>
+                                <option <?= set_select('u_state', 'CO', $unit["u_state"]=="CO");?>value="CO">CO</option>
+                                <option <?= set_select('u_state', 'CT', $unit["u_state"]=="CT");?>value="CT">CT</option>
+                                <option <?= set_select('u_state', 'DE', $unit["u_state"]=="DE");?>value="DE">DE</option>
+                                <option <?= set_select('u_state', 'DC', $unit["u_state"]=="DC");?>value="DC">DC</option>
+                                <option <?= set_select('u_state', 'FL', $unit["u_state"]=="FL");?>value="FL">FL</option>
+                                <option <?= set_select('u_state', 'GA', $unit["u_state"]=="GA");?>value="GA">GA</option>
+                                <option <?= set_select('u_state', 'GU', $unit["u_state"]=="GU");?>value="GU">GU</option>
+                                <option <?= set_select('u_state', 'HI', $unit["u_state"]=="HI");?>value="HI">HI</option>
+                                <option <?= set_select('u_state', 'ID', $unit["u_state"]=="ID");?>value="ID">ID</option>
+                                <option <?= set_select('u_state', 'IL', $unit["u_state"]=="IL");?>value="IL">IL</option>
+                                <option <?= set_select('u_state', 'IN', $unit["u_state"]=="IN");?>value="IN">IN</option>
+                                <option <?= set_select('u_state', 'IA', $unit["u_state"]=="IA");?>value="IA">IA</option>
+                                <option <?= set_select('u_state', 'KS', $unit["u_state"]=="KS");?>value="KS">KS</option>
+                                <option <?= set_select('u_state', 'KY', $unit["u_state"]=="KY");?>value="KY">KY</option>
+                                <option <?= set_select('u_state', 'LA', $unit["u_state"]=="LA");?>value="LA">LA</option>
+                                <option <?= set_select('u_state', 'ME', $unit["u_state"]=="ME");?>value="ME">ME</option>
+                                <option <?= set_select('u_state', 'MD', $unit["u_state"]=="MD");?>value="MD">MD</option>
+                                <option <?= set_select('u_state', 'MA', $unit["u_state"]=="MA");?>value="MA">MA</option>
+                                <option <?= set_select('u_state', 'MI', $unit["u_state"]=="MI");?>value="MI">MI</option>
+                                <option <?= set_select('u_state', 'MN', $unit["u_state"]=="MN");?>value="MN">MN</option>
+                                <option <?= set_select('u_state', 'MS', $unit["u_state"]=="MS");?>value="MS">MS</option>
+                                <option <?= set_select('u_state', 'MO', $unit["u_state"]=="MO");?>value="MO">MO</option>
+                                <option <?= set_select('u_state', 'MT', $unit["u_state"]=="MT");?>value="MT">MT</option>
+                                <option <?= set_select('u_state', 'NE', $unit["u_state"]=="NE");?>value="NE">NE</option>
+                                <option <?= set_select('u_state', 'NV', $unit["u_state"]=="NV");?>value="NV">NV</option>
+                                <option <?= set_select('u_state', 'NH', $unit["u_state"]=="NH");?>value="NH">NH</option>
+                                <option <?= set_select('u_state', 'NJ', $unit["u_state"]=="NJ");?>value="NJ">NJ</option>
+                                <option <?= set_select('u_state', 'NM', $unit["u_state"]=="NM");?>value="NM">NM</option>
+                                <option <?= set_select('u_state', 'NY', $unit["u_state"]=="NY");?>value="NY">NY</option>
+                                <option <?= set_select('u_state', 'NC', $unit["u_state"]=="NC");?>value="NC">NC</option>
+                                <option <?= set_select('u_state', 'ND', $unit["u_state"]=="ND");?>value="ND">ND</option>
+                                <option <?= set_select('u_state', 'MP', $unit["u_state"]=="MP");?>value="MP">MP</option>
+                                <option <?= set_select('u_state', 'OH', $unit["u_state"]=="OH");?>value="OH">OH</option>
+                                <option <?= set_select('u_state', 'OK', $unit["u_state"]=="OK");?>value="OK">OK</option>
+                                <option <?= set_select('u_state', 'OR', $unit["u_state"]=="OR");?>value="OR">OR</option>
+                                <option <?= set_select('u_state', 'PA', $unit["u_state"]=="PA");?>value="PA">PA</option>
+                                <option <?= set_select('u_state', 'PR', $unit["u_state"]=="PR");?>value="PR">PR</option>
+                                <option <?= set_select('u_state', 'RI', $unit["u_state"]=="RI");?>value="RI">RI</option>
+                                <option <?= set_select('u_state', 'SC', $unit["u_state"]=="SC");?>value="SC">SC</option>
+                                <option <?= set_select('u_state', 'SD', $unit["u_state"]=="SD");?>value="SD">SD</option>
+                                <option <?= set_select('u_state', 'TN', $unit["u_state"]=="TN");?>value="TN">TN</option>
+                                <option <?= set_select('u_state', 'TX', $unit["u_state"]=="TX");?>value="TX">TX</option>
+                                <option <?= set_select('u_state', 'UT', $unit["u_state"]=="UT");?>value="UT">UT</option>
+                                <option <?= set_select('u_state', 'VT', $unit["u_state"]=="VT");?>value="VT">VT</option>
+                                <option <?= set_select('u_state', 'VA', $unit["u_state"]=="VA");?>value="VA">VA</option>
+                                <option <?= set_select('u_state', 'VI', $unit["u_state"]=="VI");?>value="VI">VI</option>
+                                <option <?= set_select('u_state', 'WA', $unit["u_state"]=="WA");?>value="WA">WA</option>
+                                <option <?= set_select('u_state', 'WV', $unit["u_state"]=="WV");?>value="WV">WV</option>
+                                <option <?= set_select('u_state', 'WI', $unit["u_state"]=="WI");?>value="WI">WI</option>
+                                <option <?= set_select('u_state', 'WY', $unit["u_state"]=="WY");?>value="WY">WY</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -141,14 +141,14 @@
                                     style="width: 100%;"
                                     data-select2-id="1" tabindex="-1" aria-hidden="true"
                                     id="u_size" name="u_size">
-                                <option value="">Choose</option>
-                                <option value="self_employed">Self-employed</option>
-                                <option value="1-10">1-10 employees</option>
-                                <option value="11-50">11-50 employees</option>
-                                <option value="51-200">51-200 employees</option>
-                                <option value="201-500">201-500 employees</option>
-                                <option value="501-1000">501-1,000 employees</option>
-                                <option value="1001">1,001+ employees</option>
+                                <option <?= set_select('u_size', '', $unit["u_size"]=="");?>value="">Choose</option>
+                                <option <?= set_select('u_size', '', $unit["u_size"]=="");?>value="self_employed">Self-employed</option>
+                                <option <?= set_select('u_size', '', $unit["u_size"]=="");?>value="1-10">1-10 employees</option>
+                                <option <?= set_select('u_size', '', $unit["u_size"]=="");?>value="11-50">11-50 employees</option>
+                                <option <?= set_select('u_size', '', $unit["u_size"]=="");?>value="51-200">51-200 employees</option>
+                                <option <?= set_select('u_size', '', $unit["u_size"]=="");?>value="201-500">201-500 employees</option>
+                                <option <?= set_select('u_size', '', $unit["u_size"]=="");?>value="501-1000">501-1,000 employees</option>
+                                <option <?= set_select('u_size', '', $unit["u_size"]=="");?>value="1001">1,001+ employees</option>
                             </select>
                         </div>
                     </div>
@@ -297,24 +297,33 @@
                             </tr>
                             </thead>
                             <tbody>
+                            <?php
+                            $counter = 0;
+                            foreach ($accounts as $account){
+                                $counter++;
+                                ?>
+
+
+
+
                             <tr>
-                                <td>1.</td>
-                                <td>John</td>
+                                <td><?= $counter;?></td>
+                                <td><?= $account["first_name"];?></td>
                                 <td>
                                     Smith
                                 </td>
                                 <td>
                                     <a href="#" class="text-muted" data-toggle="modal"
-                                       data-target="#modal-default-employee" title="Edit">
+                                       data-target="#modal-default-employee<?= $counter;?>" title="Edit">
                                         <i class="fas  fa-edit"></i>
                                     </a>
                                     <!-- Employee Edit modal -->
-                                    <div class="modal fade" id="modal-default-employee" style="display: none;"
+                                    <div class="modal fade" id="modal-default-employee<?= $counter;?>" style="display: none;"
                                          aria-hidden="true">
                                         <div class="modal-dialog modal-default-employee">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h4 class="modal-title">EMPLOYEE FULL NAME</h4>
+                                                    <h4 class="modal-title"><?= $account["first_name"];?> <?= $account["last_name"];?></h4>
                                                     <button type="button" class="close" data-dismiss="modal"
                                                             aria-label="Close">
                                                         <span aria-hidden="true">×</span>
@@ -361,6 +370,8 @@
                                     </div>
                                 </td>
                             </tr>
+
+                            <?php } ?>
                             </tbody>
                         </table>
                     </div>

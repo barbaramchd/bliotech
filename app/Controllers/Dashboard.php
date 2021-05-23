@@ -121,14 +121,34 @@ class Dashboard extends BaseController
         # Name of the tab in browser
         $DATA["page_title"] = $DATA["page_header"].BLIO_TITLE;
 
-        # TODO: Get Data about the unit
 
+        $units = new UnitsModel();
 
-        # TODO: Get Data about the employees
+        # Get Data about the unit
+        $unit = $units->get_own_unit($unit_id, $DATA["user"]->id, $DATA["isManager"]);
 
+        if (!isset($unit)){
+            # If user has permission to edit the unit
 
-        # TODO: Get Data about the clicks
+            echo view("dashboard/header", $DATA);
+            $DATA["message"] = "You do not have access to given unit. Please contact our tech support.";
+            echo view("dashboard/error_message", $DATA);
+            echo view("dashboard/footer", $DATA);
+            die();
 
+        }
+        helper('form');
+        $DATA["unit"] = $unit;
+        $DATA["page_header"] = $unit["u_name"];
+        # Name of the tab in browser
+        $DATA["page_title"] = $DATA["page_header"].BLIO_TITLE;
+        # Get Data about the employees
+        $users = $units->getUsersFromUnit($unit_id);
+        $DATA["accounts"] = $users;
+
+        # Get Data about the clicks
+        $devices = $units->getDevicesFromUnit($unit_id);
+        $DATA["devices"] = $devices;
 
 
         # Displaying Header

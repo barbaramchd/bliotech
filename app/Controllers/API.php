@@ -63,7 +63,7 @@ class API extends BaseController
 
 
                 $this->send_sms("+".$device["d_notification_phone"], $message);
-
+                $this->send_email($device["d_notification_email"],$device["d_name"]."Needs attention","<h3>Hi!</h3><br><p>We have received a notification, that your device in ".$device["d_name"]." requires attention.</p><p>You can change the status on <a href='https://blio.tech'>you Blio Dashboard</a>.</p><p>Thank you for using our service!</p><p>Blio.Tech</p>");
 
 
                 //Trigger notifications
@@ -103,10 +103,17 @@ class API extends BaseController
         }
     }
 
-    public function test($number){
-        $events = new EventsModel();
-        $latest = $events->getLatestByPhone("$number");
-        var_dump($latest);
+    public function send_email($address, $subject, $message){
+        $email = \Config\Services::email();
+
+        $email->setTo($address);
+        //$email->setCC("juraj.vasek@minerva.kgi.edu");
+
+        $email->setSubject($subject);
+        $email->setMessage($message);
+
+        $email->send();
+        echo $email->printDebugger(['headers']);
         die();
     }
 

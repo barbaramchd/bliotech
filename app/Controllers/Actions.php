@@ -88,4 +88,17 @@ class Actions extends BaseController
         }
         return redirect()->to('/Dashboard/units');
     }
+
+    public function mark_solved($id){
+
+
+    }
+
+    public function mark_unsolved($id){
+
+
+    }
+
+
+
 }

@@ -233,7 +233,7 @@
                                 </td>
                                 <td>
                                     <a href="#" class="text-muted" data-toggle="modal"
-                                       data-target="#modal-default-device-<?= $counter;?>" title="Edit">
+                                       data-target="#modal-default-device<?= $counter;?>" title="Edit">
                                         <i class="fas  fa-edit"></i>
                                     </a>
                                     <!-- Device Edit modal -->

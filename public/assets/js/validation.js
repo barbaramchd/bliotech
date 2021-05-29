@@ -69,7 +69,7 @@ $(function() {
                 digits: 'Please enter digits only.'
             },
             u_phone: {
-                digits: 'Please enter digits only.'
+                pattern: "Please enter phone number in format +12345678901"
             },
             u_email: {
                 email: 'Please enter a <em>valid</em> email address.'

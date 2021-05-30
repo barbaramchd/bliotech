@@ -114,6 +114,8 @@
                     <th>Employee</th>
                     <th>Email</th>
                     <th>Unit</th>
+                    <th>Status</th>
+                    <th>Last Login</th>
                     <th>Role</th>
                     <th>Actions</th>
                 </tr>
@@ -124,6 +126,8 @@
                     <td><?= $user->first_name;?> <?= $user->last_name;?> <small>(you)</small></td>
                     <td><?= $user->email;?></td>
                     <td>-</td>
+                    <td><?= $user->active=="1"?"Active":"Disabled";?></td>
+                    <td><?= isset($user->last_login)?date("Y-m-d",$user->last_login):"";?></td>
                     <td>Manager</td>
                     <td>
                         <a href="#" class="text-muted">
@@ -139,6 +143,8 @@
                         <td><?=$account["first_name"];?> <?=$account["last_name"];?></td>
                         <td><?=$account["email"];?></td>
                         <td><?=$account["u_name"];?></td>
+                        <td><?= $account["active"]=="1"?"Active":"Disabled";?></td>
+                        <td><?= isset($account["last_login"])?date("Y-m-d",$account["last_login"]):"";?></td>
                         <td>Employee</td>
                         <td>
                             <a href="#" class="text-muted">

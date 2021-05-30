@@ -22,13 +22,13 @@
                         <div class="form-group">
                             <label for="u_name">Name</label>
                             <input type="text" name="u_name" id="u_name" class="form-control"
-                                   value="<?= $unit["u_name"];?>"
+                                   value="<?= $unit["u_name"]; ?>"
                                    required>
                         </div>
                         <div class="form-group">
                             <label for="u_company">Company</label>
                             <input type="text" name="u_company" id="u_company" class="form-control"
-                                   value="<?= $unit["u_company"];?>">
+                                   value="<?= $unit["u_company"]; ?>">
                         </div>
                         <div class="form-group">
                             <label for="u_address1">Address 1</label>
@@ -53,63 +53,120 @@
                                     style="width: 100%;"
                                     data-select2-id="1" tabindex="-1" aria-hidden="true"
                                     id="u_state" name="u_state" required>
-                                <option <?= set_select('u_state', '', $unit["u_state"]=="");?> value="">Choose</option>
-                                <option <?= set_select('u_state', 'AL', $unit["u_state"]=="AL");?>value="AL">AL</option>
-                                <option <?= set_select('u_state', 'AK', $unit["u_state"]=="AK");?>value="AK">AK</option>
-                                <option <?= set_select('u_state', 'AS', $unit["u_state"]=="AS");?>value="AS">AS</option>
-                                <option <?= set_select('u_state', 'AZ', $unit["u_state"]=="AZ");?>value="AZ">AZ</option>
-                                <option <?= set_select('u_state', 'AR', $unit["u_state"]=="AR");?>value="AR">AR</option>
-                                <option <?= set_select('u_state', 'CA', $unit["u_state"]=="CA");?>value="CA">CA</option>
-                                <option <?= set_select('u_state', 'CO', $unit["u_state"]=="CO");?>value="CO">CO</option>
-                                <option <?= set_select('u_state', 'CT', $unit["u_state"]=="CT");?>value="CT">CT</option>
-                                <option <?= set_select('u_state', 'DE', $unit["u_state"]=="DE");?>value="DE">DE</option>
-                                <option <?= set_select('u_state', 'DC', $unit["u_state"]=="DC");?>value="DC">DC</option>
-                                <option <?= set_select('u_state', 'FL', $unit["u_state"]=="FL");?>value="FL">FL</option>
-                                <option <?= set_select('u_state', 'GA', $unit["u_state"]=="GA");?>value="GA">GA</option>
-                                <option <?= set_select('u_state', 'GU', $unit["u_state"]=="GU");?>value="GU">GU</option>
-                                <option <?= set_select('u_state', 'HI', $unit["u_state"]=="HI");?>value="HI">HI</option>
-                                <option <?= set_select('u_state', 'ID', $unit["u_state"]=="ID");?>value="ID">ID</option>
-                                <option <?= set_select('u_state', 'IL', $unit["u_state"]=="IL");?>value="IL">IL</option>
-                                <option <?= set_select('u_state', 'IN', $unit["u_state"]=="IN");?>value="IN">IN</option>
-                                <option <?= set_select('u_state', 'IA', $unit["u_state"]=="IA");?>value="IA">IA</option>
-                                <option <?= set_select('u_state', 'KS', $unit["u_state"]=="KS");?>value="KS">KS</option>
-                                <option <?= set_select('u_state', 'KY', $unit["u_state"]=="KY");?>value="KY">KY</option>
-                                <option <?= set_select('u_state', 'LA', $unit["u_state"]=="LA");?>value="LA">LA</option>
-                                <option <?= set_select('u_state', 'ME', $unit["u_state"]=="ME");?>value="ME">ME</option>
-                                <option <?= set_select('u_state', 'MD', $unit["u_state"]=="MD");?>value="MD">MD</option>
-                                <option <?= set_select('u_state', 'MA', $unit["u_state"]=="MA");?>value="MA">MA</option>
-                                <option <?= set_select('u_state', 'MI', $unit["u_state"]=="MI");?>value="MI">MI</option>
-                                <option <?= set_select('u_state', 'MN', $unit["u_state"]=="MN");?>value="MN">MN</option>
-                                <option <?= set_select('u_state', 'MS', $unit["u_state"]=="MS");?>value="MS">MS</option>
-                                <option <?= set_select('u_state', 'MO', $unit["u_state"]=="MO");?>value="MO">MO</option>
-                                <option <?= set_select('u_state', 'MT', $unit["u_state"]=="MT");?>value="MT">MT</option>
-                                <option <?= set_select('u_state', 'NE', $unit["u_state"]=="NE");?>value="NE">NE</option>
-                                <option <?= set_select('u_state', 'NV', $unit["u_state"]=="NV");?>value="NV">NV</option>
-                                <option <?= set_select('u_state', 'NH', $unit["u_state"]=="NH");?>value="NH">NH</option>
-                                <option <?= set_select('u_state', 'NJ', $unit["u_state"]=="NJ");?>value="NJ">NJ</option>
-                                <option <?= set_select('u_state', 'NM', $unit["u_state"]=="NM");?>value="NM">NM</option>
-                                <option <?= set_select('u_state', 'NY', $unit["u_state"]=="NY");?>value="NY">NY</option>
-                                <option <?= set_select('u_state', 'NC', $unit["u_state"]=="NC");?>value="NC">NC</option>
-                                <option <?= set_select('u_state', 'ND', $unit["u_state"]=="ND");?>value="ND">ND</option>
-                                <option <?= set_select('u_state', 'MP', $unit["u_state"]=="MP");?>value="MP">MP</option>
-                                <option <?= set_select('u_state', 'OH', $unit["u_state"]=="OH");?>value="OH">OH</option>
-                                <option <?= set_select('u_state', 'OK', $unit["u_state"]=="OK");?>value="OK">OK</option>
-                                <option <?= set_select('u_state', 'OR', $unit["u_state"]=="OR");?>value="OR">OR</option>
-                                <option <?= set_select('u_state', 'PA', $unit["u_state"]=="PA");?>value="PA">PA</option>
-                                <option <?= set_select('u_state', 'PR', $unit["u_state"]=="PR");?>value="PR">PR</option>
-                                <option <?= set_select('u_state', 'RI', $unit["u_state"]=="RI");?>value="RI">RI</option>
-                                <option <?= set_select('u_state', 'SC', $unit["u_state"]=="SC");?>value="SC">SC</option>
-                                <option <?= set_select('u_state', 'SD', $unit["u_state"]=="SD");?>value="SD">SD</option>
-                                <option <?= set_select('u_state', 'TN', $unit["u_state"]=="TN");?>value="TN">TN</option>
-                                <option <?= set_select('u_state', 'TX', $unit["u_state"]=="TX");?>value="TX">TX</option>
-                                <option <?= set_select('u_state', 'UT', $unit["u_state"]=="UT");?>value="UT">UT</option>
-                                <option <?= set_select('u_state', 'VT', $unit["u_state"]=="VT");?>value="VT">VT</option>
-                                <option <?= set_select('u_state', 'VA', $unit["u_state"]=="VA");?>value="VA">VA</option>
-                                <option <?= set_select('u_state', 'VI', $unit["u_state"]=="VI");?>value="VI">VI</option>
-                                <option <?= set_select('u_state', 'WA', $unit["u_state"]=="WA");?>value="WA">WA</option>
-                                <option <?= set_select('u_state', 'WV', $unit["u_state"]=="WV");?>value="WV">WV</option>
-                                <option <?= set_select('u_state', 'WI', $unit["u_state"]=="WI");?>value="WI">WI</option>
-                                <option <?= set_select('u_state', 'WY', $unit["u_state"]=="WY");?>value="WY">WY</option>
+                                <option <?= set_select('u_state', '', $unit["u_state"] == ""); ?> value="">Choose
+                                </option>
+                                <option <?= set_select('u_state', 'AL', $unit["u_state"] == "AL"); ?>value="AL">AL
+                                </option>
+                                <option <?= set_select('u_state', 'AK', $unit["u_state"] == "AK"); ?>value="AK">AK
+                                </option>
+                                <option <?= set_select('u_state', 'AS', $unit["u_state"] == "AS"); ?>value="AS">AS
+                                </option>
+                                <option <?= set_select('u_state', 'AZ', $unit["u_state"] == "AZ"); ?>value="AZ">AZ
+                                </option>
+                                <option <?= set_select('u_state', 'AR', $unit["u_state"] == "AR"); ?>value="AR">AR
+                                </option>
+                                <option <?= set_select('u_state', 'CA', $unit["u_state"] == "CA"); ?>value="CA">CA
+                                </option>
+                                <option <?= set_select('u_state', 'CO', $unit["u_state"] == "CO"); ?>value="CO">CO
+                                </option>
+                                <option <?= set_select('u_state', 'CT', $unit["u_state"] == "CT"); ?>value="CT">CT
+                                </option>
+                                <option <?= set_select('u_state', 'DE', $unit["u_state"] == "DE"); ?>value="DE">DE
+                                </option>
+                                <option <?= set_select('u_state', 'DC', $unit["u_state"] == "DC"); ?>value="DC">DC
+                                </option>
+                                <option <?= set_select('u_state', 'FL', $unit["u_state"] == "FL"); ?>value="FL">FL
+                                </option>
+                                <option <?= set_select('u_state', 'GA', $unit["u_state"] == "GA"); ?>value="GA">GA
+                                </option>
+                                <option <?= set_select('u_state', 'GU', $unit["u_state"] == "GU"); ?>value="GU">GU
+                                </option>
+                                <option <?= set_select('u_state', 'HI', $unit["u_state"] == "HI"); ?>value="HI">HI
+                                </option>
+                                <option <?= set_select('u_state', 'ID', $unit["u_state"] == "ID"); ?>value="ID">ID
+                                </option>
+                                <option <?= set_select('u_state', 'IL', $unit["u_state"] == "IL"); ?>value="IL">IL
+                                </option>
+                                <option <?= set_select('u_state', 'IN', $unit["u_state"] == "IN"); ?>value="IN">IN
+                                </option>
+                                <option <?= set_select('u_state', 'IA', $unit["u_state"] == "IA"); ?>value="IA">IA
+                                </option>
+                                <option <?= set_select('u_state', 'KS', $unit["u_state"] == "KS"); ?>value="KS">KS
+                                </option>
+                                <option <?= set_select('u_state', 'KY', $unit["u_state"] == "KY"); ?>value="KY">KY
+                                </option>
+                                <option <?= set_select('u_state', 'LA', $unit["u_state"] == "LA"); ?>value="LA">LA
+                                </option>
+                                <option <?= set_select('u_state', 'ME', $unit["u_state"] == "ME"); ?>value="ME">ME
+                                </option>
+                                <option <?= set_select('u_state', 'MD', $unit["u_state"] == "MD"); ?>value="MD">MD
+                                </option>
+                                <option <?= set_select('u_state', 'MA', $unit["u_state"] == "MA"); ?>value="MA">MA
+                                </option>
+                                <option <?= set_select('u_state', 'MI', $unit["u_state"] == "MI"); ?>value="MI">MI
+                                </option>
+                                <option <?= set_select('u_state', 'MN', $unit["u_state"] == "MN"); ?>value="MN">MN
+                                </option>
+                                <option <?= set_select('u_state', 'MS', $unit["u_state"] == "MS"); ?>value="MS">MS
+                                </option>
+                                <option <?= set_select('u_state', 'MO', $unit["u_state"] == "MO"); ?>value="MO">MO
+                                </option>
+                                <option <?= set_select('u_state', 'MT', $unit["u_state"] == "MT"); ?>value="MT">MT
+                                </option>
+                                <option <?= set_select('u_state', 'NE', $unit["u_state"] == "NE"); ?>value="NE">NE
+                                </option>
+                                <option <?= set_select('u_state', 'NV', $unit["u_state"] == "NV"); ?>value="NV">NV
+                                </option>
+                                <option <?= set_select('u_state', 'NH', $unit["u_state"] == "NH"); ?>value="NH">NH
+                                </option>
+                                <option <?= set_select('u_state', 'NJ', $unit["u_state"] == "NJ"); ?>value="NJ">NJ
+                                </option>
+                                <option <?= set_select('u_state', 'NM', $unit["u_state"] == "NM"); ?>value="NM">NM
+                                </option>
+                                <option <?= set_select('u_state', 'NY', $unit["u_state"] == "NY"); ?>value="NY">NY
+                                </option>
+                                <option <?= set_select('u_state', 'NC', $unit["u_state"] == "NC"); ?>value="NC">NC
+                                </option>
+                                <option <?= set_select('u_state', 'ND', $unit["u_state"] == "ND"); ?>value="ND">ND
+                                </option>
+                                <option <?= set_select('u_state', 'MP', $unit["u_state"] == "MP"); ?>value="MP">MP
+                                </option>
+                                <option <?= set_select('u_state', 'OH', $unit["u_state"] == "OH"); ?>value="OH">OH
+                                </option>
+                                <option <?= set_select('u_state', 'OK', $unit["u_state"] == "OK"); ?>value="OK">OK
+                                </option>
+                                <option <?= set_select('u_state', 'OR', $unit["u_state"] == "OR"); ?>value="OR">OR
+                                </option>
+                                <option <?= set_select('u_state', 'PA', $unit["u_state"] == "PA"); ?>value="PA">PA
+                                </option>
+                                <option <?= set_select('u_state', 'PR', $unit["u_state"] == "PR"); ?>value="PR">PR
+                                </option>
+                                <option <?= set_select('u_state', 'RI', $unit["u_state"] == "RI"); ?>value="RI">RI
+                                </option>
+                                <option <?= set_select('u_state', 'SC', $unit["u_state"] == "SC"); ?>value="SC">SC
+                                </option>
+                                <option <?= set_select('u_state', 'SD', $unit["u_state"] == "SD"); ?>value="SD">SD
+                                </option>
+                                <option <?= set_select('u_state', 'TN', $unit["u_state"] == "TN"); ?>value="TN">TN
+                                </option>
+                                <option <?= set_select('u_state', 'TX', $unit["u_state"] == "TX"); ?>value="TX">TX
+                                </option>
+                                <option <?= set_select('u_state', 'UT', $unit["u_state"] == "UT"); ?>value="UT">UT
+                                </option>
+                                <option <?= set_select('u_state', 'VT', $unit["u_state"] == "VT"); ?>value="VT">VT
+                                </option>
+                                <option <?= set_select('u_state', 'VA', $unit["u_state"] == "VA"); ?>value="VA">VA
+                                </option>
+                                <option <?= set_select('u_state', 'VI', $unit["u_state"] == "VI"); ?>value="VI">VI
+                                </option>
+                                <option <?= set_select('u_state', 'WA', $unit["u_state"] == "WA"); ?>value="WA">WA
+                                </option>
+                                <option <?= set_select('u_state', 'WV', $unit["u_state"] == "WV"); ?>value="WV">WV
+                                </option>
+                                <option <?= set_select('u_state', 'WI', $unit["u_state"] == "WI"); ?>value="WI">WI
+                                </option>
+                                <option <?= set_select('u_state', 'WY', $unit["u_state"] == "WY"); ?>value="WY">WY
+                                </option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -141,14 +198,28 @@
                                     style="width: 100%;"
                                     data-select2-id="1" tabindex="-1" aria-hidden="true"
                                     id="u_size" name="u_size">
-                                <option <?= set_select('u_size', '', $unit["u_size"]=="");?>value="">Choose</option>
-                                <option <?= set_select('u_size', '', $unit["u_size"]=="");?>value="self_employed">Self-employed</option>
-                                <option <?= set_select('u_size', '', $unit["u_size"]=="");?>value="1-10">1-10 employees</option>
-                                <option <?= set_select('u_size', '', $unit["u_size"]=="");?>value="11-50">11-50 employees</option>
-                                <option <?= set_select('u_size', '', $unit["u_size"]=="");?>value="51-200">51-200 employees</option>
-                                <option <?= set_select('u_size', '', $unit["u_size"]=="");?>value="201-500">201-500 employees</option>
-                                <option <?= set_select('u_size', '', $unit["u_size"]=="");?>value="501-1000">501-1,000 employees</option>
-                                <option <?= set_select('u_size', '', $unit["u_size"]=="");?>value="1001">1,001+ employees</option>
+                                <option <?= set_select('u_size', '', $unit["u_size"] == ""); ?>value="">Choose</option>
+                                <option <?= set_select('u_size', '', $unit["u_size"] == ""); ?>value="self_employed">
+                                    Self-employed
+                                </option>
+                                <option <?= set_select('u_size', '', $unit["u_size"] == ""); ?>value="1-10">1-10
+                                    employees
+                                </option>
+                                <option <?= set_select('u_size', '', $unit["u_size"] == ""); ?>value="11-50">11-50
+                                    employees
+                                </option>
+                                <option <?= set_select('u_size', '', $unit["u_size"] == ""); ?>value="51-200">51-200
+                                    employees
+                                </option>
+                                <option <?= set_select('u_size', '', $unit["u_size"] == ""); ?>value="201-500">201-500
+                                    employees
+                                </option>
+                                <option <?= set_select('u_size', '', $unit["u_size"] == ""); ?>value="501-1000">
+                                    501-1,000 employees
+                                </option>
+                                <option <?= set_select('u_size', '', $unit["u_size"] == ""); ?>value="1001">1,001+
+                                    employees
+                                </option>
                             </select>
                         </div>
                     </div>
@@ -217,84 +288,133 @@
                             <tbody>
                             <?php
                             $counter = 0;
-                            foreach ($devices as $device){
-                            $counter++;
-                            ?>
+                            foreach ($devices as $device) {
+                                $counter++;
+                                ?>
 
-                            <tr>
-                                <td><?= $counter;?></td>
-                                <td><?= $device["d_name"];?></td>
-                                <td>
-                                    <input type="checkbox" name="my-checkbox" data-bootstrap-switch
-                                           data-off-color="danger" <?= set_checkbox('d_active', '1', $device["d_active"] ); ?> data-on-color="success">
-                                </td>
-                                <td>
-                                    <!-- TODO: should show the device status here -->
-                                    TODO
-                                </td>
-                                <td>
-                                    <a href="#" class="text-muted" data-toggle="modal"
-                                       data-target="#modal-default-device<?= $counter;?>" title="Edit">
-                                        <i class="fas  fa-edit"></i>
-                                    </a>
-                                    <!-- Device Edit modal -->
-                                    <div class="modal fade" id="modal-default-device<?= $counter;?>" style="display: none;"
-                                         aria-hidden="true">
-                                        <div class="modal-dialog modal-default-device">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h4 class="modal-title"><?= $device["d_name"];?></h4>
-                                                    <button type="button" class="close" data-dismiss="modal"
-                                                            aria-label="Close">
-                                                        <span aria-hidden="true">×</span>
-                                                    </button>
+                                <tr>
+                                    <td><?= $counter; ?></td>
+                                    <td><?= $device["d_name"]; ?></td>
+                                    <td>
+                                        <input type="checkbox" name="my-checkbox" data-bootstrap-switch
+                                               data-off-color="danger" <?= set_checkbox('d_active', '1', $device["d_active"]); ?>
+                                               data-on-color="success">
+                                    </td>
+                                    <td>
+                                        <!-- TODO: should show the device status here -->
+                                        TODO
+                                    </td>
+                                    <td>
+                                        <a href="#" class="text-muted" data-toggle="modal"
+                                           data-target="#modal-default-device<?= $counter; ?>" title="Edit">
+                                            <i class="fas  fa-edit"></i>
+                                        </a>
+                                        <!-- Device Edit modal -->
+                                        <div class="modal fade" id="modal-default-device<?= $counter; ?>"
+                                             style="display: none;"
+                                             aria-hidden="true">
+                                            <div class="modal-dialog modal-default-device">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title"><?= $device["d_name"]; ?></h4>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                            <span aria-hidden="true">×</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <!-- TODO: get real serial number -->
+                                                        <div class="form-group">
+                                                            <label for="d_serial_number"> Serial Number</label>
+                                                            <input type="text" name="d_serial_number"
+                                                                   id="d_serial_number"
+                                                                   class="form-control" disabled
+                                                                   value="123456">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="d_name"> Device Name</label>
+                                                            <input type="text" name="d_name" id="d_name"
+                                                                   class="form-control"
+                                                                   value="NAMENAME"
+                                                                   required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div class="row">
+                                                                <div class="col-sm-12">
+                                                                    <label for="d_name"> Notifications</label>
+                                                                </div>
+                                                                <div class="col-sm-6">
+                                                                    <div class="custom-control custom-checkbox">
+                                                                        <input class="custom-control-input"
+                                                                               type="checkbox"
+                                                                               id="customCheckbox2" checked="">
+                                                                        <h6 for="customCheckbox2"
+                                                                            class="custom-control-label">Notify me by
+                                                                            email</h6>
+                                                                    </div>
+                                                                    <!-- Select multiple-->
+                                                                    <!-- TODO: get real emails -->
+                                                                    <div class="form-group">
+                                                                        <h6>Select all email addresses that you want to be
+                                                                            notified:</h6>
+                                                                        <select multiple="" class="custom-select">
+                                                                            <option>option 1</option>
+                                                                            <option>option 2</option>
+                                                                            <option>option 3</option>
+                                                                            <option>option 4</option>
+                                                                            <option>option 5</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-6">
+                                                                    <div class="custom-control custom-checkbox">
+                                                                        <input class="custom-control-input"
+                                                                               type="checkbox"
+                                                                               id="customCheckbox2" checked="">
+                                                                        <h6 for="customCheckbox2"
+                                                                            class="custom-control-label">Notify me by
+                                                                            SMS</h6>
+                                                                    </div>
+                                                                    <!-- Select multiple-->
+                                                                    <!-- TODO: get real numbers -->
+                                                                    <div class="form-group">
+                                                                        <h6>Select all numbers that you want to be
+                                                                            notified:</h6>
+                                                                        <select multiple="" class="custom-select">
+                                                                            <option>option 1</option>
+                                                                            <option>option 2</option>
+                                                                            <option>option 3</option>
+                                                                            <option>option 4</option>
+                                                                            <option>option 5</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <!-- TODO: autosave function in note -->
+                                                            <label>Note:</label>
+                                                            <textarea class="form-control"
+                                                                      id="autosave-note"
+                                                                      rows="3"
+                                                                      placeholder="Enter ..."
+                                                                      spellcheck="true"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer justify-content-between">
+                                                        <button type="button" class="btn btn-default btn-sm"
+                                                                data-dismiss="modal">Close
+                                                        </button>
+                                                        <input type="submit" class="btn btn-success btn-sm"
+                                                               id="save-note-device" value="Save">
+                                                    </div>
                                                 </div>
-                                                <div class="modal-body">
-                                                    <div class="form-group">
-                                                        <label for="d_serial_number"> Serial Number</label>
-                                                        <input type="text" name="d_serial_number" id="d_serial_number"
-                                                               class="form-control" disabled
-                                                               <!-- TODO: get real serial number -->
-                                                               value="123456">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="d_name"> Device Name</label>
-                                                        <input type="text" name="d_name" id="d_name"
-                                                               class="form-control"
-                                                               value="NAMENAME"
-                                                               required>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="d_name"> Notifications</label>
-                                                        <input type="text" name="d_name" id="d_name"
-                                                               class="form-control"
-                                                               value="NAMENAME"
-                                                               required>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <!-- TODO: autosave function in note -->
-                                                        <label>Note:</label>
-                                                        <textarea class="form-control"
-                                                                  id="autosave-note"
-                                                                  rows="3"
-                                                                  placeholder="Enter ..."
-                                                                  spellcheck="true"></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="modal-footer justify-content-between">
-                                                    <button type="button" class="btn btn-default btn-sm"
-                                                            data-dismiss="modal">Close
-                                                    </button>
-                                                    <input type="submit" class="btn btn-success btn-sm"
-                                                           id="save-note-device" value="Save">
-                                                </div>
+                                                <!-- /.modal-content -->
                                             </div>
-                                            <!-- /.modal-content -->
+                                            <!-- /.modal-dialog -->
                                         </div>
-                                        <!-- /.modal-dialog -->
-                                    </div>
-                                </td>
-                            </tr>
+                                    </td>
+                                </tr>
                             <?php } ?>
                             </tbody>
                         </table>
@@ -324,73 +444,75 @@
 
                             <?php
                             $counter = 0;
-                            foreach ($accounts as $account){
+                            foreach ($accounts as $account) {
                                 $counter++;
                                 ?>
-                            <tr>
-                                <td><?= $counter;?></td>
-                                <td><?= $account["first_name"];?></td>
-                                <td>
-                                    Smith
-                                </td>
-                                <td>
-                                    <a href="#" class="text-muted" data-toggle="modal"
-                                       data-target="#modal-default-employee<?= $counter;?>" title="Edit">
-                                        <i class="fas  fa-edit"></i>
-                                    </a>
-                                    <!-- Employee Edit modal -->
-                                    <div class="modal fade" id="modal-default-employee<?= $counter;?>" style="display: none;"
-                                         aria-hidden="true">
-                                        <div class="modal-dialog modal-default-employee">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h4 class="modal-title"><?= $account["first_name"];?> <?= $account["last_name"];?></h4>
-                                                    <button type="button" class="close" data-dismiss="modal"
-                                                            aria-label="Close">
-                                                        <span aria-hidden="true">×</span>
-                                                    </button>
+                                <tr>
+                                    <td><?= $counter; ?></td>
+                                    <td><?= $account["first_name"]; ?></td>
+                                    <td>
+                                        Smith
+                                    </td>
+                                    <td>
+                                        <a href="#" class="text-muted" data-toggle="modal"
+                                           data-target="#modal-default-employee<?= $counter; ?>" title="Edit">
+                                            <i class="fas  fa-edit"></i>
+                                        </a>
+                                        <!-- Employee Edit modal -->
+                                        <div class="modal fade" id="modal-default-employee<?= $counter; ?>"
+                                             style="display: none;"
+                                             aria-hidden="true">
+                                            <div class="modal-dialog modal-default-employee">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title"><?= $account["first_name"]; ?> <?= $account["last_name"]; ?></h4>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                            <span aria-hidden="true">×</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="form-group">
+                                                            <label for="first_name"> First Name</label>
+                                                            <input type="text" name="first_name" id="first_name"
+                                                                   class="form-control"
+                                                                   value="NAMENAME"
+                                                                   required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="last_name"> Last Name</label>
+                                                            <input type="text" name="last_name" id="last_name"
+                                                                   class="form-control"
+                                                                   value="NAMENAME"
+                                                                   required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="email">Email</label>
+                                                            <input type="email" name="email" id="email"
+                                                                   class="form-control"
+                                                                   placeholder="Enter email" required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="phone">Phone</label>
+                                                            <input type="number" name="phone" id="phone"
+                                                                   class="form-control"
+                                                                   placeholder="Enter phone (only digits)">
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer justify-content-between">
+                                                        <button type="button" class="btn btn-default btn-sm"
+                                                                data-dismiss="modal">Close
+                                                        </button>
+                                                        <input type="submit" class="btn btn-secondary btn-sm"
+                                                               id="save-note-device" value="Save">
+                                                    </div>
                                                 </div>
-                                                <div class="modal-body">
-                                                    <div class="form-group">
-                                                        <label for="first_name"> First Name</label>
-                                                        <input type="text" name="first_name" id="first_name"
-                                                               class="form-control"
-                                                               value="NAMENAME"
-                                                               required>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="last_name"> Last Name</label>
-                                                        <input type="text" name="last_name" id="last_name"
-                                                               class="form-control"
-                                                               value="NAMENAME"
-                                                               required>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="email">Email</label>
-                                                        <input type="email" name="email" id="email" class="form-control"
-                                                               placeholder="Enter email" required>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="phone">Phone</label>
-                                                        <input type="number" name="phone" id="phone"
-                                                               class="form-control"
-                                                               placeholder="Enter phone (only digits)">
-                                                    </div>
-                                                </div>
-                                                <div class="modal-footer justify-content-between">
-                                                    <button type="button" class="btn btn-default btn-sm"
-                                                            data-dismiss="modal">Close
-                                                    </button>
-                                                    <input type="submit" class="btn btn-secondary btn-sm"
-                                                           id="save-note-device" value="Save">
-                                                </div>
+                                                <!-- /.modal-content -->
                                             </div>
-                                            <!-- /.modal-content -->
+                                            <!-- /.modal-dialog -->
                                         </div>
-                                        <!-- /.modal-dialog -->
-                                    </div>
-                                </td>
-                            </tr>
+                                    </td>
+                                </tr>
 
                             <?php } ?>
                             </tbody>

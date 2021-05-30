@@ -7,9 +7,9 @@
                 <?php if (isset($flashdata["operation_action"])){
                     if($flashdata["operation_action"] == "show_alert_success"){?>
                         <div class="callout callout-success">
-                            <h5>User Account was successfully created!</h5>
+                            <h5>User account was successfully created!</h5>
 
-                            <p>Email with instructions to on how to create a new password has been send to email: <?= $flashdata["operation_id"];?>.
+                            <p>An email with instructions about how to create a new password has been sent to: <?= $flashdata["operation_id"];?>.
                             </p>
                         </div>
                     <?php }else{?>

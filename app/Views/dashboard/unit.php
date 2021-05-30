@@ -463,7 +463,11 @@
                                     <td>
                                         <?= $account["last_name"]; ?>
                                     </td>
-                                    <td><?= $account["active"]=="1"?"Active":"Disabled";?></td>
+                                    <td>
+                                        <input type="checkbox" name="my-checkbox" data-bootstrap-switch
+                                               data-off-color="danger" <?= set_checkbox('d_active', '1', $device["d_active"]); ?>
+                                               data-on-color="success">
+                                    </td>
                                     <td><?= date("Y-m-d",$account["last_login"]);?></td>
                                     <td>
                                         <a href="#" class="text-muted" data-toggle="modal"

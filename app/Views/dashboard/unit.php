@@ -229,6 +229,7 @@
                                            data-off-color="danger" <?= set_checkbox('d_active', '1', $device["d_active"] ); ?> data-on-color="success">
                                 </td>
                                 <td>
+                                    <!-- TODO: should show the device status here -->
                                     TODO
                                 </td>
                                 <td>
@@ -250,6 +251,13 @@
                                                 </div>
                                                 <div class="modal-body">
                                                     <div class="form-group">
+                                                        <label for="d_serial_number"> Serial Number</label>
+                                                        <input type="text" name="d_serial_number" id="d_serial_number"
+                                                               class="form-control" disabled
+                                                               <!-- TODO: get real serial number -->
+                                                               value="123456">
+                                                    </div>
+                                                    <div class="form-group">
                                                         <label for="d_name"> Device Name</label>
                                                         <input type="text" name="d_name" id="d_name"
                                                                class="form-control"
@@ -257,6 +265,14 @@
                                                                required>
                                                     </div>
                                                     <div class="form-group">
+                                                        <label for="d_name"> Notifications</label>
+                                                        <input type="text" name="d_name" id="d_name"
+                                                               class="form-control"
+                                                               value="NAMENAME"
+                                                               required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <!-- TODO: autosave function in note -->
                                                         <label>Note:</label>
                                                         <textarea class="form-control"
                                                                   id="autosave-note"

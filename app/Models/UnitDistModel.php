@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class UnitDistModel extends Model
 {
     protected $table = 'unit_districts';
-    protected $allowedFields = ['unit_id', 'district_id'];
+    protected $allowedFields = ["id",'unit_id', 'district_id'];
     protected $useTimestamps = false;
 
     public function getUnitsFromDistrict($district_id)
@@ -19,9 +19,13 @@ class UnitDistModel extends Model
     }
 
     public function checkIfExists($district_id, $unit_id){
-        return $this->where(['district_id' => $district_id,
+        return $this->select("id")->where(['district_id' => $district_id,
                              "unit_id" => $unit_id])
             ->countAllResults();
+        //return $this->asArray()
+        //->where(['district_id' => $district_id])
+        //    ->where(['unit_id' => $unit_id])
+        //    ->findAll();
     }
 
     public function getUsersFromDistrict($district_id){

@@ -115,7 +115,7 @@ class Actions extends BaseController
 
             # Verify if unit belongs to given district
             $unit_id = $request->getVar("user_unit", FILTER_SANITIZE_NUMBER_INT);
-            if ($ud->checkIfExists($district, $unit_id) == 0){
+            if ($ud->checkIfExists($district["id"], $unit_id) == 0){
                 $session->setFlashdata('operation_action', 'show_alert');
                 $session->setFlashdata('operation_result', 'danger');
                 $session->setFlashdata('operation_content', "Invalid data received: User´s Unit");
@@ -137,7 +137,7 @@ class Actions extends BaseController
                 else
                 {
                     # Validated, parsing all input data and filtering
-                    $email = $request->getVar("u_email", FILTER_SANITIZE_EMAIL);
+                    $email = $request->getVar("email", FILTER_SANITIZE_EMAIL);
                     $additional_data = array(
                         'first_name' => $request->getVar("first_name", FILTER_SANITIZE_STRING),
                         'last_name'  => $request->getVar("last_name", FILTER_SANITIZE_STRING),

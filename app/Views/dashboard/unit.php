@@ -348,7 +348,8 @@
                                                                     <!-- Select multiple-->
                                                                     <!-- TODO: get real emails -->
                                                                     <div class="form-group">
-                                                                        <h6>Select all the email addresses that you want to
+                                                                        <h6>Select all the email addresses that you want
+                                                                            to
                                                                             be notified:</h6>
                                                                         <div class="form-check">
                                                                             <input class="form-check-input"
@@ -395,31 +396,31 @@
                                                                                    id="exampleInputBorder"
                                                                                    placeholder="Add new number">
                                                                         </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
+                                                            <div class="form-group">
+                                                                <!-- TODO: autosave function in note -->
+                                                                <label>Note:</label>
+                                                                <textarea class="form-control"
+                                                                          id="autosave-note"
+                                                                          rows="3"
+                                                                          placeholder="Enter ..."
+                                                                          spellcheck="true"></textarea>
+                                                            </div>
                                                         </div>
-                                                        <div class="form-group">
-                                                            <!-- TODO: autosave function in note -->
-                                                            <label>Note:</label>
-                                                            <textarea class="form-control"
-                                                                      id="autosave-note"
-                                                                      rows="3"
-                                                                      placeholder="Enter ..."
-                                                                      spellcheck="true"></textarea>
+                                                        <div class="modal-footer justify-content-between">
+                                                            <button type="button" class="btn btn-default btn-sm"
+                                                                    data-dismiss="modal">Close
+                                                            </button>
+                                                            <input type="submit" class="btn btn-success btn-sm"
+                                                                   id="save-note-device" value="Save">
                                                         </div>
                                                     </div>
-                                                    <div class="modal-footer justify-content-between">
-                                                        <button type="button" class="btn btn-default btn-sm"
-                                                                data-dismiss="modal">Close
-                                                        </button>
-                                                        <input type="submit" class="btn btn-success btn-sm"
-                                                               id="save-note-device" value="Save">
-                                                    </div>
+                                                    <!-- /.modal-content -->
                                                 </div>
-                                                <!-- /.modal-content -->
+                                                <!-- /.modal-dialog -->
                                             </div>
-                                            <!-- /.modal-dialog -->
-                                        </div>
                                     </td>
                                 </tr>
                             <?php } ?>
@@ -504,6 +505,17 @@
                                                             <input type="number" name="phone" id="phone"
                                                                    class="form-control"
                                                                    placeholder="Enter phone (only digits)">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <button type="button"
+                                                                    class="btn btn-outline-info btn-xs">
+                                                                Disable account
+                                                            </button>
+                                                            <button type="button"
+                                                                    class="btn btn-outline-danger btn-xs">
+                                                                Delete
+                                                                account
+                                                            </button>
                                                         </div>
                                                     </div>
                                                     <div class="modal-footer justify-content-between">

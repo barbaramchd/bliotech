@@ -196,7 +196,7 @@ class IonAuth extends \IonAuth\Config\IonAuth
 	 *
 	 * @var string
 	 */
-	public $emailTemplates = 'IonAuth\\Views\\auth\\email\\';
+	public $emailTemplates = '../Views/auth/email/';
 
 	/**
 	 * -------------------------------------------------------------------------

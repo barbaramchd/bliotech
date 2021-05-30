@@ -465,7 +465,7 @@
                                     </td>
                                     <td>
                                         <input type="checkbox" name="my-checkbox" data-bootstrap-switch
-                                               data-off-color="danger" <?= set_checkbox('d_active', '1', $device["d_active"]); ?>
+                                               data-off-color="danger" <?= set_checkbox('active', '1', $account["active"]); ?>
                                                data-on-color="success">
                                     </td>
                                     <td><?= date("Y-m-d",$account["last_login"]);?></td>

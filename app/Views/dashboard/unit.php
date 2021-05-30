@@ -33,18 +33,18 @@
                         <div class="form-group">
                             <label for="u_address1">Address 1</label>
                             <input type="text" name="u_address1" id="u_address1" class="form-control"
-                                   value="AdminLTE"
+                                   value="<?= $unit["u_address1"]; ?>"
                                    required>
                         </div>
                         <div class="form-group">
                             <label for="u_address2">Address 2</label>
                             <input type="text" name="u_address2" id="u_address2" class="form-control"
-                                   value="AdminLTE">
+                                   value="<?= $unit["u_address2"]; ?>">
                         </div>
                         <div class="form-group">
                             <label for="u_city">City</label>
                             <input type="text" name="u_city" id="u_city" class="form-control"
-                                   value="CITY"
+                                   value="<?= $unit["u_city"]; ?>"
                                    required>
                         </div>
                         <div class="form-group">
@@ -173,24 +173,24 @@
                             <label for="u_zip">Postal Code</label>
                             <input type="text" name="u_zip" id="u_zip"
                                    class="form-control"
-                                   value="AAA"
+                                   value="<?= $unit["u_zip"]; ?>"
                                    required>
                         </div>
                         <div class="form-group">
                             <label for="u_phone">Phone</label>
                             <input type="text" name="u_phone" id="u_phone"
                                    class="form-control"
-                                   value="AAA">
+                                   value="<?= $unit["u_phone"]; ?>">
                         </div>
                         <div class="form-group">
                             <label for="u_email">Email</label>
                             <input type="email" name="u_email" id="u_email" class="form-control"
-                                   value="AAA">
+                                   value="<?= $unit["u_email"]; ?>">
                         </div>
                         <div class="form-group">
                             <label for="u_website">Website</label>
                             <input type="url" name="u_website" id="u_website" class="form-control"
-                                   value="AAA">
+                                   value="<?= $unit["u_website"]; ?>">
                         </div>
                         <div class="form-group">
                             <label for="u_size">Unit Size</label>
@@ -199,25 +199,25 @@
                                     data-select2-id="1" tabindex="-1" aria-hidden="true"
                                     id="u_size" name="u_size">
                                 <option <?= set_select('u_size', '', $unit["u_size"] == ""); ?>value="">Choose</option>
-                                <option <?= set_select('u_size', '', $unit["u_size"] == ""); ?>value="self_employed">
+                                <option <?= set_select('u_size', '1', $unit["u_size"] == "1"); ?>value="self_employed">
                                     Self-employed
                                 </option>
-                                <option <?= set_select('u_size', '', $unit["u_size"] == ""); ?>value="1-10">1-10
+                                <option <?= set_select('u_size', '2', $unit["u_size"] == "2"); ?>value="1-10">1-10
                                     employees
                                 </option>
-                                <option <?= set_select('u_size', '', $unit["u_size"] == ""); ?>value="11-50">11-50
+                                <option <?= set_select('u_size', '3', $unit["u_size"] == "3"); ?>value="11-50">11-50
                                     employees
                                 </option>
-                                <option <?= set_select('u_size', '', $unit["u_size"] == ""); ?>value="51-200">51-200
+                                <option <?= set_select('u_size', '4', $unit["u_size"] == "4"); ?>value="51-200">51-200
                                     employees
                                 </option>
-                                <option <?= set_select('u_size', '', $unit["u_size"] == ""); ?>value="201-500">201-500
+                                <option <?= set_select('u_size', '5', $unit["u_size"] == "5"); ?>value="201-500">201-500
                                     employees
                                 </option>
-                                <option <?= set_select('u_size', '', $unit["u_size"] == ""); ?>value="501-1000">
+                                <option <?= set_select('u_size', '6', $unit["u_size"] == "6"); ?>value="501-1000">
                                     501-1,000 employees
                                 </option>
-                                <option <?= set_select('u_size', '', $unit["u_size"] == ""); ?>value="1001">1,001+
+                                <option <?= set_select('u_size', '7', $unit["u_size"] == "7"); ?>value="1001">1,001+
                                     employees
                                 </option>
                             </select>
@@ -329,13 +329,13 @@
                                                             <input type="text" name="d_serial_number"
                                                                    id="d_serial_number"
                                                                    class="form-control" disabled
-                                                                   value="123456">
+                                                                   value="<?= $device["d_serial_number"]; ?>">
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="d_name"> Device Name</label>
                                                             <input type="text" name="d_name" id="d_name"
                                                                    class="form-control"
-                                                                   value="NAMENAME"
+                                                                   value="<?= $device["d_name"]; ?>"
                                                                    required>
                                                         </div>
                                                         <div class="form-group">
@@ -406,7 +406,7 @@
                                                                           id="autosave-note"
                                                                           rows="3"
                                                                           placeholder="Enter ..."
-                                                                          spellcheck="true"></textarea>
+                                                                          spellcheck="true"><?= $device["d_note"]; ?></textarea>
                                                             </div>
                                                         </div>
                                                         <div class="modal-footer justify-content-between">
@@ -444,6 +444,8 @@
                                 <th style="width: 10px">#</th>
                                 <th>First Name</th>
                                 <th>Last Name</th>
+                                <th>Status</th>
+                                <th>Last Active</th>
                                 <th style="width: 40px">Actions</th>
                             </tr>
                             </thead>
@@ -459,8 +461,10 @@
                                     <td><?= $counter; ?></td>
                                     <td><?= $account["first_name"]; ?></td>
                                     <td>
-                                        Smith
+                                        <?= $account["last_name"]; ?>
                                     </td>
+                                    <td><?= $account["active"]=="1"?"Active":"Disabled";?></td>
+                                    <td><?= date("Y-m-d",$account["last_login"]);?></td>
                                     <td>
                                         <a href="#" class="text-muted" data-toggle="modal"
                                            data-target="#modal-default-employee<?= $counter; ?>" title="Edit">
@@ -484,26 +488,26 @@
                                                             <label for="first_name"> First Name</label>
                                                             <input type="text" name="first_name" id="first_name"
                                                                    class="form-control"
-                                                                   value="NAMENAME"
+                                                                   value="<?= $account["first_name"]; ?>"
                                                                    required>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="last_name"> Last Name</label>
                                                             <input type="text" name="last_name" id="last_name"
                                                                    class="form-control"
-                                                                   value="NAMENAME"
+                                                                   value="<?= $account["last_name"]; ?>"
                                                                    required>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="email">Email</label>
-                                                            <input type="email" name="email" id="email"
-                                                                   class="form-control"
+                                                            <input type="email" name="email" id="email" disabled
+                                                                   class="form-control" value="<?= $account["email"]; ?>"
                                                                    placeholder="Enter email" required>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="phone">Phone</label>
                                                             <input type="number" name="phone" id="phone"
-                                                                   class="form-control"
+                                                                   class="form-control", value="<?= $account["phone"]; ?>"
                                                                    placeholder="Enter phone (only digits)">
                                                         </div>
                                                         <div class="form-group">

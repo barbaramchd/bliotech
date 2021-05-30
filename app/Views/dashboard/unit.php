@@ -344,50 +344,57 @@
                                                                     <label for="d_name"> Notifications</label>
                                                                 </div>
                                                                 <div class="col-sm-6">
-                                                                    <div class="custom-control custom-checkbox">
-                                                                        <input class="custom-control-input"
-                                                                               type="checkbox"
-                                                                               id="customCheckbox2" checked="">
-                                                                        <h6 for="customCheckbox2"
-                                                                            class="custom-control-label">Notify me by
-                                                                            email</h6>
-                                                                    </div>
+                                                                    <label>Email</label>
                                                                     <!-- Select multiple-->
                                                                     <!-- TODO: get real emails -->
                                                                     <div class="form-group">
-                                                                        <h6>Select all email addresses that you want to be
-                                                                            notified:</h6>
-                                                                        <select multiple="" class="custom-select">
-                                                                            <option>option 1</option>
-                                                                            <option>option 2</option>
-                                                                            <option>option 3</option>
-                                                                            <option>option 4</option>
-                                                                            <option>option 5</option>
-                                                                        </select>
+                                                                        <h6>Select all the email addresses that you want to
+                                                                            be notified:</h6>
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input"
+                                                                                   type="checkbox">
+                                                                            <label class="form-check-label">Email
+                                                                                1</label>
+                                                                        </div>
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input"
+                                                                                   type="checkbox">
+                                                                            <label class="form-check-label">Email
+                                                                                2</label>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <input type="text"
+                                                                                   class="form-control form-control-border"
+                                                                                   id="exampleInputBorder"
+                                                                                   placeholder="Add new email">
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-sm-6">
-                                                                    <div class="custom-control custom-checkbox">
-                                                                        <input class="custom-control-input"
-                                                                               type="checkbox"
-                                                                               id="customCheckbox2" checked="">
-                                                                        <h6 for="customCheckbox2"
-                                                                            class="custom-control-label">Notify me by
-                                                                            SMS</h6>
-                                                                    </div>
+                                                                    <label>SMS</label>
                                                                     <!-- Select multiple-->
-                                                                    <!-- TODO: get real numbers -->
+                                                                    <!-- TODO: get real emails -->
                                                                     <div class="form-group">
-                                                                        <h6>Select all numbers that you want to be
-                                                                            notified:</h6>
-                                                                        <select multiple="" class="custom-select">
-                                                                            <option>option 1</option>
-                                                                            <option>option 2</option>
-                                                                            <option>option 3</option>
-                                                                            <option>option 4</option>
-                                                                            <option>option 5</option>
-                                                                        </select>
-                                                                    </div>
+                                                                        <h6>Select all the numbers that you want to
+                                                                            be notified:</h6>
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input"
+                                                                                   type="checkbox">
+                                                                            <label class="form-check-label">Number
+                                                                                1</label>
+                                                                        </div>
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input"
+                                                                                   type="checkbox">
+                                                                            <label class="form-check-label">Number
+                                                                                2</label>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <input type="text"
+                                                                                   class="form-control form-control-border"
+                                                                                   id="exampleInputBorder"
+                                                                                   placeholder="Add new number">
+                                                                        </div>
                                                                 </div>
                                                             </div>
                                                         </div>

@@ -1,5 +1,27 @@
 <section class="content">
     <div class="container-fluid">
+
+        <?php if (isset($flashdata)){?>
+            <!-- Showing alerts if needed -->
+            <div class="row">
+                <?php if (isset($flashdata["operation_action"])){
+                    if($flashdata["operation_action"] == "show_alert_success"){?>
+                        <div class="callout callout-success">
+                            <h5>User Account was successfully created!</h5>
+
+                            <p>Email with instructions to on how to create a new password has been send to email: <?= $flashdata["operation_id"];?>.
+                            </p>
+                        </div>
+                    <?php }else{?>
+                        <div class="alert alert-<?= $flashdata["operation_result"];?> alert-dismissible">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                            <h5><i class="icon fas fa-check"></i> Warning!</h5>
+                            <?= $flashdata["operation_content"];?>
+                        </div>
+                    <?php }}?>
+            </div>
+        <?php } ?>
+
         <!-- Main row -->
         <div class="row">
             <!-- Left col -->
@@ -11,7 +33,7 @@
                 Add new account
             </button>
             <div class="modal fade" id="modal-default" style="display: none;" aria-hidden="true">
-                <form id="accounts-form">
+                <form id="accounts-form" action="<?=base_url("/Actions/add_account");?>" method="post">
                     <div class="modal-dialog modal-default">
                         <div class="modal-content">
                             <div class="modal-header">

@@ -32,9 +32,12 @@ class Dashboard extends BaseController
         if ($DATA["isManager"] == false){
             return redirect()->to('/Dashboard/home');
         }
-        # Find a District of a Manager
+
         $districts = new DistrictModel();
         $ud   = new UnitDistModel();
+        $session = \Config\Services::session();
+
+        # Find a District of a Manager
         $district = $districts->getDistrictByUser($DATA["user"]->id);
 
         # Get all accounts associated with the district
@@ -45,7 +48,9 @@ class Dashboard extends BaseController
         $units = $ud->getUnitsFromDistrict($district["id"]);
         $DATA["units_all"] = $units;
 
-        # List all units available for given manager
+        # Get Session Data
+        $DATA["units_all"] = $units;
+        $DATA["flashdata"] = $session->getFlashdata();
 
         # Displaying Header
         echo view("dashboard/header", $DATA);
@@ -168,10 +173,12 @@ class Dashboard extends BaseController
         # Name of the tab in browser
         $DATA["page_title"] = $DATA["page_header"] .BLIO_TITLE;
 
-        # Find a District of a Manager
+
         $districts = new DistrictModel();
         $ud   = new UnitDistModel();
         $session = \Config\Services::session();
+
+        # Find a District of a Manager
         $district = $districts->getDistrictByUser($DATA["user"]->id);
 
         # Get all units associated with the district

@@ -91,6 +91,85 @@ class Actions extends BaseController
         return redirect()->to('/Dashboard/units');
     }
 
+    public function add_account()
+    {
+        global $DATA;
+        $session = \Config\Services::session();
+        if ($DATA["isManager"] == true){
+
+            # Loading Required Models
+            $ud   = new UnitDistModel();
+            $uu   = new UnitUsersModel();
+            $units = new UnitsModel();
+            $districts = new DistrictModel();
+            $ionAuth = new \IonAuth\Libraries\IonAuth();
+
+            # Load Libraries and helpers
+            helper("form"); # Load form validation library
+            $validation =  \Config\Services::validation();
+            $request = \Config\Services::request();
+
+
+            # Get current district of manager;
+            $district = $districts->getDistrictByUser($DATA["user"]->id);
+
+            # Verify if unit belongs to given district
+            $unit_id = $request->getVar("user_unit", FILTER_SANITIZE_NUMBER_INT);
+            if ($ud->checkIfExists($district, $unit_id) == 0){
+                $session->setFlashdata('operation_action', 'show_alert');
+                $session->setFlashdata('operation_result', 'danger');
+                $session->setFlashdata('operation_content', "Invalid data received: User´s Unit");
+            }else{
+
+                # Form validation rules
+                $validation->setRule('first_name', 'First Name', 'required');
+                $validation->setRule('last_name', 'Last Name', 'required');
+                $validation->setRule('email', 'E-Mail', 'required');
+
+                # Run form validations
+                $validation->withRequest($this->request);
+                if (! $validation->run())
+                {
+                    $session->setFlashdata('operation_action', 'show_alert');
+                    $session->setFlashdata('operation_result', 'danger');
+                    $session->setFlashdata('operation_content', "Invalid data received: ". $validation->listErrors());
+                }
+                else
+                {
+                    # Validated, parsing all input data and filtering
+                    $email = $request->getVar("u_email", FILTER_SANITIZE_EMAIL);
+                    $additional_data = array(
+                        'first_name' => $request->getVar("first_name", FILTER_SANITIZE_STRING),
+                        'last_name'  => $request->getVar("last_name", FILTER_SANITIZE_STRING),
+                        "phone"      => $request->getVar("phone", FILTER_SANITIZE_STRING),
+                    );
+                    $password = substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil(16/strlen($x)) )),1,16);
+
+                    $new_user = $ionAuth->register($email, $password,$email,$additional_data);
+
+                    # Request password by sending an email
+                    $ionAuth->forgottenPassword($email);
+
+                    # Add unit to district
+                    $data_relations = [
+                        "unit_id" => $unit_id,
+                        "user_id" => $new_user
+                    ];
+                    $uu->insert($data_relations);
+
+                    $session->setFlashdata('operation_action', 'show_alert_success');
+                    $session->setFlashdata('operation_result', 'success');
+                    $session->setFlashdata('operation_id', $email);
+                }}
+            }else{
+                $session->setFlashdata('operation_action', 'show_alert');
+                $session->setFlashdata('operation_result', 'danger');
+                $session->setFlashdata('operation_content', "You do not have enough permissions for selected action!");
+
+            }
+        return redirect()->to('/Dashboard/accounts');
+    }
+
     public function mark_solved($e_id){
         global $DATA;
         $request = \Config\Services::request();

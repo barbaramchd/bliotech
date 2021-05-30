@@ -18,6 +18,12 @@ class UnitDistModel extends Model
             ->findAll();
     }
 
+    public function checkIfExists($district_id, $unit_id){
+        return $this->where(['district_id' => $district_id,
+                             "unit_id" => $unit_id])
+            ->countAllResults();
+    }
+
     public function getUsersFromDistrict($district_id){
 
         return $this->asArray()
